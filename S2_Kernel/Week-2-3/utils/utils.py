@@ -3,6 +3,8 @@ import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import StandardScaler,RobustScaler
 from sklearn.metrics import mean_squared_error, r2_score, mean_absolute_error
+from sklearn.svm import SVR, NuSVR
+import seaborn as sns
 
 def load_data():
     X_train = pd.read_csv('../Datasets/processed/X_train.csv')
@@ -85,41 +87,5 @@ def plot_residuals(model_name, y_test, y_pred):
     plt.show()
 
 
-def load_and_prepare_kfold_data(filepath, test_size=0.2, random_state=42):
-    """
-    Load data from CSV, clean it, rename columns, and split for k-fold validation.
-    
-    Parameters:
-    -----------
-    filepath : str
-        Path to the CSV file
-    test_size : float
-        Proportion of data to use for testing (default: 0.2)
-    random_state : int
-        Random seed for reproducibility (default: 42)
-    
-    Returns:
-    --------
-    X_train_kf, X_test_kf, y_train_kf, y_test_kf : pandas DataFrames/Series
-        Split training and testing data
-    """
-    from sklearn.model_selection import train_test_split
-    
-    df = pd.read_csv(filepath)
-    df_clean = df.dropna()
-    df_clean = df_clean.drop_duplicates()
-    
-    df_clean.columns = [
-        "cement", "slag", "fly_ash", "water",
-        "superplasticizer", "coarse_agg",
-        "fine_agg", "age", "strength"
-    ]
-    
-    X = df_clean.drop("strength", axis=1)
-    y = df_clean["strength"]
-    
-    X_train_kf, X_test_kf, y_train_kf, y_test_kf = train_test_split(
-        X, y, test_size=test_size, random_state=random_state
-    )
-    
-    return X_train_kf, X_test_kf, y_train_kf, y_test_kf
+
+
