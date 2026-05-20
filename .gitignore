@@ -1,0 +1,57 @@
+# OS/editor noise
+.DS_Store
+__MACOSX/
+Thumbs.db
+.vscode/
+.idea/
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local environment variables and logs
+.env
+.env.*
+*.log
+.cache/
+
+# Data files: do not push shared/raw/preprocessed datasets.
+**/data/raw/**
+**/data/processed/**
+**/data/interim/**
+**/data/external/**
+!**/data/
+!**/data/**/
+!**/data/**/.gitkeep
+!**/data/**/README.md
+
+# Generated reports and experiment outputs
+**/reports/figures/**
+**/reports/tables/**
+**/results/**
+!**/reports/
+!**/reports/**/
+!**/reports/**/.gitkeep
+!**/reports/**/README.md
+!**/results/
+!**/results/**/
+!**/results/**/.gitkeep
+!**/results/**/README.md
+
+# Large/generated model artifacts
+*.joblib
+*.pkl
+*.pickle
+*.sav
