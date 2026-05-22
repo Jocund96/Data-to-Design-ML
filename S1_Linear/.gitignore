@@ -1,0 +1,45 @@
+# Local development files
+.DS_Store
+.venv/
+venv/
+env/
+.env
+.env.*
+*.log
+.cache/
+
+# Python/Jupyter cache
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+
+# Local datasets only. Keep documentation and folder placeholders.
+/data/raw/**
+/data/processed/**
+/data/interim/**
+/data/external/**
+!/data/
+!/data/**/
+!/data/**/.gitkeep
+!/data/**/README.md
+
+# Generated experiment outputs. Recreate them by running scripts/run_week03_linear.py.
+/reports/figures/**
+/reports/tables/**
+/results/**
+!/reports/
+!/reports/**/
+!/reports/**/.gitkeep
+!/reports/**/README.md
+!/results/
+!/results/**/
+!/results/**/.gitkeep
+!/results/**/README.md
+
+# Saved model artifacts
+*.joblib
+*.pkl
+*.pickle
+*.sav
