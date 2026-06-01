@@ -1,0 +1,106 @@
+data:
+  processed_path: "data/processed/uci_concrete_clean_engineered.csv"
+  target: "Strength"
+
+split:
+  test_size: 0.20
+  random_state: 42
+  cv_folds: 4
+
+seed_test:
+  seeds:
+    - 0
+    - 42
+    - 123
+
+outputs:
+  figures_dir: "reports/figures"
+  tables_dir: "reports/tables"
+  metrics_dir: "results/metrics"
+  predictions_dir: "results/predictions"
+  models_dir: "results/models"
+
+feature_sets:
+  original:
+    description: "Original eight UCI/Yeh features."
+    representation: "original"
+    features:
+      - Cement
+      - Slag
+      - FlyAsh
+      - Water
+      - Superplasticizer
+      - CoarseAggregate
+      - FineAggregate
+      - Age
+
+  yeh_engineered:
+    description: "Original features plus Yeh/domain ratio features."
+    representation: "yeh_engineered"
+    features:
+      - Cement
+      - Slag
+      - FlyAsh
+      - Water
+      - Superplasticizer
+      - CoarseAggregate
+      - FineAggregate
+      - Age
+      - TotalBinder
+      - WaterToCement
+      - WaterToBinder
+      - SPToBinder
+      - FlyAshToBinder
+      - SlagToBinder
+
+  log_transformed:
+    description: "Yeh/domain features plus log transformations for skewed variables."
+    representation: "log_transformed"
+    features:
+      - Cement
+      - Slag
+      - FlyAsh
+      - Water
+      - Superplasticizer
+      - CoarseAggregate
+      - FineAggregate
+      - Age
+      - TotalBinder
+      - WaterToCement
+      - WaterToBinder
+      - SPToBinder
+      - FlyAshToBinder
+      - SlagToBinder
+      - LogAge
+      - LogSuperplasticizer
+      - LogSlag
+      - LogFlyAsh
+
+  aggressive_interactions:
+    description: "Log-transformed and engineered features plus interaction terms."
+    representation: "aggressive_interactions"
+    features:
+      - Cement
+      - Slag
+      - FlyAsh
+      - Water
+      - Superplasticizer
+      - CoarseAggregate
+      - FineAggregate
+      - Age
+      - TotalBinder
+      - WaterToCement
+      - WaterToBinder
+      - SPToBinder
+      - FlyAshToBinder
+      - SlagToBinder
+      - LogAge
+      - LogSuperplasticizer
+      - LogSlag
+      - LogFlyAsh
+      - BinderAge
+      - WaterBinderAge
+      - CementAge
+      - SPAge
+      - CementWaterInteraction
+      - BinderWaterInteraction
