@@ -1,7 +1,12 @@
 {
+  "filepath" : "../Datasets/uci_concrete_data.csv",
+  "engineered_filepath": "../Datasets/processed/uci_concrete_dataset/engineered_features.csv",
+  "target" : "strength",
+
   "scaler": "StandardScaler",
   "plot": true,
   "verbose": true,
+
 
   "svr": {
     "model_type": "SVR",

@@ -1,0 +1,27 @@
+Label              | Our data | Paper (Fig. 6) in UHPC Paper you provided
+ -------------------|----------|---------------
+ PCE_SP             |  55.9%   |  45%
+ PCE_HRWRA          |  19.2%   |  27%
+ PCE family total   |  75.1%   |  72%
+ HRWRA              |   6.0%   |   9%
+ Unspecified + NaN  |  16.3%   |   7%
+ SNF_SP             |   1.3%   |   —
+ Other_Polymer_SP   |   1.1%   |   1%
+ VMA                |   0.2%   |   —
+
+
+Label                  | Our data | Our count | Paper (Fig.1) | Paper count
+-----------------------|----------|-----------|---------------|------------
+OPC_52.5               |  33.7%   |    698    |     34.6%     |    757
+OPC_42.5               |  22.0%   |    456    |     21.9%     |    479
+HS_cement              |   7.6%   |    158    |      7.2%     |    158
+OPC_I (Type I)         |  27.0%   |    559    |     19.1%     |    418
+OPC_III                |   1.5%   |     32    |      1.9%     |     41
+Type I/II              |    —     |     —     |      2.7%     |     59
+OPC_53                 |   4.4%   |     92    |       —       |     —
+CEM_II                 |   1.6%   |     33    |       —       |     —
+Other types            |    —     |     —     |     12.6%     |    276
+white/pozzolan/GGBS/BFS|   1.2%   |     25    |       —       |     —
+Unknown                |   0.9%   |     19    |       —       |     —
+-----------------------|----------|-----------|---------------|------------
+Total                  |          |   2072    |               |   2188
