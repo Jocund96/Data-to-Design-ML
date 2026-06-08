@@ -1,0 +1,39 @@
+data:
+  source_path: "data/processed/uhpc_rows_with_28day_target.csv"
+  target: "Mechanical Properties | Compressive Strength (Mpa) | 28-Day"
+
+split:
+  val_size: 0.15
+  test_size: 0.15
+  random_state: 42
+
+outputs:
+  processed_dir: "data/processed/week6"
+  semantic_cleaned_path: "data/processed/week6_semantic_cleaned.csv"
+  tables_dir: "reports/tables"
+  preprocessor_dir: "results/models/week6_preprocessors"
+  fit_preprocessors: true
+
+preprocessing:
+  numeric_imputer: "simple"  # "simple" or "knn"
+  numeric_add_indicator: true
+  knn_neighbors: 5
+  low_cardinality_max: 10
+  medium_cardinality_max: 20
+  enable_target_encoder_high_cardinality: false
+
+policies:
+  full_raw:
+    description: "Keep all raw mix-constituent and curing features, then apply semantic recoding."
+    missing_threshold:
+    apply_semantic_recode: true
+
+  raw_le_50:
+    description: "Keep raw features with at most 50 percent missingness before semantic recoding."
+    missing_threshold: 0.50
+    apply_semantic_recode: true
+
+  raw_le_20:
+    description: "Keep raw features with at most 20 percent missingness before semantic recoding."
+    missing_threshold: 0.20
+    apply_semantic_recode: true

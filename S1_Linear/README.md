@@ -66,3 +66,29 @@ These files are recreated locally when the script runs and are ignored by Git by
 - Predictions: `results/predictions/week03_linear_predictions.csv`
 - Figures: `reports/figures/`
 - Models: `results/models/`
+
+## Run Week 6
+
+Week 6 prepares the UHPC modeling dataset with semantic missingness rules.
+It starts from:
+
+```text
+data/processed/uhpc_rows_with_28day_target.csv
+```
+
+From `S1_Linear/`:
+
+```bash
+PYTHONPATH=src python scripts/run_week06_semantic_missingness.py
+```
+
+The script creates:
+
+- `data/processed/week6_semantic_cleaned.csv`
+- `data/processed/week6/full_raw/X_train.csv`, `X_val.csv`, `X_test.csv`
+- `data/processed/week6/raw_le_50/X_train.csv`, `X_val.csv`, `X_test.csv`
+- `data/processed/week6/raw_le_20/X_train.csv`, `X_val.csv`, `X_test.csv`
+- Policy-level `numeric_fully_missing_audit.csv`, `categorical_cardinality_report.csv`,
+  `preprocessing_summary.csv`, and `modeling_features.csv`
+- Week 6 audit tables in `reports/tables/`
+- Leakage-safe train-fitted preprocessors in `results/models/week6_preprocessors/`
