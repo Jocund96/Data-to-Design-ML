@@ -1,6 +1,6 @@
 Column,Data Type,Unique Values,Type of Encoding
 cement,float64,359,No Encoding
-cement_type,str,11,Ordinal/Target Encoding
+cement_type,str,12,Ordinal/Target Encoding
 cement_grade,float64,3,No Encoding
 silica_fume,float64,247,No Encoding
 fly_ash,float64,101,No Encoding
@@ -42,4 +42,3 @@ curing_temp,float64,19,No Encoding
 curing_humidity,float64,11,No Encoding
 curing_pressure,float64,3,No Encoding
 cs_28d,float64,646,No Encoding
-cement_type_clean,str,12,Ordinal/Target Encoding
