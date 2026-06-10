@@ -1,0 +1,8 @@
+split by publications
+remove one 
+look to the validation set - using
+
+make imputation after splitting 
+
+
+summarize cem type and maybe apply one hot 

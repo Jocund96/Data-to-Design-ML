@@ -1,0 +1,19 @@
+Experiment	Model	                            MAE	        RMSE	    R2
+0	BaseRaw	XGBRegressor	                10.621600	14.368656	0.854939
+1	BaseRaw	HistGradientBoostingRegressor	10.387900	14.398714	0.854331
+2	BaseRaw	AdaBoostRegressor	            16.698880	20.804189	0.695897
+3	Out5std	XGBRegressor	                9.833187	13.915460	0.867932
+4	Out5std	HistGradientBoostingRegressor	9.765203	13.534795	0.875059
+5	Out5std	AdaBoostRegressor	            15.376372	19.587338	0.738330
+6	GridSCV	XGBRegressor	                9.132491	12.958469	0.885472
+7	GridSCV	HistGradientBoostingRegressor	9.651726	13.355510	0.878347
+8	GridSCV	AdaBoostRegressor	            15.477236	19.898292	0.729956
+
+
+XGBoost {'model__learning_rate': 0.2, 'model__max_depth': 5, 'model__n_estimators': 200}
+HistGrad {'model__learning_rate': 0.2, 'model__max_depth': 5, 'model__max_iter': 200}
+AdaBoost {'model__learning_rate': 0.2, 'model__n_estimators': 200}
+
+No Fiber XGBoost: {'model__learning_rate': 0.1, 'model__max_depth': 5, 'model__n_estimators': 200}
+No Fiber HistGrad: {'model__learning_rate': 0.1, 'model__max_depth': 7, 'model__max_iter': 200}
+No Fiber AdaBoost Best Params: {'model__learning_rate': 0.1, 'model__n_estimators': 200}
