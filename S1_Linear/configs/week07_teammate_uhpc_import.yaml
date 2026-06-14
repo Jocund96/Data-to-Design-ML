@@ -1,0 +1,23 @@
+data:
+  source_path: "../S2_Kernel/Datasets/processed/uhpc_dataset/semantic_recoding_features_50.csv"
+  target: "cs_28d"
+  policy: "semantic_recoding_50_percent"
+  expected_rows_before_teammate_preprocessing: 2073
+
+cleaning:
+  drop_columns:
+    - "Unnamed: 0"
+    - "cement_type"
+  required_columns:
+    - "cs_28d"
+    - "cement_type_clean"
+  strip_text_values: true
+  drop_rows_with_missing_target: true
+  drop_exact_duplicate_rows: true
+
+outputs:
+  cleaned_dataset_path: "data/processed/week7/uhpc_teammate_semantic_50_linear_ready.csv"
+  tables_dir: "reports/tables"
+  audit_summary_name: "week07_teammate_import_audit_summary.csv"
+  column_audit_name: "week07_teammate_import_column_audit.csv"
+  readiness_name: "week07_teammate_import_readiness.csv"

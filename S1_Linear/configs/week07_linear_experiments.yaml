@@ -1,0 +1,89 @@
+data:
+  policy: "semantic_recoding_50_percent"
+  split_dir: "data/processed/week7/semantic_50_splits"
+  target: "cs_28d"
+
+random_state: 42
+hyperparameter_tuning: false
+
+enabled_models:
+  - "OLS"
+  - "Ridge"
+  - "Lasso"
+  - "Elastic Net"
+  - "Bayesian Ridge"
+
+preprocessing:
+  numeric_add_indicator: true
+  categorical_missing_value: "missing_reported_gap"
+  categorical_min_frequency: 5
+  categorical_max_categories: 25
+
+models:
+  ridge:
+    alpha: 10.0
+  lasso:
+    alpha: 0.01
+    max_iter: 20000
+    random_state: 42
+  elastic_net:
+    alpha: 0.01
+    l1_ratio: 0.5
+    max_iter: 20000
+    random_state: 42
+  bayesian_ridge:
+    max_iter: 300
+    tol: 0.001
+
+experiments:
+  feature_policy_sensitivity:
+    enabled: false
+    reason: "Week 7 uses only the agreed semantic-recoded 50 percent policy."
+  curing_regime_error_analysis:
+    enabled: true
+  fiber_ablation:
+    enabled: true
+  outliers:
+    enabled: true
+    lower_quantile: 0.025
+    upper_quantile: 0.975
+  engineering_features:
+    enabled: true
+    exploratory: true
+    replace_combined_amount_components: true
+
+outputs:
+  tables_dir: "reports/tables"
+  metrics_dir: "results/metrics"
+  predictions_dir: "results/predictions"
+  models_dir: "results/models/week7_baseline"
+  figures_dir: "reports/figures/week07"
+
+  baseline_metrics_name: "week07_baseline_metrics.csv"
+  baseline_predictions_name: "week07_baseline_predictions.csv"
+  experiment_metrics_name: "week07_targeted_experiment_metrics.csv"
+  experiment_predictions_name: "week07_targeted_experiment_predictions.csv"
+  experiment_scope_name: "week07_experiment_scope.csv"
+  best_model_name: "week07_best_baseline_model.csv"
+
+  strength_error_name: "week07_best_model_error_by_strength.csv"
+  fiber_error_name: "week07_best_model_error_by_fiber.csv"
+  curing_error_name: "week07_best_model_error_by_curing.csv"
+
+  vif_name: "week07_numeric_vif.csv"
+  vif_audit_name: "week07_numeric_vif_audit.csv"
+  vif_summary_name: "week07_numeric_vif_summary.csv"
+
+  metrics_comparison_figure: "week07_metrics_comparison.png"
+  r2_comparison_figure: "week07_r2_comparison.png"
+  predicted_actual_figure: "week07_selected_baseline_predicted_vs_actual.png"
+  residual_figure: "week07_selected_baseline_residuals.png"
+  error_distribution_figure: "week07_selected_baseline_error_distribution.png"
+  strength_error_figure: "week07_error_by_strength_bin.png"
+  fiber_error_figure: "week07_error_by_fiber_group.png"
+  curing_error_figure: "week07_error_by_curing_group.png"
+  vif_figure: "week07_top_vif.png"
+  fiber_ablation_figure: "week07_fiber_ablation_comparison.png"
+  outlier_sensitivity_figure: "week07_outlier_sensitivity_comparison.png"
+  engineering_features_figure: "week07_engineering_features_comparison.png"
+  coefficient_figure: "week07_selected_baseline_coefficients.png"
