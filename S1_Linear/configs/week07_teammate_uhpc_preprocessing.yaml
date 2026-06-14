@@ -1,0 +1,31 @@
+data:
+  input_path: "data/processed/week7/uhpc_teammate_semantic_50_linear_ready.csv"
+  target: "cs_28d"
+  policy: "semantic_recoding_50_percent"
+
+split:
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+  random_state: 42
+  strategy: "feature_hash_grouped"
+
+preprocessing:
+  numeric_imputer: "median"
+  numeric_add_indicator: true
+  numeric_scaler: "standard"
+  categorical_missing_value: "missing_reported_gap"
+  categorical_encoder: "rare_aware_onehot"
+  categorical_min_frequency: 5
+  categorical_max_categories: 25
+
+outputs:
+  split_dir: "data/processed/week7/semantic_50_splits"
+  transformed_dir: "data/processed/week7/semantic_50_transformed"
+  preprocessor_path: "results/models/week7_semantic_50_preprocessor.joblib"
+  tables_dir: "reports/tables"
+  split_summary_name: "week07_semantic_50_split_summary.csv"
+  preprocessing_summary_name: "week07_semantic_50_preprocessing_summary.csv"
+  feature_names_name: "week07_semantic_50_transformed_feature_names.csv"
+  categorical_report_name: "week07_semantic_50_categorical_cardinality.csv"
+  missingness_report_name: "week07_semantic_50_train_missingness.csv"
