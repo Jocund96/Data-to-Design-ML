@@ -3,7 +3,7 @@ cement,float64,359,No Encoding
 cement_type,str,12,Ordinal/Target Encoding
 cement_grade,float64,3,No Encoding
 silica_fume,float64,247,No Encoding
-fly_ash,float64,101,No Encoding
+fly_ash,float64,102,No Encoding
 fly_ash_type,str,2,Binary Encoding
 limestone_powder,float64,44,No Encoding
 quartz_powder,float64,87,No Encoding
@@ -36,7 +36,7 @@ fiber2_tensile_strength,float64,12,No Encoding
 fiber2_youngs_modulus,float64,4,No Encoding
 water,float64,263,No Encoding
 sp_type,str,7,One-Hot Encoding
-sp_amount,float64,344,No Encoding
+sp_amount,float64,345,No Encoding
 curing_method,str,7,One-Hot Encoding
 curing_temp,float64,19,No Encoding
 curing_humidity,float64,11,No Encoding

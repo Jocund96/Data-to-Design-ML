@@ -1,0 +1,67 @@
+{
+    "filepath": "../Datasets/UHPC_dataset.csv",
+    "initial_cleaned_filepath": "../Datasets/processed/UHPC_dataset/initial_cleaned.csv",
+    "utils_path": "../Week-2-3-4",
+    "encoding_report_filepath": "encoding_report.csv",
+    "raw_dropped_features_20_filepath": "../Datasets/processed/UHPC_dataset/raw_dropped_features_20.csv",
+    "raw_dropped_features_50_filepath": "../Datasets/processed/UHPC_dataset/raw_dropped_features_50.csv",
+    "semantic_recoding_features_20_filepath": "../Datasets/processed/UHPC_dataset/semantic_recoding_features_20.csv",
+    "semantic_recoding_features_50_filepath": "../Datasets/processed/UHPC_dataset/semantic_recoding_features_50.csv",
+
+    "column_names": [
+      "mix_id",
+      "cement", "cement_type", "cement_grade",
+      "silica_fume", "fly_ash", "fly_ash_type", "limestone_powder",
+      "quartz_powder", "glass_powder", "rice_husk_ash", "metakaolin",
+      "ggbfs", "slag", "slag_type", "nano_caco3", "nano_al2o3",
+      "nano_tio2", "nano_sio2",
+      "filler", "filler_type", "sand", "sand_type", "sand_max_size",
+      "fiber1_type", "fiber1_amount", "fiber1_length", "fiber1_diameter",
+      "fiber1_tensile_strength", "fiber1_youngs_modulus",
+      "fiber2_type", "fiber2_amount", "fiber2_length", "fiber2_diameter",
+      "fiber2_tensile_strength", "fiber2_youngs_modulus",
+      "water", "sp_type", "sp_amount",
+      "curing_method", "curing_temp", "curing_humidity", "curing_pressure",
+      "workability_standard", "slump", "slump_flow",
+      "cs_specimen", "cs_standard", "cs_1d", "cs_3d", "cs_7d",
+      "cs_14d", "cs_21d", "cs_28d", "cs_56d", "cs_90d",
+      "em_standard", "elastic_modulus",
+      "tensile_standard", "split_tensile", "first_cracking_strength",
+      "direct_tensile", "peak_tensile_strain", "tensile_elastic_modulus",
+      "strain_capacity",
+      "flexural_specimen", "flexural_standard", "lop", "mor",
+      "peak_flexural", "residual_f600", "residual_f150", "toughness",
+      "durability_standard", "air_content", "air_void", "porosity",
+      "water_absorption_standard", "water_absorption", "shrinkage_standard",
+      "shrinkage_28d", "shrinkage_56d", "freeze_thaw_standard",
+      "freeze_thaw_cycles", "rcpt_standard", "rcpt", "resistivity_standard",
+      "surface_resistivity", "country", "reference_details", "publish_year", "paper_reference"
+    ],
+
+    "drop_cols": [
+      "workability_standard", "slump", "slump_flow",
+      "cs_specimen", "cs_standard", "cs_1d", "cs_3d", "cs_7d",
+      "cs_14d", "cs_21d", "cs_56d", "cs_90d",
+      "em_standard", "elastic_modulus",
+      "tensile_standard", "split_tensile", "first_cracking_strength",
+      "direct_tensile", "peak_tensile_strain", "tensile_elastic_modulus",
+      "strain_capacity",
+      "flexural_specimen", "flexural_standard", "lop", "mor",
+      "peak_flexural", "residual_f600", "residual_f150", "toughness",
+      "durability_standard", "air_content", "air_void", "porosity",
+      "water_absorption_standard", "water_absorption", "shrinkage_standard",
+      "shrinkage_28d", "shrinkage_56d", "freeze_thaw_standard",
+      "freeze_thaw_cycles", "rcpt_standard", "rcpt", "resistivity_standard",
+      "surface_resistivity"
+    ],
+
+    "amount_type_twins": [
+      ["fly_ash", "fly_ash_type"],
+      ["slag", "slag_type"],
+      ["filler", "filler_type"],
+      ["sand", "sand_type"],
+      ["fiber1_amount", "fiber1_type"],
+      ["fiber2_amount", "fiber2_type"],
+      ["sp_amount", "sp_type"]
+    ]
+}
