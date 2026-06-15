@@ -1,7 +1,3 @@
-import pandas as df
-
-## Data Filtering Utility
-
 def drop_by_threshold(df, threshold_pct):
     """Drop columns where missing values exceed threshold percentage."""
     threshold = threshold_pct * len(df)
