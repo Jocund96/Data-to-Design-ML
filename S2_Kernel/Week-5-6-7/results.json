@@ -2,18 +2,20 @@
   "best_params": {
     "best_params_publications_included": {
       "knn": {
-        "model__metric": "manhattan",
-        "model__n_neighbors": 4,
-        "model__p": 2,
+        "model__metric": "minkowski",
+        "model__n_neighbors": 47,
+        "model__p": 1,
         "model__weights": "distance"
       },
       "svr": {
-        "model__C": 1024,
-        "model__epsilon": 3
+        "model__C": 256,
+        "model__epsilon": 0.5,
+        "model__gamma": 0.001
       },
       "nusvr": {
-        "model__C": 512,
-        "model__nu": 0.4
+        "model__C": 128,
+        "model__gamma": 0.001,
+        "model__nu": 0.2
       }
     },
     "recoded_50": {
