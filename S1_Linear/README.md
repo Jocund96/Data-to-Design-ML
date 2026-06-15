@@ -96,8 +96,9 @@ The script creates:
 ## Import the teammate-prepared UHPC dataset
 
 The current-week Linear Family work uses the teammate's semantic-recoded
-**50 percent policy** dataset in `S2_Kernel` as its canonical source. The import
-step creates an S1-owned copy without duplicating the teammate dataset manually.
+**50 percent policy** representation. A correction step restores the valid row
+accidentally skipped upstream, and the import step creates the S1-owned
+modeling input.
 
 From `S1_Linear/`:
 
@@ -107,7 +108,10 @@ PYTHONPATH=src python scripts/run_week07_import_teammate_uhpc.py
 
 The import script:
 
-- imports `../S2_Kernel/Datasets/processed/uhpc_dataset/semantic_recoding_features_50.csv`;
+- restores the one valid mix accidentally skipped upstream with
+  `scripts/run_week07_correct_semantic_dataset.py`;
+- imports the corrected S1-owned
+  `data/processed/week7/semantic_recoding_features_50_corrected_2073.csv`;
 - drops the accidental `Unnamed: 0` saved-index predictor;
 - keeps `cement_type_clean` and drops the redundant `cement_type`;
 - removes exact feature-and-target duplicate rows;
@@ -145,10 +149,10 @@ From `S1_Linear/`:
 PYTHONPATH=src python scripts/run_week07_linear_experiments.py
 ```
 
-The runner uses fixed model parameters from
-`configs/week07_linear_experiments.yaml`; it does not perform hyperparameter
-tuning. It trains OLS, Ridge, Lasso, Elastic Net, and Bayesian Ridge, then
-runs:
+The runner tunes model parameters from
+`configs/week07_linear_experiments.yaml` using group-aware `GridSearchCV` on
+training rows only. It trains OLS, Elastic Net, Bayesian Ridge, and Polynomial
+Ridge. The tuned settings are frozen before running:
 
 - curing-regime and fiber-group error analysis for the best validation model;
 - fiber-feature ablation;

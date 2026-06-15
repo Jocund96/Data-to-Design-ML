@@ -224,7 +224,7 @@ def _fit_and_evaluate_models(
     categorical_features: list[str] | None = None,
     **extra,
 ) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Fit all configured fixed-parameter models and evaluate all splits."""
+    """Fit all models using the frozen parameters selected by training-only CV."""
     if numeric_features is None or categorical_features is None:
         numeric_features, categorical_features = _feature_types(X_train)
     models = build_week07_models(

@@ -379,6 +379,11 @@ def plot_coefficient_importance(
         preprocessor = fitted_pipeline.named_steps["preprocessor"]
         model = fitted_pipeline.named_steps["model"]
         feature_names = np.asarray(preprocessor.get_feature_names_out(), dtype=str)
+        if "poly" in fitted_pipeline.named_steps:
+            feature_names = np.asarray(
+                fitted_pipeline.named_steps["poly"].get_feature_names_out(feature_names),
+                dtype=str,
+            )
         coefficients = np.asarray(model.coef_, dtype=float).reshape(-1)
     except (AttributeError, KeyError, TypeError, ValueError) as exc:
         print(f"Coefficient plot skipped: feature names or coefficients unavailable ({exc}).")

@@ -1,9 +1,18 @@
-"""Fixed Linear Family model builders for Week 7 UHPC experiments."""
+"""Linear Family model builders for Week 7 UHPC experiments."""
 
-from sklearn.linear_model import BayesianRidge, ElasticNet, Lasso, LinearRegression, Ridge
+from sklearn.linear_model import BayesianRidge, ElasticNet, LinearRegression, Ridge
 from sklearn.pipeline import Pipeline
+from sklearn.preprocessing import PolynomialFeatures, StandardScaler
 
 from s1_linear.week07_preprocessing import build_week07_preprocessor
+
+
+MODEL_NAME_TO_CONFIG_KEY = {
+    "OLS": "ols",
+    "Elastic Net": "elastic_net",
+    "Bayesian Ridge": "bayesian_ridge",
+    "Polynomial Ridge": "polynomial_ridge",
+}
 
 
 def _model_config(config: dict, model_key: str) -> dict:
@@ -65,47 +74,6 @@ def build_ols_model(
     )
 
 
-def build_ridge_model(
-    X_train,
-    config: dict,
-    numeric_features: list[str] | None = None,
-    categorical_features: list[str] | None = None,
-) -> Pipeline:
-    """Ridge baseline with fixed alpha from config."""
-    params = _model_config(config, "ridge")
-    return build_week07_model_pipeline(
-        Ridge(
-            alpha=params.get("alpha", 10.0),
-            random_state=params.get("random_state"),
-        ),
-        X_train=X_train,
-        config=config,
-        numeric_features=numeric_features,
-        categorical_features=categorical_features,
-    )
-
-
-def build_lasso_model(
-    X_train,
-    config: dict,
-    numeric_features: list[str] | None = None,
-    categorical_features: list[str] | None = None,
-) -> Pipeline:
-    """Lasso baseline with fixed alpha from config."""
-    params = _model_config(config, "lasso")
-    return build_week07_model_pipeline(
-        Lasso(
-            alpha=params.get("alpha", 0.01),
-            max_iter=params.get("max_iter", 20000),
-            random_state=params.get("random_state", config.get("random_state", 42)),
-        ),
-        X_train=X_train,
-        config=config,
-        numeric_features=numeric_features,
-        categorical_features=categorical_features,
-    )
-
-
 def build_elastic_net_model(
     X_train,
     config: dict,
@@ -118,7 +86,9 @@ def build_elastic_net_model(
         ElasticNet(
             alpha=params.get("alpha", 0.01),
             l1_ratio=params.get("l1_ratio", 0.5),
-            max_iter=params.get("max_iter", 20000),
+            max_iter=params.get("max_iter", 50000),
+            tol=params.get("tol", 0.0001),
+            selection=params.get("selection", "cyclic"),
             random_state=params.get("random_state", config.get("random_state", 42)),
         ),
         X_train=X_train,
@@ -140,11 +110,59 @@ def build_bayesian_ridge_model(
         BayesianRidge(
             max_iter=params.get("max_iter", 300),
             tol=params.get("tol", 0.001),
+            alpha_1=params.get("alpha_1", 1e-6),
+            alpha_2=params.get("alpha_2", 1e-6),
+            lambda_1=params.get("lambda_1", 1e-6),
+            lambda_2=params.get("lambda_2", 1e-6),
         ),
         X_train=X_train,
         config=config,
         numeric_features=numeric_features,
         categorical_features=categorical_features,
+    )
+
+
+def build_polynomial_ridge_model(
+    X_train,
+    config: dict,
+    numeric_features: list[str] | None = None,
+    categorical_features: list[str] | None = None,
+) -> Pipeline:
+    """
+    Build Polynomial Ridge with expansion after train-fitted preprocessing.
+
+    Scaling after polynomial expansion keeps the Ridge penalty comparable
+    across original, squared, and interaction terms.
+    """
+    params = _model_config(config, "polynomial_ridge")
+    base_pipeline = build_week07_model_pipeline(
+        Ridge(
+            alpha=params.get("alpha", 10.0),
+            solver=params.get("solver", "lsqr"),
+            max_iter=params.get("max_iter", 5000),
+            tol=params.get("tol", 0.0001),
+        ),
+        X_train=X_train,
+        config=config,
+        numeric_features=numeric_features,
+        categorical_features=categorical_features,
+    )
+    preprocessor = base_pipeline.named_steps["preprocessor"]
+
+    return Pipeline(
+        [
+            ("preprocessor", preprocessor),
+            (
+                "poly",
+                PolynomialFeatures(
+                    degree=params.get("degree", 2),
+                    include_bias=False,
+                    interaction_only=params.get("interaction_only", False),
+                ),
+            ),
+            ("polynomial_scaler", StandardScaler()),
+            ("model", base_pipeline.named_steps["model"]),
+        ]
     )
 
 
@@ -154,13 +172,12 @@ def build_week07_models(
     numeric_features: list[str] | None = None,
     categorical_features: list[str] | None = None,
 ) -> dict[str, Pipeline]:
-    """Build all enabled fixed-parameter Week 7 Linear Family models."""
+    """Build all enabled Week 7 Linear Family models."""
     registry = {
         "OLS": build_ols_model,
-        "Ridge": build_ridge_model,
-        "Lasso": build_lasso_model,
         "Elastic Net": build_elastic_net_model,
         "Bayesian Ridge": build_bayesian_ridge_model,
+        "Polynomial Ridge": build_polynomial_ridge_model,
     }
     enabled = config.get("enabled_models", list(registry))
 

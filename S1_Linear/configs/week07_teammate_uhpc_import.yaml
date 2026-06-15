@@ -1,5 +1,6 @@
 data:
-  source_path: "../S2_Kernel/Datasets/processed/uhpc_dataset/semantic_recoding_features_50.csv"
+  source_path: "data/processed/week7/semantic_recoding_features_50_corrected_2073.csv"
+  lineage_path: "data/processed/week7/semantic_recoding_features_50_corrected_lineage.csv"
   target: "cs_28d"
   policy: "semantic_recoding_50_percent"
   expected_rows_before_teammate_preprocessing: 2073

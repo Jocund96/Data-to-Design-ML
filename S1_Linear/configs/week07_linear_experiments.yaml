@@ -4,14 +4,30 @@ data:
   target: "cs_28d"
 
 random_state: 42
-hyperparameter_tuning: false
+
+hyperparameter_tuning:
+  enabled: true
+  cv_folds: 3
+  grouping: "feature_hash_group"
+  scoring: "neg_root_mean_squared_error"
+  n_jobs: 1
+  verbose: 1
+  grids:
+    elastic_net:
+      model__alpha: [0.001, 0.01, 0.1, 1.0, 10.0]
+      model__l1_ratio: [0.1, 0.3, 0.5, 0.7, 0.9]
+    bayesian_ridge:
+      model__alpha_1: [0.0000001, 0.000001, 0.00001]
+      model__lambda_1: [0.0000001, 0.000001, 0.00001]
+    polynomial_ridge:
+      poly__degree: [2]
+      model__alpha: [0.1, 1.0, 10.0, 100.0, 1000.0]
 
 enabled_models:
   - "OLS"
-  - "Ridge"
-  - "Lasso"
   - "Elastic Net"
   - "Bayesian Ridge"
+  - "Polynomial Ridge"
 
 preprocessing:
   numeric_add_indicator: true
@@ -20,20 +36,26 @@ preprocessing:
   categorical_max_categories: 25
 
 models:
-  ridge:
-    alpha: 10.0
-  lasso:
-    alpha: 0.01
-    max_iter: 20000
-    random_state: 42
   elastic_net:
     alpha: 0.01
     l1_ratio: 0.5
-    max_iter: 20000
+    max_iter: 50000
+    tol: 0.0001
     random_state: 42
   bayesian_ridge:
     max_iter: 300
     tol: 0.001
+    alpha_1: 0.000001
+    alpha_2: 0.000001
+    lambda_1: 0.000001
+    lambda_2: 0.000001
+  polynomial_ridge:
+    degree: 2
+    interaction_only: false
+    alpha: 10.0
+    solver: "lsqr"
+    max_iter: 5000
+    tol: 0.0001
 
 experiments:
   feature_policy_sensitivity:
@@ -65,6 +87,9 @@ outputs:
   experiment_predictions_name: "week07_targeted_experiment_predictions.csv"
   experiment_scope_name: "week07_experiment_scope.csv"
   best_model_name: "week07_best_baseline_model.csv"
+  tuning_summary_name: "week07_tuning_summary.csv"
+  tuning_cv_results_name: "week07_tuning_cv_results.csv"
+  frozen_config_name: "week07_frozen_tuned_config.yaml"
 
   strength_error_name: "week07_best_model_error_by_strength.csv"
   fiber_error_name: "week07_best_model_error_by_fiber.csv"

@@ -241,9 +241,20 @@ def make_readiness_report(
         },
         {
             "check": "group_split_identifier",
-            "status": "source_limitation",
-            "value": "Mix-ID and paper source are unavailable",
-            "action": "Request preserved grouping columns; feature hashes are only a partial fallback.",
+            "status": (
+                "available_separately"
+                if audit.get("publication_lineage_available")
+                else "source_limitation"
+            ),
+            "value": audit.get(
+                "publication_lineage_path",
+                "Mix-ID and paper source are unavailable",
+            ),
+            "action": (
+                "Keep lineage out of predictors; use it for publication-group evaluation."
+                if audit.get("publication_lineage_available")
+                else "Request preserved grouping columns; feature hashes are only a partial fallback."
+            ),
         },
         {
             "check": "preprocessing_fitted_before_split",
@@ -304,6 +315,7 @@ def main(config_path: str) -> None:
     output_path = resolve_project_path(config["outputs"]["cleaned_dataset_path"])
     tables_dir = resolve_project_path(config["outputs"]["tables_dir"])
     target_col = config["data"]["target"]
+    lineage_path = resolve_project_path(config["data"]["lineage_path"])
 
     if not source_path.exists():
         raise FileNotFoundError(f"Teammate dataset not found: {source_path}")
@@ -326,6 +338,8 @@ def main(config_path: str) -> None:
         audit["source_rows"] - expected_source_rows
     )
     audit["policy"] = config["data"]["policy"]
+    audit["publication_lineage_available"] = lineage_path.exists()
+    audit["publication_lineage_path"] = str(lineage_path)
     cleaned_df.to_csv(output_path, index=False)
 
     column_audit = make_column_audit(cleaned_df, target_col=target_col)

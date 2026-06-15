@@ -1,22 +1,32 @@
 """
-Run Week 7 Linear Family baselines and targeted UHPC experiments.
+Run tuned Week 7 Linear Family baselines and targeted UHPC experiments.
 
-This runner uses the agreed semantic-recoded 50% policy only. Model parameters
-are fixed in config; no hyperparameter tuning is performed this week.
+This runner uses the agreed semantic-recoded 50% policy only. Hyperparameter
+tuning and all preprocessing are fitted using training rows only.
 """
 
 from pathlib import Path
 import argparse
+import os
 import sys
+import tempfile
 
 script_dir = Path(__file__).resolve().parent
 project_root = script_dir.parent
+
+# Keep Matplotlib/fontconfig caches writable in restricted execution environments.
+cache_root = Path(tempfile.gettempdir()) / "s1_linear_plot_cache"
+cache_root.mkdir(parents=True, exist_ok=True)
+os.environ.setdefault("MPLCONFIGDIR", str(cache_root / "matplotlib"))
+os.environ.setdefault("XDG_CACHE_HOME", str(cache_root))
+os.environ.setdefault("MPLBACKEND", "Agg")
 
 for path in (project_root / "src", project_root, project_root.parent):
     sys.path.insert(0, str(path))
 
 import joblib
 import pandas as pd
+import yaml
 
 from s1_linear.config import load_config
 from s1_linear.week07_experiments import (
@@ -26,7 +36,6 @@ from s1_linear.week07_experiments import (
     run_outlier_sensitivity_experiment,
 )
 from s1_linear.week07_metrics import evaluate_fitted_model
-from s1_linear.week07_models import build_week07_models
 from s1_linear.week07_plots import (
     plot_coefficient_importance,
     plot_error_by_group,
@@ -39,6 +48,7 @@ from s1_linear.week07_plots import (
     plot_top_vif,
 )
 from s1_linear.week07_vif import calculate_policy_vif, summarize_vif
+from s1_linear.week07_tuning import tune_week07_models
 
 
 def resolve_project_path(path: str | Path) -> Path:
@@ -85,12 +95,13 @@ def train_baseline_models(
     y_test,
     config,
     models_dir,
-) -> tuple[pd.DataFrame, pd.DataFrame]:
-    """Train and save fixed-parameter baseline Linear Family models."""
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame, pd.DataFrame, dict]:
+    """Tune, evaluate, and save the Week 7 Linear Family baseline models."""
     numeric_features = X_train.select_dtypes(include=["number"]).columns.tolist()
     categorical_features = X_train.select_dtypes(exclude=["number"]).columns.tolist()
-    models = build_week07_models(
+    models, tuning_summary, cv_results, frozen_config = tune_week07_models(
         X_train=X_train,
+        y_train=y_train,
         config=config,
         numeric_features=numeric_features,
         categorical_features=categorical_features,
@@ -100,10 +111,9 @@ def train_baseline_models(
     models_dir.mkdir(parents=True, exist_ok=True)
 
     for model_name, model in models.items():
-        fitted = model.fit(X_train, y_train)
         metrics, predictions = evaluate_fitted_model(
             model_name=model_name,
-            model=fitted,
+            model=model,
             X_train=X_train,
             X_val=X_val,
             X_test=X_test,
@@ -118,11 +128,14 @@ def train_baseline_models(
         prediction_frames.append(predictions)
 
         safe_name = model_name.casefold().replace(" ", "_")
-        joblib.dump(fitted, models_dir / f"week07_{safe_name}.joblib")
+        joblib.dump(model, models_dir / f"week07_{safe_name}.joblib")
 
     return (
         pd.concat(metric_frames, ignore_index=True),
         pd.concat(prediction_frames, ignore_index=True),
+        tuning_summary,
+        cv_results,
+        frozen_config,
     )
 
 
@@ -306,7 +319,13 @@ def main(config_path: str) -> None:
     numeric_features = X_train.select_dtypes(include=["number"]).columns.tolist()
     categorical_features = X_train.select_dtypes(exclude=["number"]).columns.tolist()
 
-    baseline_metrics, baseline_predictions = train_baseline_models(
+    (
+        baseline_metrics,
+        baseline_predictions,
+        tuning_summary,
+        cv_results,
+        frozen_config,
+    ) = train_baseline_models(
         policy=policy,
         X_train=X_train,
         X_val=X_val,
@@ -317,6 +336,19 @@ def main(config_path: str) -> None:
         config=config,
         models_dir=models_dir,
     )
+    tuning_summary.to_csv(
+        tables_dir / output_config["tuning_summary_name"],
+        index=False,
+    )
+    cv_results.to_csv(
+        tables_dir / output_config["tuning_cv_results_name"],
+        index=False,
+    )
+    with (models_dir / output_config["frozen_config_name"]).open(
+        "w",
+        encoding="utf-8",
+    ) as file:
+        yaml.safe_dump(frozen_config, file, sort_keys=False)
     save_table_copies(
         baseline_metrics,
         tables_dir / output_config["baseline_metrics_name"],
@@ -361,7 +393,7 @@ def main(config_path: str) -> None:
             y_train,
             y_val,
             y_test,
-            config,
+            frozen_config,
             numeric_features,
             categorical_features,
         )
@@ -377,7 +409,7 @@ def main(config_path: str) -> None:
             y_train,
             y_val,
             y_test,
-            config,
+            frozen_config,
             numeric_features,
             categorical_features,
         )
@@ -393,7 +425,7 @@ def main(config_path: str) -> None:
             y_train,
             y_val,
             y_test,
-            config,
+            frozen_config,
             numeric_features,
             categorical_features,
         )
@@ -452,6 +484,8 @@ def main(config_path: str) -> None:
     )
     print("\nSelected baseline:")
     print(best_model_summary.round(3).to_string(index=False))
+    print("\nTraining-only hyperparameter tuning summary:")
+    print(tuning_summary.round(3).to_string(index=False))
     print("\nVIF summary:")
     print(vif_summary.round(3).to_string(index=False))
     print("\nWeek 7 targeted experiments complete.")
