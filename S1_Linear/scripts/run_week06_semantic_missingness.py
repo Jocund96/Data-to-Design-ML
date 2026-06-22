@@ -215,6 +215,58 @@ def add_policy_columns(
     return df
 
 
+def make_encoding_expansion_audit(
+    policy_name: str,
+    preprocessing_policy: str,
+    X_train: pd.DataFrame,
+    build,
+    fitted_preprocessor,
+) -> pd.DataFrame:
+    """Summarize train-fitted encoding and missing-indicator column expansion."""
+
+    def output_width(indexer) -> int:
+        if isinstance(indexer, slice):
+            return max(0, (indexer.stop or 0) - (indexer.start or 0))
+        return len(indexer)
+
+    output_indices = fitted_preprocessor.output_indices_
+    numeric_output_columns = output_width(
+        output_indices.get("numeric", slice(0, 0))
+    )
+    encoded_categorical_columns = sum(
+        output_width(indexer)
+        for name, indexer in output_indices.items()
+        if name.startswith("categorical_")
+    )
+    transformed_columns = len(fitted_preprocessor.get_feature_names_out())
+    numeric_source_columns = len(build.numeric_features)
+    categorical_source_columns = len(build.categorical_features)
+
+    return pd.DataFrame(
+        [
+            {
+                "policy": policy_name,
+                "preprocessing_policy": preprocessing_policy,
+                "fit_scope": "X_train_only",
+                "input_predictor_columns": X_train.shape[1],
+                "numeric_source_columns": numeric_source_columns,
+                "categorical_source_columns": categorical_source_columns,
+                "encoded_categorical_columns": encoded_categorical_columns,
+                "extra_columns_from_categorical_encoding": (
+                    encoded_categorical_columns - categorical_source_columns
+                ),
+                "extra_numeric_missing_indicator_columns": (
+                    numeric_output_columns - numeric_source_columns
+                ),
+                "total_transformed_columns": transformed_columns,
+                "net_extra_columns_after_preprocessing": (
+                    transformed_columns - X_train.shape[1]
+                ),
+            }
+        ]
+    )
+
+
 def run_policy(
     policy_name: str,
     policy_config: dict,
@@ -228,6 +280,7 @@ def run_policy(
     preprocessing_config: dict,
 ) -> tuple[
     dict,
+    pd.DataFrame,
     pd.DataFrame,
     pd.DataFrame,
     pd.DataFrame,
@@ -333,11 +386,21 @@ def run_policy(
         semantic_summary.insert(0, "policy", policy_name)
         semantic_summary.to_csv(policy_dir / "semantic_recode_summary.csv", index=False)
 
+    encoding_expansion_frames = []
     if fit_preprocessors:
         ensure_dirs(preprocessor_dir)
         for preprocessing_policy, build in preprocessing_builds.items():
             preprocessor = build.preprocessor
             preprocessor.fit(X_train, y_train)
+            encoding_expansion_frames.append(
+                make_encoding_expansion_audit(
+                    policy_name=policy_name,
+                    preprocessing_policy=preprocessing_policy,
+                    X_train=X_train,
+                    build=build,
+                    fitted_preprocessor=preprocessor,
+                )
+            )
 
             if preprocessing_policy == "grouped_ohe":
                 filename = f"week6_{policy_name}_preprocessor.joblib"
@@ -347,6 +410,17 @@ def run_policy(
                 )
 
             joblib.dump(preprocessor, preprocessor_dir / filename)
+
+    encoding_expansion = (
+        pd.concat(encoding_expansion_frames, ignore_index=True)
+        if encoding_expansion_frames
+        else pd.DataFrame()
+    )
+    if not encoding_expansion.empty:
+        encoding_expansion.to_csv(
+            policy_dir / "encoding_column_expansion.csv",
+            index=False,
+        )
 
     policy_summary = {
         "policy": policy_name,
@@ -387,6 +461,7 @@ def run_policy(
         numeric_audit,
         cardinality_report,
         preprocessing_summary,
+        encoding_expansion,
     )
 
 
@@ -457,6 +532,7 @@ def main(config_path: str) -> None:
     all_numeric_audits = []
     all_cardinality_reports = []
     all_preprocessing_summaries = []
+    all_encoding_expansion_reports = []
 
     for policy_name, policy_config in config["policies"].items():
         print(f"\nBuilding Week 6 policy: {policy_name}")
@@ -468,6 +544,7 @@ def main(config_path: str) -> None:
             numeric_audit,
             cardinality_report,
             preprocessing_summary,
+            encoding_expansion,
         ) = run_policy(
             policy_name=policy_name,
             policy_config=policy_config,
@@ -487,6 +564,8 @@ def main(config_path: str) -> None:
         all_numeric_audits.append(numeric_audit)
         all_cardinality_reports.append(cardinality_report)
         all_preprocessing_summaries.append(preprocessing_summary)
+        if not encoding_expansion.empty:
+            all_encoding_expansion_reports.append(encoding_expansion)
 
         if not semantic_summary.empty:
             all_semantic_summaries.append(semantic_summary)
@@ -520,6 +599,17 @@ def main(config_path: str) -> None:
         index=False,
     )
 
+    encoding_expansion_df = (
+        pd.concat(all_encoding_expansion_reports, ignore_index=True)
+        if all_encoding_expansion_reports
+        else pd.DataFrame()
+    )
+    if not encoding_expansion_df.empty:
+        encoding_expansion_df.to_csv(
+            tables_dir / "week06_encoding_column_expansion.csv",
+            index=False,
+        )
+
     if all_semantic_summaries:
         pd.concat(all_semantic_summaries, ignore_index=True).to_csv(
             tables_dir / "week06_policy_semantic_recode_summary.csv",
@@ -530,6 +620,21 @@ def main(config_path: str) -> None:
     print(target_summary.to_string(index=False))
     print("\nFeature policy summary:")
     print(policy_summary_df.to_string(index=False))
+    if not encoding_expansion_df.empty:
+        print("\nEncoded-column expansion (preprocessing fitted on X_train only):")
+        for row in encoding_expansion_df.itertuples(index=False):
+            print(
+                f"- {row.policy} / {row.preprocessing_policy}: categorical "
+                f"{row.categorical_source_columns} -> "
+                f"{row.encoded_categorical_columns} "
+                f"(+{row.extra_columns_from_categorical_encoding}); "
+                f"numeric missing indicators +"
+                f"{row.extra_numeric_missing_indicator_columns}; total "
+                f"{row.input_predictor_columns} -> {row.total_transformed_columns} "
+                f"(+{row.net_extra_columns_after_preprocessing})."
+            )
+    else:
+        print("\nEncoded-column expansion not calculated: preprocessor fitting is disabled.")
     print(f"\nSaved semantic cleaned file to: {semantic_cleaned_path}")
     print(f"Saved policy split folders to: {processed_dir}")
 
