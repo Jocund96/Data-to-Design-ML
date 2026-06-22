@@ -160,6 +160,35 @@ Ridge. The tuned settings are frozen before running:
 - exploratory engineering-ratio features;
 - numeric-feature VIF as a separate OLS coefficient-stability diagnostic.
 
+## Build the Week 8 publication-held-out foundation
+
+Week 8 evaluates whether the Linear Family models generalize to publications
+that were completely unseen during training. All Week 8 modules live under
+`src/s1_linear/week08/`.
+
+From `S1_Linear/`:
+
+```bash
+PYTHONPATH=src python -m s1_linear.week08.runner
+```
+
+Inside the Week 8 runner:
+
+- reconstructs a publication sidecar aligned with the exact 2,048-row Week 7
+  modeling input;
+- verifies that publication metadata is absent from model predictors;
+- creates publication-level composition, target, fiber, curing, and
+  missingness audits;
+- creates one shared size-balanced publication-held-out split;
+- saves predictor, target, and lineage files separately for every split;
+- verifies zero publication overlap between train, validation, and test;
+- tunes the four Linear Family models using publication-group cross-validation;
+- selects on held-out validation publications and evaluates the selected model
+  once on unseen test publications;
+- compares the same frozen model against the row-mixed Week 7 split;
+- runs leave-one-publication-out analysis for eligible publications;
+- saves worst-publication, worst-row, and presentation-figure outputs.
+
 Feature-policy sensitivity is intentionally skipped because Week 7 uses only
 the agreed semantic-recoded 50 percent policy.
 

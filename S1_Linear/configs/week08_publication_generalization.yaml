@@ -1,0 +1,72 @@
+data:
+  corrected_semantic_path: "data/processed/week7/semantic_recoding_features_50_corrected_2073.csv"
+  corrected_lineage_path: "data/processed/week7/semantic_recoding_features_50_corrected_lineage.csv"
+  week07_linear_ready_path: "data/processed/week7/uhpc_teammate_semantic_50_linear_ready.csv"
+  target: "cs_28d"
+  policy: "semantic_recoding_50_percent"
+  drop_predictor_columns:
+    - "Unnamed: 0"
+    - "cement_type"
+
+publication_audit:
+  minimum_rows_for_reliable_metrics: 50
+  important_numeric_features:
+    - "cement"
+    - "silica_fume"
+    - "fly_ash"
+    - "ggbfs"
+    - "slag"
+    - "water"
+    - "sand"
+    - "sp_amount"
+    - "fiber1_amount"
+    - "curing_temp"
+
+split:
+  train_size: 0.70
+  validation_size: 0.15
+  test_size: 0.15
+  random_state: 42
+  search_restarts: 200
+
+modeling:
+  tuning_config_path: "configs/week07_linear_experiments.yaml"
+  row_mixed_split_dir: "data/processed/week7/semantic_50_splits"
+  run_leave_one_publication_out: true
+
+outputs:
+  data_dir: "data/processed/week8"
+  split_dir: "data/processed/week8/publication_splits"
+  tables_dir: "reports/tables/week08"
+  modeling_data_name: "week08_modeling_data.csv"
+  modeling_lineage_name: "week08_modeling_lineage.csv"
+  linkage_audit_name: "week08_metadata_linkage_audit.csv"
+  publication_audit_name: "week08_publication_audit.csv"
+  publication_summary_name: "week08_publication_summary.csv"
+  split_manifest_name: "week08_publication_split_manifest.csv"
+  split_summary_name: "week08_publication_split_summary.csv"
+  split_leakage_audit_name: "week08_publication_split_leakage_audit.csv"
+  models_dir: "results/models/week08"
+  metrics_dir: "results/metrics/week08"
+  predictions_dir: "results/predictions/week08"
+  tuning_summary_name: "week08_publication_tuning_summary.csv"
+  tuning_cv_results_name: "week08_publication_tuning_cv_results.csv"
+  validation_metrics_name: "week08_publication_validation_metrics.csv"
+  validation_predictions_name: "week08_publication_validation_predictions.csv"
+  selected_model_name: "week08_selected_publication_model.csv"
+  frozen_config_name: "week08_frozen_publication_config.yaml"
+  final_test_metrics_name: "week08_unseen_publication_test_metrics.csv"
+  final_test_predictions_name: "week08_unseen_publication_test_predictions.csv"
+  split_comparison_name: "week08_row_mixed_vs_publication_held_out.csv"
+  lopo_metrics_name: "week08_lopo_publication_metrics.csv"
+  lopo_predictions_name: "week08_lopo_predictions.csv"
+  lopo_summary_name: "week08_lopo_micro_macro_summary.csv"
+  worst_publications_name: "week08_worst_publications.csv"
+  worst_rows_name: "week08_worst_rows.csv"
+  figures_dir: "reports/figures/week08"
+  group_size_figure: "week08_publication_group_sizes.png"
+  split_comparison_figure: "week08_row_mixed_vs_publication_held_out.png"
+  final_prediction_figure: "week08_unseen_publication_predicted_vs_actual.png"
+  lopo_ranking_figure: "week08_lopo_rmse_ranking.png"
+  lopo_bias_figure: "week08_lopo_bias.png"
+  shift_diagnostics_figure: "week08_lopo_shift_diagnostics.png"
