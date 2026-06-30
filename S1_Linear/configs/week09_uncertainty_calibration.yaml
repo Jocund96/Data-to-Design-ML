@@ -7,7 +7,7 @@ data:
   week08_frozen_config_path: "results/models/week08/week08_frozen_publication_config.yaml"
   week08_lopo_metrics_path: "results/metrics/week08/week08_lopo_publication_metrics.csv"
   target: "cs_28d"
-  policy: "semantic_recoding_50_percent"
+  policy: "shared_semantic_recoding_50_percent"
 
 calibration:
   alpha: 0.10

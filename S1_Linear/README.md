@@ -1,10 +1,16 @@
-# S1 Linear Family — Week 3 Baselines
+# S1 Linear Family
 
-This folder contains the Linear Family implementation for the Week 3 UCI Concrete baseline task.
+This folder contains the Linear Family implementation and notebooks for the
+S1 workstream.
 
 ## Important data rule
 
-Datasets are **not committed** to GitHub. Place your local CSV here:
+For final submission, I have kept the S1 input datasets and processed split CSV files
+under `data/` so the workflows can run without manual dataset setup.
+Bulky generated model artifacts remain local/ignored and are recreated by the
+runners.
+
+For the Week 3 UCI Concrete baseline, the input file lives here:
 
 ```text
 data/processed/uci_concrete_clean_engineered.csv
@@ -93,43 +99,39 @@ The script creates:
 - Week 6 audit tables in `reports/tables/`
 - Leakage-safe train-fitted preprocessors in `results/models/week6_preprocessors/`
 
-## Import the teammate-prepared UHPC dataset
+## Prepare the Shared UHPC Semantic Dataset
 
-The current-week Linear Family work uses the teammate's semantic-recoded
-**50 percent policy** representation. A correction step restores the valid row
-accidentally skipped upstream, and the import step creates the S1-owned
-modeling input.
+From Week 7 onward, the Linear Family work uses the shared
+semantic-recoded **50 percent policy** UHPC representation. Local copies live
+under:
 
-From `S1_Linear/`:
-
-```bash
-PYTHONPATH=src python scripts/run_week07_import_teammate_uhpc.py
+```text
+data/processed/shared_strategies/uhpc_semantic_50/
 ```
 
-The import script:
+The active modeling files are:
 
-- restores the one valid mix accidentally skipped upstream with
-  `scripts/run_week07_correct_semantic_dataset.py`;
-- imports the corrected S1-owned
-  `data/processed/week7/semantic_recoding_features_50_corrected_2073.csv`;
-- drops the accidental `Unnamed: 0` saved-index predictor;
-- keeps `cement_type_clean` and drops the redundant `cement_type`;
-- removes exact feature-and-target duplicate rows;
-- saves `data/processed/week7/uhpc_teammate_semantic_50_linear_ready.csv`;
-- saves lineage, column, and readiness audits in `reports/tables/`.
+- `uhpc_semantic_50_modeling.csv` for Week 7 row-mixed modeling;
+- `uhpc_semantic_50_publication_ready.csv` for Week 8/9 publication-aware
+  splitting and diagnostics.
 
-Then prepare the agreed dataset for model training:
+Prepare the shared dataset for model training:
 
 ```bash
-PYTHONPATH=src python scripts/run_week07_preprocess_teammate_uhpc.py
+PYTHONPATH=src python scripts/run_week07_preprocess_shared_uhpc.py
 ```
 
 The preprocessing script:
 
 - creates feature-hash grouped 70/15/15 train, validation, and test splits;
-- fits median imputation, missing indicators, and `StandardScaler` on numeric
-  training features only;
-- fits rare-aware one-hot encoding on categorical training features only;
+- fits median imputation and `StandardScaler` on numeric training features
+  only;
+- fits `OneHotEncoder(handle_unknown='ignore')` on the fixed low-cardinality
+  shared categorical group;
+- fits `TargetEncoder(cv=5)` on the fixed high-cardinality shared categorical
+  group and scales those encoded columns;
+- produces 60 transformed model-input columns for the shared 50 percent
+  semantic setup;
 - saves the fitted preprocessor to
   `results/models/week7_semantic_50_preprocessor.joblib`;
 - saves raw splits, transformed inspection copies, and preprocessing audits.
@@ -174,8 +176,8 @@ PYTHONPATH=src python -m s1_linear.week08.runner
 
 Inside the Week 8 runner:
 
-- reconstructs a publication sidecar aligned with the exact 2,048-row Week 7
-  modeling input;
+- derives publication lineage from the shared publication-ready dataset and
+  aligns it with the exact 2,073-row Week 7 modeling input;
 - verifies that publication metadata is absent from model predictors;
 - creates publication-level composition, target, fiber, curing, and
   missingness audits;

@@ -1,5 +1,5 @@
 data:
-  policy: "semantic_recoding_50_percent"
+  policy: "shared_semantic_recoding_50_percent"
   split_dir: "data/processed/week7/semantic_50_splits"
   target: "cs_28d"
 
@@ -30,10 +30,13 @@ enabled_models:
   - "Polynomial Ridge"
 
 preprocessing:
-  numeric_add_indicator: true
-  categorical_missing_value: "missing_reported_gap"
-  categorical_min_frequency: 5
-  categorical_max_categories: 25
+  strategy: "shared_uhpc_semantic_50"
+  numeric_add_indicator: false
+  numeric_imputer: "median"
+  numeric_scaler: "standard"
+  one_hot_encoder: "OneHotEncoder(handle_unknown='ignore')"
+  target_encoder: "TargetEncoder(cv=5)"
+  target_encoded_scaler: "standard"
 
 models:
   elastic_net:

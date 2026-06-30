@@ -1,12 +1,12 @@
 data:
-  corrected_semantic_path: "data/processed/week7/semantic_recoding_features_50_corrected_2073.csv"
-  corrected_lineage_path: "data/processed/week7/semantic_recoding_features_50_corrected_lineage.csv"
-  week07_linear_ready_path: "data/processed/week7/uhpc_teammate_semantic_50_linear_ready.csv"
+  shared_publication_ready_path: "data/processed/shared_strategies/uhpc_semantic_50/uhpc_semantic_50_publication_ready.csv"
+  week07_linear_ready_path: "data/processed/shared_strategies/uhpc_semantic_50/uhpc_semantic_50_modeling.csv"
+  publication_column: "paper_reference"
   target: "cs_28d"
-  policy: "semantic_recoding_50_percent"
+  policy: "shared_semantic_recoding_50_percent"
+  drop_exact_duplicate_rows: false
   drop_predictor_columns:
-    - "Unnamed: 0"
-    - "cement_type"
+    - "paper_reference"
 
 publication_audit:
   minimum_rows_for_reliable_metrics: 50
