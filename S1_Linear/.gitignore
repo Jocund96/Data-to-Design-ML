@@ -25,6 +25,13 @@ __pycache__/
 !/data/**/.gitkeep
 !/data/**/README.md
 
+# Final submission datasets. These are included so evaluators can run S1
+# notebooks and scripts immediately after cloning.
+!/data/raw/**
+!/data/processed/**
+!/data/interim/**
+!/data/external/**
+
 # Generated experiment outputs. Recreate them by running scripts/run_week03_linear.py.
 /reports/figures/**
 /reports/tables/**

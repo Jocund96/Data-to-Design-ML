@@ -1,0 +1,9 @@
+policy,pair,amount_col,type_col,applied,reason,amount_missing_before,type_missing_before,both_missing_before,amount_positive_type_missing_to_unknown_type,amount_zero_or_missing_type_missing_to_not_applicable,type_present_amount_missing_left_missing,amount_missing_after,type_missing_after,amount_zero_after,unknown_type_after,not_applicable_after
+full_raw,cement,Mix Constitutents | Binder | Cement Amount (kg/m³),Mix Constitutents | Binder | Cement type,True,semantic_rules_applied,0,19,0,19,0,0,0,0,0,19,0
+full_raw,fly_ash,Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Flayash Amount (kg/m³),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Fly Ash Type,True,semantic_rules_applied,0,1648,0,12,1636,0,0,0,1637,12,1636
+full_raw,slag,Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Slag Amount (kg/m³),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Type of Slag,True,semantic_rules_applied,0,1981,0,4,1977,0,0,0,1977,4,1977
+full_raw,sustainable_filler,Mix Constitutents | Sustainable Filler | Filler (kg/m³),Mix Constitutents | Sustainable Filler | Type of Filler,True,semantic_rules_applied,0,1713,0,0,1713,0,0,0,1713,0,1713
+full_raw,sand,Mix Constitutents | Sand | Amount (kg/m³),Mix Constitutents | Sand | Sand Type,True,semantic_rules_applied,0,82,0,16,66,0,0,0,66,16,66
+full_raw,fiber,Mix Constitutents | Fiber | Amount / Quantity of Fiber,Mix Constitutents | Fiber | Type of Fiber,True,semantic_rules_applied,669,669,669,0,669,0,0,0,669,0,669
+full_raw,synergetic_fiber,Mix Constitutents | Synergetic Fiber | Amount / Quantity of Fiber,Mix Constitutents | Synergetic Fiber | Type of Fiber,True,semantic_rules_applied,1955,1955,1955,0,1955,0,0,0,1955,0,1955
+full_raw,superplasticizer,Mix Constitutents | Superplasticizer | Amount (kg/m³),Mix Constitutents | Superplasticizer | Type of Superplasticizer,True,semantic_rules_applied,8,120,0,120,0,8,8,0,0,120,0

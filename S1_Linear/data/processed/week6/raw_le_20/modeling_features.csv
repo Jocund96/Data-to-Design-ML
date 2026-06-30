@@ -1,0 +1,25 @@
+feature
+Mix Constitutents | Binder | Cement Amount (kg/m³)
+Mix Constitutents | Binder | Cement type
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Silica Fume (kg/m³)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Flayash Amount (kg/m³)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Limestone Powder (kg/m3)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Quartzpowder (kg/m3)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Glass powder (kg/m3)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Rice husk ash (kg/m3)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Metakaolin (kg/m³)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | GGBFS (kg/m³)
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Slag Amount (kg/m³)
+Mix Constitutents | Nano Particles | Nano-CaCO3 (kg/m3)
+Mix Constitutents | Nano Particles | Nano-Al2O3 (kg/m3)
+Mix Constitutents | Nano Particles | Nano-TiO2 (kg/m3)
+Mix Constitutents | Nano Particles | Nano Silica (kg/m3)
+Mix Constitutents | Sustainable Filler | Filler (kg/m³)
+Mix Constitutents | Sand | Amount (kg/m³)
+Mix Constitutents | Sand | Sand Type
+Mix Constitutents | Sand | Max Size (mm)
+Mix Constitutents | Water | Amount (kg/m³)
+Mix Constitutents | Superplasticizer | Type of Superplasticizer
+Mix Constitutents | Superplasticizer | Amount (kg/m³)
+Curing Regime | Curing
+Curing Regime | Temperature (o C)

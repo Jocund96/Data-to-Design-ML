@@ -1,0 +1,30 @@
+column,missing_before,missing_after,missing_reduced_by,missing_percentage_before,missing_percentage_after
+Mix Constitutents | Binder | Cement Grade (Mpa),799,799,0,38.54317414375302,38.54317414375302
+Mix Constitutents | Fiber | Length (mm),676,676,0,32.609744331886155,32.609744331886155
+Mix Constitutents | Fiber | Diameter (mm),675,675,0,32.56150506512301,32.56150506512301
+Mix Constitutents | Fiber | Amount / Quantity of Fiber,669,0,669,32.27206946454414,0.0
+Mix Constitutents | Fiber | Type of Fiber,669,0,669,32.27206946454414,0.0
+Mix Constitutents | Sand | Max Size (mm),277,277,0,13.36227689339122,13.36227689339122
+Curing Regime | Temperature (o C),158,158,0,7.621804148576941,7.621804148576941
+Mix Constitutents | Superplasticizer | Type of Superplasticizer,120,0,120,5.788712011577424,0.0
+Mix Constitutents | Sand | Sand Type,82,0,82,3.9556198745779065,0.0
+Mix Constitutents | Binder | Cement type,19,0,19,0.9165460684997588,0.0
+Mix Constitutents | Superplasticizer | Amount (kg/m³),8,8,0,0.3859141341051616,0.3859141341051616
+Curing Regime | Curing,0,0,0,0.0,0.0
+Mix Constitutents | Binder | Cement Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano Silica (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano-Al2O3 (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano-CaCO3 (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano-TiO2 (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Sand | Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Flayash Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | GGBFS (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Glass powder (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Limestone Powder (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Metakaolin (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Quartzpowder (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Rice husk ash (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Silica Fume (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Slag Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Sustainable Filler | Filler (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Water | Amount (kg/m³),0,0,0,0.0,0.0
