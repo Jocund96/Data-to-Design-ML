@@ -1,0 +1,73 @@
+data:
+  week08_config_path: "configs/week08_publication_generalization.yaml"
+  week08_split_dir: "data/processed/week8/publication_splits"
+  week08_modeling_data_path: "data/processed/week8/week08_modeling_data.csv"
+  week08_modeling_lineage_path: "data/processed/week8/week08_modeling_lineage.csv"
+  week08_split_manifest_path: "reports/tables/week08/week08_publication_split_manifest.csv"
+  week08_frozen_config_path: "results/models/week08/week08_frozen_publication_config.yaml"
+  week08_lopo_metrics_path: "results/metrics/week08/week08_lopo_publication_metrics.csv"
+  target: "cs_28d"
+  policy: "semantic_recoding_50_percent"
+
+calibration:
+  alpha: 0.10
+  epsilon: 0.00000001
+  coverage_levels: [0.50, 0.80, 0.90, 0.95]
+  methods:
+    elastic_net_split_conformal: true
+    bayesian_ridge_native: true
+    bayesian_ridge_conformalized: true
+    elastic_net_residual_bootstrap: true
+    elastic_net_bootstrap_conformalized: true
+
+bootstrap:
+  repetitions: 300
+  random_state: 42
+
+lopo:
+  enabled: true
+  calibration_manifest_split: "validation"
+
+outputs:
+  data_dir: "data/processed/week9"
+  tables_dir: "reports/tables/week09"
+  figures_dir: "reports/figures/week09"
+  models_dir: "results/models/week09"
+  metrics_dir: "results/metrics/week09"
+  predictions_dir: "results/predictions/week09"
+
+  readiness_audit_name: "week09_input_readiness_audit.csv"
+  shared_role_manifest_name: "week09_shared_role_manifest.csv"
+  shared_role_summary_name: "week09_shared_role_summary.csv"
+  shared_leakage_audit_name: "week09_shared_leakage_audit.csv"
+  shared_calibration_quantiles_name: "week09_shared_calibration_quantiles.csv"
+  shared_metrics_name: "week09_shared_interval_metrics.csv"
+  shared_publication_metrics_name: "week09_shared_publication_interval_metrics.csv"
+  shared_predictions_name: "week09_shared_interval_predictions.csv"
+  shared_coverage_curve_name: "week09_shared_coverage_curve.csv"
+  shared_confidence_diagnostics_name: "week09_shared_confidence_diagnostics.csv"
+  shared_overconfident_rows_name: "week09_shared_overconfident_rows.csv"
+
+  lopo_role_manifest_name: "week09_lopo_role_manifest.csv"
+  lopo_role_summary_name: "week09_lopo_role_summary.csv"
+  lopo_leakage_audit_name: "week09_lopo_leakage_audit.csv"
+  lopo_calibration_quantiles_name: "week09_lopo_calibration_quantiles.csv"
+  lopo_publication_metrics_name: "week09_lopo_publication_interval_metrics.csv"
+  lopo_micro_macro_name: "week09_lopo_micro_macro_summary.csv"
+  lopo_predictions_name: "week09_lopo_interval_predictions.csv"
+  lopo_coverage_curve_name: "week09_lopo_coverage_curve.csv"
+  lopo_confidence_diagnostics_name: "week09_lopo_confidence_diagnostics.csv"
+  lopo_week08_comparison_name: "week09_lopo_week08_error_calibration_comparison.csv"
+
+  elastic_net_model_name: "week09_train_only_elastic_net.joblib"
+  bayesian_ridge_model_name: "week09_train_only_bayesian_ridge.joblib"
+  frozen_config_name: "week09_frozen_uncertainty_config.yaml"
+
+  method_coverage_width_figure: "week09_method_coverage_width.png"
+  coverage_curve_figure: "week09_coverage_curve.png"
+  publication_coverage_figure: "week09_publication_coverage.png"
+  coverage_width_figure: "week09_coverage_vs_width.png"
+  shared_interval_examples_figure: "week09_shared_interval_examples.png"
+  lopo_coverage_figure: "week09_lopo_coverage.png"
+  uncertainty_error_figure: "week09_uncertainty_vs_error.png"
+  lopo_shift_figure: "week09_lopo_shift_vs_uncertainty.png"

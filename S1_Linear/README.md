@@ -189,6 +189,24 @@ Inside the Week 8 runner:
 - runs leave-one-publication-out analysis for eligible publications;
 - saves worst-publication, worst-row, and presentation-figure outputs.
 
+## Run the Week 9 uncertainty-calibration workflow
+
+Week 9 reuses the frozen Week 8 publication split and model configuration. It
+fits models on training publications only, calibrates intervals on validation
+publications, and evaluates the unchanged test publications.
+
+From `S1_Linear/`:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m s1_linear.week09.runner
+```
+
+The runner evaluates 90% Elastic Net split-conformal intervals, native and
+conformalized Bayesian Ridge intervals, and raw and conformalized residual
+bootstrap intervals. It reports coverage, interval width, Winkler score,
+publication confidence diagnostics, and calibrated LOPO results for the six
+publications meeting the Week 8 50-row threshold.
+
 Feature-policy sensitivity is intentionally skipped because Week 7 uses only
 the agreed semantic-recoded 50 percent policy.
 
