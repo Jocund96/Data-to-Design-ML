@@ -37,6 +37,13 @@ env/
 !**/data/**/.gitkeep
 !**/data/**/README.md
 
+# Final S1 submission datasets. Keep these commit-ready so the project can run
+# after cloning without a separate local data setup.
+!S1_Linear/data/raw/**
+!S1_Linear/data/processed/**
+!S1_Linear/data/interim/**
+!S1_Linear/data/external/**
+
 # Generated reports and experiment outputs
 **/reports/figures/**
 **/reports/tables/**

@@ -47,10 +47,10 @@ We work with a concrete dataset collection to predict concrete compressive stren
 
 ## 👥 Contributors
 
-*   **Shoaib Ahmad Joo** ([@shoaib-joo](https://github.com))
-*   **Jasurbek Odilov** ([@Jacund96](https://github.com))
-*   **Brijesh** ([@BrijeshDholakiya](https://github.com))
-*   **ANMOL BHARDWAJ** ([@Anmol040](https://github.com))
+*   **Shoaib Ahmad Joo** ([@shoaib-joo](https://github.com/shoaib-joo))
+*   **Jasurbek Odilov** ([@Jocund96](https://github.com/Jocund96))
+*   **Brijesh** ([@BrijeshDholakiya](https://github.com/BrijeshDholakiya))
+*   **ANMOL BHARDWAJ** ([@Anmol040](https://github.com/Anmol040))
 
 ## 🎓 Course Info
 *   **Chair**: Data Science in Civil Engineering, Bauhaus-Universität Weimar.

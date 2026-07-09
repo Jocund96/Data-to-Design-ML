@@ -73,7 +73,7 @@ def load_week07_splits(split_dir: Path, target_col: str):
     if missing:
         raise FileNotFoundError(
             f"Missing Week 7 split files: {missing}\n"
-            "Run scripts/run_week07_preprocess_teammate_uhpc.py first."
+            "Run scripts/run_week07_preprocess_shared_uhpc.py first."
         )
 
     X_train = pd.read_csv(split_dir / "X_train.csv")

@@ -1,24 +1,31 @@
-"""Train-only preprocessing utilities for the teammate UHPC 50% dataset."""
+"""Week 7 preprocessing wrappers for the shared UHPC strategy."""
 
 from dataclasses import dataclass
 
-import numpy as np
 import pandas as pd
-from sklearn.compose import ColumnTransformer
-from sklearn.impute import SimpleImputer
-from sklearn.pipeline import Pipeline
-from sklearn.preprocessing import OneHotEncoder, StandardScaler
+
+from s1_linear.shared_strategies.uhpc_semantic_50 import (
+    SHARED_NUMERIC_FEATURES,
+    SHARED_ONE_HOT_FEATURES,
+    SHARED_TARGET_ENCODED_FEATURES,
+    build_shared_uhpc_preprocessor,
+    make_categorical_cardinality_report,
+    make_train_missingness_report,
+)
 
 
 @dataclass(frozen=True)
 class Week07PreprocessorBuild:
     """Preprocessor and train-derived feature reports."""
 
-    preprocessor: ColumnTransformer
+    preprocessor: object
     numeric_features: list[str]
     categorical_features: list[str]
+    one_hot_features: list[str]
+    target_encoded_features: list[str]
     train_missingness_report: pd.DataFrame
     categorical_cardinality_report: pd.DataFrame
+    column_contract_report: pd.DataFrame
 
 
 def make_feature_hash_groups(X: pd.DataFrame) -> pd.Series:
@@ -34,152 +41,85 @@ def make_feature_hash_groups(X: pd.DataFrame) -> pd.Series:
     return groups
 
 
-def make_train_missingness_report(X_train: pd.DataFrame) -> pd.DataFrame:
-    """Profile missingness using the training split only."""
-    rows = []
-
-    for column in X_train.columns:
-        missing_count = int(X_train[column].isna().sum())
-        rows.append(
-            {
-                "column": column,
-                "feature_type": (
-                    "numeric"
-                    if pd.api.types.is_numeric_dtype(X_train[column])
-                    else "categorical"
-                ),
-                "train_rows": len(X_train),
-                "missing_count_train": missing_count,
-                "missing_percentage_train": (
-                    missing_count / len(X_train) * 100 if len(X_train) else np.nan
-                ),
-            }
-        )
-
-    return pd.DataFrame(rows).sort_values(
-        ["missing_percentage_train", "column"],
-        ascending=[False, True],
-    )
-
-
-def make_categorical_cardinality_report(
-    X_train: pd.DataFrame,
-    categorical_features: list[str],
-    missing_value: str,
-    min_frequency: int,
-    max_categories: int,
-) -> pd.DataFrame:
-    """Profile categorical cardinality from the training split only."""
-    rows = []
-
-    for column in categorical_features:
-        filled = X_train[column].fillna(missing_value).astype(str)
-        value_counts = filled.value_counts(dropna=False)
-        rare_categories = int((value_counts < min_frequency).sum())
-
-        rows.append(
-            {
-                "column": column,
-                "missing_count_train": int(X_train[column].isna().sum()),
-                "unique_categories_train": int(filled.nunique(dropna=False)),
-                "categories_below_min_frequency": rare_categories,
-                "min_frequency": min_frequency,
-                "max_categories": max_categories,
-                "encoder": "OneHotEncoder(handle_unknown='infrequent_if_exist')",
-            }
-        )
-
-    return pd.DataFrame(rows)
-
-
 def build_week07_preprocessor(
     X_train: pd.DataFrame,
     numeric_features: list[str] | None = None,
     categorical_features: list[str] | None = None,
-    numeric_add_indicator: bool = True,
-    categorical_missing_value: str = "missing_reported_gap",
-    categorical_min_frequency: int = 5,
-    categorical_max_categories: int = 25,
+    numeric_add_indicator: bool = False,
+    categorical_missing_value: str = "unused_shared_strategy",
+    categorical_min_frequency: int = 0,
+    categorical_max_categories: int = 0,
 ) -> Week07PreprocessorBuild:
-    """Build an unfitted preprocessor using feature types found in X_train."""
+    """
+    Build an unfitted shared UHPC preprocessor.
+
+    The extra keyword arguments are accepted for backward compatibility with
+    older Week 7 configs. The shared strategy intentionally does not add
+    numeric missing indicators or rare-category grouping because those choices
+    would change the agreed transformed column count.
+    """
+    del numeric_add_indicator
+    del categorical_missing_value
+    del categorical_min_frequency
+    del categorical_max_categories
+
     if numeric_features is None:
-        numeric_features = X_train.select_dtypes(include=["number"]).columns.tolist()
-    else:
-        numeric_features = [column for column in numeric_features if column in X_train]
-
-    if categorical_features is None:
-        categorical_features = X_train.select_dtypes(exclude=["number"]).columns.tolist()
-    else:
-        categorical_features = [
-            column for column in categorical_features if column in X_train
+        numeric_features = [
+            column for column in SHARED_NUMERIC_FEATURES if column in X_train
         ]
+    if categorical_features is None:
+        one_hot_features = [
+            column for column in SHARED_ONE_HOT_FEATURES if column in X_train
+        ]
+        target_encoded_features = [
+            column for column in SHARED_TARGET_ENCODED_FEATURES if column in X_train
+        ]
+    else:
+        categorical_set = set(categorical_features)
+        one_hot_features = [
+            column
+            for column in SHARED_ONE_HOT_FEATURES
+            if column in X_train and column in categorical_set
+        ]
+        target_encoded_features = [
+            column
+            for column in SHARED_TARGET_ENCODED_FEATURES
+            if column in X_train and column in categorical_set
+        ]
+        assigned = set(one_hot_features) | set(target_encoded_features)
+        extra_categoricals = [
+            column
+            for column in categorical_features
+            if column in X_train and column not in assigned
+        ]
+        for column in extra_categoricals:
+            if X_train[column].nunique(dropna=True) <= 10:
+                one_hot_features.append(column)
+            else:
+                target_encoded_features.append(column)
 
-    if not numeric_features:
-        raise ValueError("No numeric predictors were found in the training split.")
-
-    transformers = [
-        (
-            "numeric",
-            Pipeline(
-                [
-                    (
-                        "imputer",
-                        SimpleImputer(
-                            strategy="median",
-                            add_indicator=numeric_add_indicator,
-                        ),
-                    ),
-                    ("scaler", StandardScaler()),
-                ]
-            ),
-            numeric_features,
-        )
-    ]
-
-    if categorical_features:
-        transformers.append(
-            (
-                "categorical",
-                Pipeline(
-                    [
-                        (
-                            "imputer",
-                            SimpleImputer(
-                                strategy="constant",
-                                fill_value=categorical_missing_value,
-                            ),
-                        ),
-                        (
-                            "onehot",
-                            OneHotEncoder(
-                                handle_unknown="infrequent_if_exist",
-                                min_frequency=categorical_min_frequency,
-                                max_categories=categorical_max_categories,
-                                sparse_output=False,
-                            ),
-                        ),
-                    ]
-                ),
-                categorical_features,
-            )
-        )
-
-    preprocessor = ColumnTransformer(
-        transformers=transformers,
-        remainder="drop",
-        verbose_feature_names_out=True,
-    )
-
-    return Week07PreprocessorBuild(
-        preprocessor=preprocessor,
+    shared = build_shared_uhpc_preprocessor(
+        X_train=X_train,
         numeric_features=numeric_features,
-        categorical_features=categorical_features,
-        train_missingness_report=make_train_missingness_report(X_train),
-        categorical_cardinality_report=make_categorical_cardinality_report(
-            X_train=X_train,
-            categorical_features=categorical_features,
-            missing_value=categorical_missing_value,
-            min_frequency=categorical_min_frequency,
-            max_categories=categorical_max_categories,
-        ),
+        one_hot_features=one_hot_features,
+        target_encoded_features=target_encoded_features,
     )
+    return Week07PreprocessorBuild(
+        preprocessor=shared.preprocessor,
+        numeric_features=shared.numeric_features,
+        categorical_features=shared.categorical_features,
+        one_hot_features=shared.one_hot_features,
+        target_encoded_features=shared.target_encoded_features,
+        train_missingness_report=shared.train_missingness_report,
+        categorical_cardinality_report=shared.categorical_cardinality_report,
+        column_contract_report=shared.column_contract_report,
+    )
+
+
+__all__ = [
+    "Week07PreprocessorBuild",
+    "build_week07_preprocessor",
+    "make_categorical_cardinality_report",
+    "make_feature_hash_groups",
+    "make_train_missingness_report",
+]

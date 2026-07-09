@@ -1,0 +1,400 @@
+Mix Constitutents | Binder | Cement Amount (kg/m³),Mix Constitutents | Binder | Cement type,Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Silica Fume (kg/m³),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Flayash Amount (kg/m³),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Limestone Powder (kg/m3),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Quartzpowder (kg/m3),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Glass powder (kg/m3),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Rice husk ash (kg/m3),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Metakaolin (kg/m³),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | GGBFS (kg/m³),Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Slag Amount (kg/m³),Mix Constitutents | Nano Particles | Nano-CaCO3 (kg/m3),Mix Constitutents | Nano Particles | Nano-Al2O3 (kg/m3),Mix Constitutents | Nano Particles | Nano-TiO2 (kg/m3),Mix Constitutents | Nano Particles | Nano Silica (kg/m3),Mix Constitutents | Sustainable Filler | Filler (kg/m³),Mix Constitutents | Sand | Amount (kg/m³),Mix Constitutents | Sand | Sand Type,Mix Constitutents | Sand | Max Size (mm),Mix Constitutents | Water | Amount (kg/m³),Mix Constitutents | Superplasticizer | Type of Superplasticizer,Mix Constitutents | Superplasticizer | Amount (kg/m³),Curing Regime | Curing,Curing Regime | Temperature (o C)
+448.8,High sulfate-resistant cement (Type HS cement),104.0,0.0,0.0,0.0,1003.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,520.3,quartz sand,0.6,239.0,PCE-based SP,8.8,Standard Normal Curing,23.0
+751.924,White cement,187.981,182.644,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1128.479,Locally available sand,1.2,180.46176,unknown_type,27.278,Standard curing,20.0
+581.0,"Portland cement (CEM I 42,5)",291.0,83.0,0.0,0.0,0.0,0.0,0.0,166.0,0.0,0.0,0.0,0.0,0.0,0.0,932.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),58.0,Autoclave Curing,210.0
+777.423,White cement,194.504,188.574,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1165.838,Locally available sand,1.2,178.80729,unknown_type,27.871,Standard curing,20.0
+1050.0,Type I-42.5 N Portland cement,350.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,678.0,Basalt Sand,4.75,224.0,polycarboxylate-based,42.0,Hot Water Curing,80.0
+756.0,Type I 52.5 R (C),133.2,0.0,0.0,440.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,850.0000000000001,Silica Sand,0.6,190.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+664.0,"Portland cement (CEM I 42,5)",291.0,83.0,0.0,0.0,0.0,0.0,0.0,83.0,0.0,0.0,0.0,0.0,0.0,0.0,940.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),58.0,Autoclave Curing,210.0
+900.0,Type I/II ordinary portland cement (OPC),69.0,103.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1095.0,Locally available sand,4.75,160.0,polycarboxylate-based HRWRA,44.5,Warm bath curing,90.0
+862.5,ordinary Portland cement (P.O 52.5),287.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1150.0,Quartz sand,2.36,207.0,"polycarboxylate-based high range water-reducing 
+agent (HRWR)",17.25,Standard Water Curing,25.0
+898.91,Portland cement CEM-52.5,90.99,451.2,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,451.0,silica sand,0.15,275.0,superplasticizer (SP),20.0,Air Cured,25.0
+854.0,ordinary Portland cement (P.O 42.5R),213.0,0.0,0.0,0.0,1067.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,not_applicable,,167.74,polycarboxylate-based SP with a water reduction,32.0,Standard curing,20.0
+705.0,P.I 42.5 cement,217.0,0.0,0.0,0.0,0.0,0.0,0.0,163.0,0.0,0.0,0.0,0.0,0.0,0.0,1084.7,Natural River sand,2.36,174.0,polycarboxylate-based superplasticizer (SP),5.4,steam curing,80.0
+1200.0,ordinary Portland cement Type I cement,180.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,676.29,Fine dune sand,0.6,207.0,polycarboxylic ether (PCE) based superplasticizer,48.99,Standard Curing,22.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.2307692307692,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat Curing,90.0
+890.0,Type I/II ordinary portland cement,223.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,592.0,Locally available sand,0.6,334.0,polycarboxylate based HRWRA,50.0,Warm bath curing,90.0
+640.0,CEM I-type 42.5 R,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1170.0,Quartz Sand,,135.0,HE 200 hyperplasticizer,40.0,Steam-Cured samples,65.0
+726.0,Portland cement CEM I 52.5 N,181.0,0.0,0.0,290.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,789.0,silica sand,0.3,196.9,unknown_type,23.1,Steam Curing at 150 oC,150.0
+874.9,"Ordinary Portland Cement (OPC)
+CEM I 52.5 R",43.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1098.4,Locally available sand,2.0,202.1,"polycarboxylic
+ether based superplasticiser (BASF)",45.9,Standard Curing,21.0
+890.0,Type I/II ordinary portland cement,169.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1059.0,Locally available sand,0.6,180.0,polycarboxylate based HRWRA,59.0,Heat curing,90.0
+740.0,High sulfate-resistant cement (Type HS cement),206.0,0.0,0.0,0.0,666.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,444.0,quartz sand,0.6,224.0,PCE-based SP,20.2,Hot  Curing,90.0
+800.0,PII 52.5 Portland cement,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1060.0,Natural River sand,1.25,140.0,Polycarboxylic ether based SP,38.0,Standard Curing,20.0
+784.0,Portland cement (CEM I 42.5 R),0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,16.0,0.0,1430.2,Quartz sand,2.5,160.0,superplasticizer (SP) of polycarboxilate type,36.0,Standard Curing,22.0
+890.0,Type I/II ordinary portland cement,169.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1016.0,Locally available sand,0.6,180.0,polycarboxylate based HRWRA,59.0,Moist Curing,
+500.0,"Ordinary Portland cement, with a strength class of 52.5",150.0,350.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1200.0,Natural River sand,0.3,160.0,polycarboxylate-based superplasticizer,9.8,Steam Curing,80.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,188.30769230769224,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat Curing,90.0
+971.0,"ASTM C150 Type
+III portland cement",108.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,913.0,Natural River sand + Masonary Sand,4.75,159.0,"polycarboxylate-based
+high range water reducer (HRWR)",8.6,STANDARD Curing,20.0
+580.0,OPC Type-1,73.95,406.0,0.0,24.65,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,464.0,Natural River sand,1.2,152.83,VC-2044,21.69,STANDARD Curing,23.0
+690.0,"Ordinary Portland Cement (OPC, P⋅O 52.5)",187.0,0.0,270.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,920.0,Natural River sand,0.6,204.0,PC-100 polycarboxylic ether superplasticizer (SP),41.8,Standard Curing,20.0
+574.0,Type I/II ordinary portland cement (OPC),69.0,103.0,101.0,0.0,0.0,0.0,0.0,225.0,0.0,0.0,0.0,0.0,0.0,0.0,944.0,Locally available sand,4.75,160.0,polycarboxylate-based HRWRA,44.5,Normal Curing,
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.230769230769228,0.0,0.0,4.615384615384614,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.2307692307692,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Standard Curing,20.0
+752.0,High sulfate-resistant cement (Type HS cement),104.0,0.0,0.0,226.0,555.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,451.0,quartz sand,0.6,235.0,PCE-based SP,16.4,Standard Normal Curing,23.0
+845.5,"Portland
+cement (Type I)",44.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,890.0,Natural River sand,4.75,178.0,"HRWR admixture
+was carboxylate-based",30.2,Standard Curing,21.0
+840.0,Ordinary Portland cement (P⋅O 52.5,120.0,0.0,0.0,0.0,0.0,0.0,120.0,0.0,120.0,0.0,0.0,0.0,0.0,0.0,780.0,Locally available sand,,180.0,polycarboxylate-based superplasticizer,45.0,Standard Curing,20.0
+630.0,Type I 52.5 R (C),155.4,0.0,0.0,308.00000000000006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1100.0,Silica Sand,0.6,180.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+633.835,portland cement (TypeI),63.965,465.2000000000001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1923.0,Natural River Sand,2.36,232.6,HRWRA was carboxylate-based admixture,39.41,steam curing,90.0
+700.0,P-II 52.5 cement,50.0,150.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1104.0,Natural River sand,1.25,180.0,polycarboxylic ether based superplasticizer,30.0,Standard curing,20.0
+1563.5,42.5 N ordinary Portland cement,207.4,0.0,0.0,0.0,0.0,0.0,80.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,not_applicable,,321.1,superplasticizer,55.6,Standard Curing,20.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,595.0,0.0,0.0,0.0,0.0,0.0,255.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Heat Curing,160.0
+972.0,"P.I 52.5 Portland 
+cement",271.5,0.0,0.0,87.48,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.76,Quartz sand,2.0,223.83,CX-8 superplasticizer (SP) with water-reducing,24.3,Steam curing,90.0
+475.0,Portland cement (P.I. 42.5),264.0,0.0,0.0,0.0,0.0,0.0,0.0,317.0,0.0,0.0,0.0,0.0,0.0,0.0,1056.0,Natural River sand,2.36,173.0,polycarboxylate-based superplasticizer (SP),21.1,Hot Water Curing,90.0
+770.0,CEM II 52.5 R,230.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,Silica Sand,1.25,135.5,unknown_type,35.0,Standard Curing,
+850.0,Ordinary Portland Cement,200.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1030.0,Silica sand,2.0,172.1,unknown_type,28.0,Heat curing,90.0
+850.5,Type I 52.5 R ©,155.4,0.0,0.0,352.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,750.0,Silica Sand,0.6,200.0,polycarboxylate ether-based superplasticizers (SPs),40.0,Heat Curing,90.0
+1234.4,portland cement (TypeI),308.6,607.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,not_applicable,2.36,308.6,HRWRA was carboxylate-based admixture,59.5,steam curing,90.0
+788.5,Type I Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,,160.3,polycarboxylate superplasticizer,52.6,STEAM CURING,90.0
+579.3,"ordinary Portland
+cement (CEM I 52.5 R",162.9,0.0,0.0,207.8,0.0,0.0,0.0,183.2,0.0,0.0,0.0,0.0,0.0,0.0,1029.6,Quartz sand,,216.5,"Superplasticizer (SP) is polycarboxylate ether
+polymer",7.4032,Hot Water Curing,65.0
+583.0,Type-1 ordinary Portland cement (OPC),0.0,700.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,467.0,Natural River sand,,187.0,polycarboxylate-based high-range water reducer (HRWR),11.4187,STANDARD Curing,23.0
+535.3,Ordinary Portland Cement (OPC) CEM I 42.5,214.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,321.2,1177.5,quartz sand,0.8,184.0,polycsarboxylic-acid-based superplasticizer (SP),24.5,Standard Curing,20.0
+699.0,P.I 42.5 cement,215.0,0.0,0.0,0.0,0.0,0.0,0.0,161.0,0.0,0.0,0.0,0.0,0.0,0.0,1074.8,Natural River sand,2.36,193.0,polycarboxylate-based superplasticizer (SP),5.4,steam curing,80.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,680.0,0.0,0.0,0.0,0.0,0.0,170.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Normal Curing,
+770.0,CEM II 52.5 R,230.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,Silica Sand,1.25,135.5,unknown_type,35.0,Standard Curing,
+332.0,"Portland cement (CEM I 42,5)",291.0,0.0,0.0,0.0,0.0,0.0,0.0,498.0,0.0,0.0,0.0,0.0,0.0,0.0,929.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),55.0,Autoclave Curing,210.0
+890.0,Portland Cement of 53 grade,222.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,799.0,quartz sand,0.6,222.0,"High range water reducing
+admixture",29.7,Steam Curing,70.0
+696.0,Portland cement (CEM I 42.5 R),80.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,24.0,0.0,1359.2,Quartz sand,2.5,160.0,superplasticizer (SP) of polycarboxilate type,52.0,Standard Curing,22.0
+498.0,"Portland cement (CEM I 42,5)",291.0,166.0,0.0,0.0,0.0,0.0,0.0,166.0,0.0,0.0,0.0,0.0,0.0,0.0,904.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),60.0,Autoclave Curing,210.0
+657.0,Portland cement (CEM 1) with a strength class 52.5 N,119.4,0.0,0.0,0.0,0.0,0.0,0.0,429.8,0.0,0.0,0.0,0.0,0.0,1050.0,0.0,not_applicable,,180.93,polycarboxylate-based,12.66,Standard Curing,20.0
+850.0,cement with compressive strength of 42.5 Mpa,195.5,0.0,0.0,331.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,233.75,701.25,Natural River sand,0.6,161.5,"polycarboxylate based high performance water
+reduced admixture (HPWRA)",42.5,Standard curing,20.0
+840.0,Ordinary Portland cement (P⋅O 52.5,120.0,0.0,0.0,0.0,0.0,0.0,120.0,120.0,0.0,0.0,0.0,0.0,0.0,0.0,780.0,Locally available sand,,180.0,polycarboxylate-based superplasticizer,42.0,Standard Curing,20.0
+1400.0,Ordinary Portland cement (P�O 52.5),250.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,693.0,Silica sand,0.1556,304.0,Polycarboxylate superplasticizer,40.0,STANDARD Curing,25.0
+800.0,ordinary Portland cement (OPC) I42.5,140.79999999999998,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1672.0,Natural River sand,0.6,176.0,Polycarboxilate-based superplasticizer (SP),11.28,Standard curing,20.0
+754.0,P-II 52.5 cement,18.0,306.0,0.0,0.0,0.0,0.0,72.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,951.0,Natural River sand,1.25,198.0,"polycarboxylic ether based
+superplasticizer",33.0,Standard  Curing,20.0
+796.0,Portland cement (CEM I 42.5 R),0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,4.0,0.0,1461.1,Quartz sand,2.5,160.0,superplasticizer (SP) of polycarboxilate type,25.2,Standard Curing,22.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,18.461538461538456,0.0,0.0,4.615384615384614,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.2307692307692,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Standard Curing,20.0
+580.0,OPC Type-1,73.95,406.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,464.0,Natural River sand,1.2,152.83,VC-2044,21.69,STANDARD Curing,23.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,27.692307692307686,0.0,0.0,9.230769230769228,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.2307692307692,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Standard Curing,20.0
+863.0,ordinary portland cement,216.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,845.0,Natural River sand,2.36,194.22,polycarboxylate-based superplasticizer,104.663,Standard Curing,20.0
+692.0,Portland cement type 1 (52.5 R),166.1,0.0,0.0,200.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,899.6,Silica Sand,0.6,190.5,polycarboxylate ether-based superplasticizers,36.0,Steam Curing,90.0
+432.0,P.I 42.5 Portland cement,216.0,216.0,0.0,0.0,0.0,0.0,0.0,216.0,0.0,0.0,0.0,0.0,0.0,0.0,923.0,Natural River sand,2.36,177.0,polycarboxylate-based superplasticizer (SP),16.19,Standard curing,20.0
+960.0,Ordinary Portland cement with strength grade of 42.5,288.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,quartz sand,0.6,274.56,polycarboxylate-based superplasticizer (SP,19.968000000000004,Standard Curing,22.0
+1234.4,portland cement (TypeI),308.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,639.0,Natural River Sand,2.36,308.6,HRWRA was carboxylate-based admixture,89.7,steam curing,90.0
+900.0,ordinary Portland cement (OPC) I42.5,225.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1638.0,Natural River sand,0.6,180.0,Polycarboxilate-based superplasticizer (SP),11.25,Standard curing,20.0
+583.0,Type-1 ordinary Portland cement (OPC),0.0,700.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,38.49,0.0,467.0,Natural River sand,,187.0,polycarboxylate-based high-range water reducer (HRWR),33.697995,STANDARD Curing,23.0
+1000.0,ordinary Portland cement (OPC) I42.5,176.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1390.0,Natural River sand,0.6,200.0,Polycarboxilate-based superplasticizer (SP),11.8,Standard curing,20.0
+854.0,ordinary Portland cement (P.O 42.5R),213.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1067.0,Natural River sand,1.18,167.74,polycarboxylate-based SP with a water reduction,32.0,Standard curing,20.0
+788.5,Type I Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,,160.3,polycarboxylate superplasticizer,52.6,STEAM CURING,90.0
+1092.0,Portland cement Type 1 cement,273.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,647.0,Arkansas River sand,3.0,273.0,HRWRA,30.26,heat curing,90.0
+1126.0,Type I 52.5 N Portland cement,282.0,0.0,0.0,141.0,0.0,0.0,0.0,141.0,0.0,0.0,0.0,0.0,0.0,0.0,422.0,Silica sand,0.5,245.0,Polycarboxylate ether superplasticizer,23.0,Standard Curing,22.0
+1011.0,Blast furnace slag cement III/40,58.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,79.0,883.0,Quartz Sand,0.6,162.0,polycarboxylate,50.0,Standard Curing,23.0
+640.0,CEM I-type 42.5 R,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1170.0,Quartz Sand,,135.0,HE 200 hyperplasticizer,37.5,Standard Curing,22.0
+756.0,Type I 52.5 R (C),222.0,0.0,0.0,264.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,850.0000000000001,Silica Sand,0.6,200.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+840.0,Ordinary Portland cement (P⋅O 52.5,120.0,0.0,0.0,0.0,0.0,0.0,240.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,780.0,Locally available sand,,180.0,polycarboxylate-based superplasticizer,41.0,Standard Curing,20.0
+926.4705882352944,"Portland cement (PC, P⋅II 52.5)",617.6470588235295,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,555.8823529411766,Natural River sand,0.5,324.264705882353,polycarboxylate superplasticizer from Sika,54.04411764705884,Standard Curing,20.0
+850.5,Type I 52.5 R ©,177.6,0.0,0.0,264.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,800.0,Silica Sand,0.6,200.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+897.2,"P.I 
+52.5 Portland cement",269.16,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.724,Quartz Sand,1.7,161.496,superplasticizer (SP) CX-8,22.43,steam cured,90.0
+960.0,Ordinary Portland cement with strength grade of 42.5,288.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,quartz sand,0.6,224.64,polycarboxylate-based superplasticizer (SP,22.464,Standard Curing,22.0
+972.0,"P.I 52.5 Portland 
+cement",271.5,0.0,0.0,87.48,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.76,Quartz sand,2.0,223.83,CX-8 superplasticizer (SP) with water-reducing,24.3,Steam curing,90.0
+926.4705882352944,P∙II 52.5 Portland cement (PC),308.82352941176475,0.0,308.82352941176475,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,555.8823529411766,Natural River sand,0.5,355.1470588235295,polycarboxylate superplasticizer from Sika,30.88235294117648,Steam Curing,85.0
+700.0,P-II 52.5 cement,50.0,150.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1104.0,Natural River sand,1.25,180.0,polycarboxylic ether based superplasticizer,30.0,Standard curing,20.0
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.3,160.3,polycarboxylate superplasticizer,52.6,Steam Curing,90.0
+940.0,"Portland
+cement (CEM I 42,5)",282.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1180.0,Bauxite,3.0,125.0,polycarboxylate based superplasticizer (SP),55.0,Autoclave curing,210.0
+890.0,Type I/II ordinary portland cement,169.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1016.0,Locally available sand,0.6,180.0,polycarboxylate based HRWRA,59.0,Heat curing,90.0
+926.4705882352944,"Portland cement (PC, P⋅II 52.5)",154.41176470588238,0.0,463.23529411764713,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,555.8823529411766,Natural River sand,0.5,355.1470588235295,polycarboxylate superplasticizer from Sika,30.88235294117648,Standard Curing,20.0
+788.5,Type I Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,,160.3,polycarboxylate superplasticizer,52.6,STEAM CURING,90.0
+900.0,"Ordinary Portland cement
+ASTM C150 type I",209.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,11.0,1008.0,Fine dune sand,0.6,162.0,polycarboxylic-based ether hyperplasticiser,40.0,Standard Curing,22.0
+1050.0,Type I-42.5 N Portland cement,350.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,678.0,Basalt Sand,4.75,224.0,polycarboxylate-based,42.0,Hot Water Curing,80.0
+810.0,Type I cement,220.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,90.0,1002.0,Fine dune sand,1.18,163.0,MasterGlenium51_x0003_,40.0,Standard Curing,25.0
+1000.0,ordinary Portland cement (OPC) I42.5,250.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1450.0,Natural River sand,0.6,200.0,Polycarboxilate-based superplasticizer (SP),15.0,Standard curing,20.0
+475.0,Portland cement (P.I. 42.5),264.0,0.0,0.0,0.0,0.0,0.0,0.0,317.0,0.0,0.0,0.0,0.0,0.0,0.0,1056.0,Natural River sand,2.36,173.0,polycarboxylate-based superplasticizer (SP),21.1,Standard Curing,20.0
+770.0,CEM II 52.5 R,230.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,Silica Sand,1.25,135.5,unknown_type,35.0,Standard Curing,
+687.0,"Portland cement
+(OPC) 52.5R",144.0,0.0,96.0,0.0,0.0,0.0,0.0,736.0,0.0,0.0,0.0,0.0,0.0,0.0,485.0,Silica sand,0.3,267.0,"polycarboxylate-based high-range water reducer
+(HRWR)",20.0,Normal Curing,
+472.0,Portland cement (P.I 42.5),262.0,0.0,0.0,0.0,0.0,0.0,0.0,315.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.0,Natural River sand,2.36,178.0,polycarboxylate-based superplasticizer,21.0,Standard Curing,20.0
+754.0,P-II 52.5 cement,72.0,306.0,0.0,0.0,0.0,0.0,18.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,951.0,Natural River sand,1.25,198.0,"polycarboxylic ether based
+superplasticizer",33.0,Standard  Curing,20.0
+972.0,"P.I 52.5 Portland 
+cement",271.5,0.0,0.0,87.48,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.76,Quartz sand,2.0,223.83,CX-8 superplasticizer (SP) with water-reducing,24.3,Steam curing,90.0
+1000.0,ordinary Portland cement Type I cement,150.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,976.81,Fine dune sand,0.6,172.5,polycarboxylic ether (PCE) based superplasticizer,40.83,Standard Curing,22.0
+680.0,"Portland cement (PC 42,5)",260.0,170.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,999.0,Quartz + Basalt,4.0,170.0,superplasticizer of sulfonated naphthalene formaldehyde based,45.0,Autoclave curing,210.0
+608.0,High sulfate-resistant cement (Type HS cement),158.0,0.0,0.0,114.0,547.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,684.0,quartz sand,0.6,194.0,PCE-based SP,31.6,Standard Normal Curing,23.0
+788.0,Portland Cement of Grade 53,197.0,0.0,0.0,315.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,866.8,Locally available sand,2.36,173.0,Poly-Acrylic Ester based type SP,14.77,hot air curing,200.0
+712.0,Type III Portland cement,231.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1231.0,Quartz Sand,4.75,164.0,polycarboxylate HRWR,3.772,Standard Curing,23.0
+432.0,P.I 42.5 Portland cement,216.0,216.0,0.0,0.0,0.0,0.0,0.0,216.0,0.0,0.0,0.0,0.0,0.0,0.0,923.0,Natural River sand,2.36,177.0,polycarboxylate-based superplasticizer (SP),16.19,Standard curing,20.0
+1062.0,Portland cement (CEM 1),118.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,328.0,697.0,Silica Sand,,177.0,polycarboxylate based,12.39,Standard Curing,25.0
+852.4,Portland cement,215.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.8,0.0,1079.0,Natural River sand,2.36,177.0,polycarboxylate-based superplasticizer (SP),21.6,Standard curing,20.0
+792.0,Portland cement (P.I. 42.5),264.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1056.0,Natural River sand,2.36,173.0,polycarboxylate-based superplasticizer (SP),21.1,Standard Curing,20.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,27.692307692307686,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,188.30769230769224,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat Curing,90.0
+517.5350000000001,portland cement (TypeI),63.965,581.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1994.0,Natural River Sand,2.36,232.6,HRWRA was carboxylate-based admixture,39.41,steam curing,90.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,27.692307692307686,0.0,0.0,4.615384615384614,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.2307692307692,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Standard Curing,20.0
+450.0,P.II52.5,100.0,350.0,0.0,0.0,0.0,0.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,Natural River sand,2.36,170.0,polycarboxylic ether-based superplasticizer,25.0,Standard Curing,20.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,13.846153846153843,184.61538461538456,1015.3846153846152,Silica sand,2.0,188.30769230769224,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Standard Curing,20.0
+880.0,Standard Portland pozzolan cement,220.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,833.0,Calcareous sand,0.5,172.0,unknown_type,67.0,Heat curing,90.0
+639.0,High sulfate-resistant cement (Type HS cement),222.0,0.0,0.0,240.0,160.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,Quartz sand,0.6,193.0,polycarboxylate (PCE)-based high-range water-reducing admixture (HRWRA),13.0,hot curing (HC),90.0
+640.0,CEM I-type 42.5 R,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1170.0,Quartz Sand,,135.0,HE 200 hyperplasticizer,35.0,Steam-Cured samples,65.0
+526.1,ordinary Portland cement (grade 42.5),210.5,0.0,0.0,259.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,175.4,820.8,Quartz Sand,0.15,164.2,"ploycarboxylate-based superplasticizer with water
+reducing",17.5,Warm Water Curing,90.0
+788.5,Type I Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,,160.3,polycarboxylate superplasticizer,52.6,STEAM CURING,90.0
+1000.0,ordinary Portland cement (OPC) I42.5,176.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1440.0,Natural River sand,0.6,180.0,Polycarboxilate-based superplasticizer (SP),14.1,Standard curing,20.0
+712.0,Type III Portland cement,231.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1231.0,Quartz Sand,4.75,164.0,polycarboxylate HRWR,2.7346999999999997,Standard Curing,23.0
+170.0,"Portland cement (PC 42,5)",260.0,680.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,810.0,Quartz + Basalt,4.0,170.0,superplasticizer of sulfonated naphthalene formaldehyde based,45.0,steam curing,90.0
+1076.77,"Portland
+cement (Type I)",286.22999999999996,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1363.0,Natural River sand,0.075,272.6,"HRWR admixture
+was carboxylate-based",46.2,Heat Curing,90.0
+600.0,Portland cement,200.0,0.0,0.0,0.0,700.0,0.0,0.0,700.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,not_applicable,,300.0,unknown_type,10.8,Standard Curing,20.0
+700.0,Portland cement,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,550.0,1250.0,Silica sand,0.3,225.0,"high-performance polycarboxylate 
+superplasticizer",24.8,Standard Curing,20.0
+897.2,"P.I 
+52.5 Portland cement",269.16,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.724,Quartz Sand,1.7,161.496,superplasticizer (SP) CX-8,22.43,steam cured,90.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,85.0,0.0,0.0,0.0,0.0,0.0,765.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Steam Curing,70.0
+833.0,Portland cement (US) Type I,208.25,0.0,0.0,0.0,249.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1399.44,Locally available sand,0.6,183.26,HRWR based on polycarboxylate ether,5.9976,Standard Curing,20.0
+625.0,Ordinary Portland Cement,250.0,0.0,0.0,0.0,0.0,0.0,0.0,375.0,0.0,0.0,0.0,0.0,0.0,0.0,1100.0,Silica Sand,0.3,170.0,Superplasticiser-Sika,70.0,Steam Curing,70.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,27.692307692307686,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.2307692307692,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat Curing,90.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,243.6923076923076,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat  Curing,90.0
+940.0,"Portland
+cement (CEM I 42,5)",282.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,Granite + Quartz Sand,3.0,125.0,polycarboxylate based superplasticizer (SP),61.0,Autoclave curing,210.0
+192.0,ordinary Portland cement (OPC) of 53 grades,144.0,0.0,0.0,115.0,0.0,0.0,0.0,768.0,0.0,0.0,0.0,0.0,0.0,0.0,1017.0,Quartz Sand + Normal River Sand,2.62,163.0,"polycarboxylate
+ether based superplasticiser",34.0,Heat or Oven Curing,150.0
+890.0,Type I/II ordinary portland cement,223.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,549.0,Locally available sand,0.6,334.0,polycarboxylate based HRWRA,50.0,Heat curing,90.0
+664.0,Ordinary Portland cement (CEM-I 42.5-R),195.0,166.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1030.0,Quartz Sand,3.0,151.0,"polycarboxylate-based
+superplasticizer (SP)",38.0,Autoclave curing,210.0
+655.2,ordinary Portland cement (P.O 52.5),109.0,164.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1255.8,0.0,not_applicable,,196.6,unknown_type,22.14,Steam Curing,80.0
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.3,160.3,polycarboxylate superplasticizer,52.6,steam curing,90.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,9.230769230769228,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.2307692307692,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat  Curing,90.0
+862.8,P⋅O 42.5 R Portland cement,215.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1078.5,Natural River sand,1.12,169.5,unknown_type,32.4,STANDARD Curing,
+750.0,CEM II,144.0,200.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,99.0,891.0,Natural River sand,1.25,210.0,polycarboxylic-ether based,45.0,Standard Curing,20.0
+718.0,CEM I-52.5 Portland cement,128.0,574.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,429.0,Silica sand,0.15,290.0,polycarboxylate superplasticizer,25.0,Air Cured,26.0
+1044.0,portland cement (TypeI),261.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1212.0,Natural River Sand,2.36,261.0,HRWRA was carboxylate-based admixture,44.2,steam curing,90.0
+500.0,"Ordinary Portland cement, with a strength class of 52.5",150.0,350.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1200.0,Natural River sand,0.3,160.0,polycarboxylate-based superplasticizer,9.8,Steam Curing,80.0
+807.0,High sulfate-resistant cement (Type HS cement),224.0,0.0,0.0,0.0,242.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,967.0,Quartz sand,0.6,195.0,polycarboxylate (PCE)-based high-range water-reducing admixture (HRWRA),13.0,Standard Curing,20.0
+897.2,"P.I 
+52.5 Portland cement",269.16,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.724,Quartz Sand,1.7,161.496,superplasticizer (SP) CX-8,22.43,steam cured,90.0
+960.0,Ordinary Portland cement with strength grade of 42.5,288.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,quartz sand,0.6,224.64,polycarboxylate-based superplasticizer (SP,22.464,Standard Curing,22.0
+850.0,Ordinary Portland Cement,200.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1030.0,Silica sand,2.0,170.9,unknown_type,28.0,Heat curing,90.0
+900.0,portland cement,180.0,0.0,0.0,270.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1080.0,Quartz sand,,207.0,polycarboxylate based super-plasticizer,31.5,Standard Curing,20.0
+863.0,ordinary portland cement,216.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1001.0,Natural River sand,2.36,194.22,polycarboxylate-based superplasticizer,70.135,Standard Curing,20.0
+833.0,Portland cement (US) Type I,208.25,0.0,0.0,0.0,208.25,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1074.57,Locally available sand,0.6,183.26,HRWR based on polycarboxylate ether,4.498200000000001,Standard Curing,20.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,850.0,0.0,0.0,0.0,0.0,0.0,0.0,not_applicable,0.6,170.0,"High range water reducing
+admixture",45.0,Heat Curing,160.0
+633.835,portland cement (TypeI),63.965,465.2000000000001,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1923.0,Natural River Sand,2.36,232.6,HRWRA was carboxylate-based admixture,39.41,steam curing,90.0
+498.0,"Portland cement (CEM I 42,5)",291.0,83.0,0.0,0.0,0.0,0.0,0.0,249.0,0.0,0.0,0.0,0.0,0.0,0.0,924.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),58.0,Autoclave Curing,210.0
+598.0,CEM I 52.5 N,0.0,0.0,276.0,0.0,0.0,0.0,46.0,0.0,0.0,0.0,0.0,0.0,0.0,1055.0,220.0,Quartz Sand,1.0,202.4,unknown_type,27.6,Standard Curing,20.0
+654.0,Type III portland cement,41.7,409.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,962.0,River Sand + Masonry sand + Lightweight sand,4.75,220.94000000000003,polycarboxylate-based HRWR,27.6175,Standard Curing,23.0
+332.0,"Portland cement (CEM I 42,5)",291.0,249.0,0.0,0.0,0.0,0.0,0.0,249.0,0.0,0.0,0.0,0.0,0.0,0.0,867.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),62.0,Autoclave Curing,210.0
+772.5321888412018,OPC 52.5,257.51072961373393,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1133.0472103004292,Locally available sand,0.63,185.4077253218884,polycarboxylate based superpasticizer (SP),51.502145922746784,Standard Curing,20.0
+845.5,"Portland
+cement (Type I)",44.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,890.0,Natural River sand,0.6,178.0,"HRWR admixture
+was carboxylate-based",30.2,Standard Curing,21.0
+862.8,P⋅O 42.5 R Portland cement,215.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1078.5,Natural River sand,1.12,169.5,unknown_type,32.4,STANDARD Curing,
+731.7073170731708,Portland cement (P⋅II 52.5),292.6829268292683,0.0,0.0,0.0,439.0243902439024,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,263.41,673.1707317073171,Natural River sand,0.6,210.73170731707316,"polycarboxylate-based high range 
+water reducing admixture (HRWRA)",14.0487804878049,Standard Curing,22.0
+695.9,Ordinary Portland Cement (OPC) CEM I 42.5,214.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,160.6,1177.5,quartz sand,0.8,184.0,polycsarboxylic-acid-based superplasticizer (SP),22.2,Steam Curing,80.0
+830.0,"Portland cement (CEM I 42,5)",374.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,877.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),59.0,Autoclave Curing,210.0
+960.0,Ordinary Portland cement (P⋅O 52.5,120.0,0.0,0.0,0.0,0.0,0.0,120.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,780.0,Locally available sand,,180.0,polycarboxylate-based superplasticizer,40.0,Standard Curing,20.0
+900.0,Ordinary Portland cement Type I,230.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,974.7,quartz sand,,170.1,"Plasticizer
+Glenium® 51",29.700000000000003,Standard Curing,
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,255.0,0.0,0.0,0.0,0.0,0.0,595.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Heat Curing,160.0
+900.0,"Ordinary Portland cement
+ASTM C150 type I",44.0,176.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1055.0,Fine dune sand,0.6,162.0,polycarboxylic-based ether hyperplasticiser,40.0,Standard Curing,22.0
+750.1350000000001,portland cement (TypeI),63.965,348.9,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1852.0,Natural River Sand,2.36,232.6,HRWRA was carboxylate-based admixture,39.41,steam curing,90.0
+794.0,High sulfate-resistant cement (Type HS cement),221.0,0.0,0.0,238.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,953.0,0.0,not_applicable,0.225,192.0,polycarboxylate (PCE)-based high range water-reducing admixture (HRWRA),13.0,Standard Curing,20.0
+749.0,High sulfate-resistant cement (Type HS cement),211.0,0.0,0.0,225.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,899.0,Quartz Sand,0.6,239.0,polycarboxylate (PCE)-based HRWRA,24.0,Standard Curing,23.0
+744.808,White cement,186.202,180.865,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1117.212,Locally available sand,1.2,171.30584000000002,unknown_type,26.685,Standard curing,20.0
+810.0,ordinary Portland cement,150.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,150.0,1050.0,Quartz sand,1.25,120.0,Polycarboxylate superplasticizer (SP),52.0,Heat curing,70.0
+770.0,CEM II 52.5 R,230.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,Silica Sand,1.25,135.5,unknown_type,35.0,Standard Curing,
+960.0,Portland cement type I 52.5R,240.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,649.3,Quartz Sand,2.5,234.0,polycarboxylate-based SP,96.0,Standard Curing,22.0
+818.0,Portland cement CEM I 52.5 N,204.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,899.0,silica sand,0.3,221.8,unknown_type,26.0,Steam Curing at 150 oC,150.0
+720.0,Portland cement (CEM I 42.5 R),80.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1422.9,Quartz sand,2.5,160.0,superplasticizer (SP) of polycarboxilate type,29.6,Standard Curing,22.0
+641.0,Type III portland cement,40.8,401.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,943.0,River Sand + Masonry sand + Lightweight sand,4.75,216.56,polycarboxylate-based HRWR,43.312,Standard Curing,23.0
+800.0,CEM I ordinary Portland cement of strength class 52.5 N,150.0,0.0,0.0,0.0,0.0,0.0,0.0,750.0,0.0,0.0,0.0,0.0,0.0,0.0,500.0,Silica Sand,0.18,230.0,HRWRA,25.0,Standard Curing,
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.3,160.3,polycarboxylate superplasticizer,52.6,steam curing,90.0
+850.0,Ordinary Portland Cement,200.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1030.0,Silica sand,2.0,170.9,polycarboxylic ether based water reducing admixture,28.0,Heat curing,90.0
+776.0,Type I 52.5 R ©,159.0,0.0,0.0,167.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,936.0,Silica Sand,0.6,186.0,polycarboxylate ether-based superplasticizers (SPs),31.0,Heat Curing,90.0
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.3,160.3,polycarboxylate superplasticizer,52.6,steam curing,90.0
+1020.0,Ordinary Portland cement (P⋅O 52.5,120.0,0.0,0.0,0.0,0.0,0.0,60.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,780.0,Locally available sand,,180.0,polycarboxylate-based superplasticizer,37.0,Standard Curing,20.0
+890.0,Type I/II ordinary portland cement,178.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,982.0,Locally available sand,0.6,214.0,polycarboxylate based HRWRA,50.0,Heat curing,90.0
+900.0,Ordinary Portland cement Type I,230.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,974.7,quartz sand,,198.0,"Plasticizer
+Glenium® 51",39.599999999999994,Standard Curing,
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.3,160.3,polycarboxylate superplasticizer,52.6,steam curing,90.0
+625.1,portland cement,104.2,312.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1041.9,Natural River sand,,166.7,Polycarboxylate superplasticizer powder,16.8,Steam curing,85.0
+1050.0,Type I-42.5 N Portland cement,350.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,678.0,Basalt Sand,4.75,224.0,polycarboxylate-based,42.0,Hot Water Curing,80.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,221.5384615384615,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat  Curing,90.0
+536.0,High sulfate-resistant cement (Type HS cement),153.0,0.0,0.0,0.0,520.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,919.0,quartz sand,0.6,201.0,PCE-based SP,31.3,Standard Normal Curing,23.0
+900.0,Type I Ordinary Portland Cement,220.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1005.0,quartz sand,,163.0,polycarboxylic-based ether hyperplasticiser (Glenium 51®),40.0,Standard Curing,23.0
+712.0,Type III Portland cement,231.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1231.0,Quartz Sand,4.75,164.0,polycarboxylate HRWR,2.6404000000000005,Standard Curing,23.0
+640.0,CEM I-type 42.5 R,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1170.0,Quartz Sand,,135.0,HE 200 hyperplasticizer,37.5,Hot Water Curing,80.0
+920.0,ordinary Portland cement (P.O 52.5),230.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1150.0,Quartz sand,2.36,207.0,"polycarboxylate-based high range water-reducing 
+agent (HRWR)",17.25,Standard Water Curing,25.0
+897.2,"P.I 
+52.5 Portland cement",269.16,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.724,Quartz Sand,1.7,161.496,superplasticizer (SP) CX-8,22.43,steam cured,90.0
+680.0,"Portland cement (PC 42,5)",260.0,0.0,0.0,0.0,0.0,0.0,0.0,170.0,0.0,0.0,0.0,0.0,0.0,0.0,1050.0,Quartz + Basalt,4.0,170.0,superplasticizer of sulfonated naphthalene formaldehyde based,45.0,Standard Curing,20.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,510.0,0.0,0.0,0.0,0.0,0.0,340.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Normal Curing,
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,340.0,0.0,0.0,0.0,0.0,0.0,510.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Steam Curing,70.0
+1050.0,Type I-42.5 N Portland cement,350.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,678.0,Basalt Sand,4.75,224.0,polycarboxylate-based,42.0,Hot Water Curing,80.0
+788.5,Type I Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.337,160.3,polycarboxylate superplasticizer,49.8,STEAM CURING,90.0
+850.0,ordinary Portland cement  42.5 Grade,137.5,112.5,0.0,0.0,0.0,0.0,0.0,0.0,1100.0,0.0,0.0,0.0,0.0,0.0,0.0,not_applicable,1.2,176.0,Superplasticizer,8.0,Hot Water Curing,90.0
+825.8064516129032,OPC 52.5,206.4516129032258,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1135.483870967742,Locally available sand,0.63,185.8064516129032,polycarboxylate based superpasticizer (SP),46.4516129032258,Standard Curing,20.0
+972.0,"P.I 52.5 Portland 
+cement",271.5,0.0,0.0,87.48,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.76,Quartz sand,2.0,223.83,CX-8 superplasticizer (SP) with water-reducing,24.3,Steam curing,90.0
+787.5,Type I 52.5 R (C),177.6,0.0,0.0,352.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,800.0,Silica Sand,0.6,190.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+1280.0,Portland cement Type 1 cement,320.0,292.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,not_applicable,,320.0,HRWRA,35.37,heat curing,90.0
+862.8,P⋅O 42.5 R Portland cement,215.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1078.5,Natural River sand,1.12,169.5,unknown_type,32.4,STANDARD Curing,
+472.0,Portland cement (P.I 42.5),262.0,0.0,0.0,0.0,0.0,0.0,0.0,315.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.0,Natural River sand,2.36,178.0,polycarboxylate-based superplasticizer,21.0,Standard Curing,20.0
+960.0,Ordinary Portland cement with strength grade of 42.5,288.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,quartz sand,0.6,274.56,polycarboxylate-based superplasticizer (SP,19.968000000000004,Standard Curing,22.0
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.3,160.3,polycarboxylate superplasticizer,52.6,steam curing,90.0
+631.4,ordinary Portland cement (grade 42.5),210.5,0.0,0.0,259.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,70.1,820.8,Quartz Sand,0.15,164.2,"ploycarboxylate-based superplasticizer with water
+reducing",17.5,Standard Curing,22.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,27.692307692307686,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,177.23076923076923,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Heat  Curing,90.0
+640.0,CEM I-type 42.5 R,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1170.0,Quartz Sand,,135.0,HE 200 hyperplasticizer,35.0,Standard Curing,22.0
+498.0,"Portland cement (CEM I 42,5)",110.0,249.0,0.0,0.0,0.0,0.0,0.0,83.0,0.0,0.0,0.0,0.0,0.0,0.0,1094.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),33.0,Autoclave Curing,210.0
+498.0,"Portland cement (CEM I 42,5)",291.0,0.0,0.0,0.0,0.0,0.0,0.0,332.0,0.0,0.0,0.0,0.0,0.0,0.0,945.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),55.0,Autoclave Curing,210.0
+1044.0,portland cement (TypeI),261.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1212.0,Natural River Sand,2.36,261.0,HRWRA was carboxylate-based admixture,50.4,steam curing,90.0
+800.0,Ordinary Portland cement (OPC)-type I,200.0,0.0,0.0,100.0,0.0,100.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,880.0,Silica Sand,,200.0,Polycarboxylate ether type superplastisizer,9.6,Standard Curing,20.0
+561.2,ordinary Portland cement (grade 42.5),210.5,0.0,0.0,259.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,140.3,820.8,Quartz Sand,0.15,164.2,"ploycarboxylate-based superplasticizer with water
+reducing",17.5,Warm Water Curing,90.0
+472.0,Portland cement (P.I 42.5),262.0,0.0,0.0,0.0,0.0,0.0,0.0,315.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.0,Natural River sand,2.36,178.0,polycarboxylate-based superplasticizer,21.0,Standard Curing,20.0
+880.0,Standard Portland pozzolan cement,220.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,833.0,Calcareous sand,0.5,172.0,unknown_type,67.0,Heat curing,90.0
+540.0,Type I/II ordinary portland cement (OPC),69.0,103.0,135.0,0.0,0.0,0.0,0.0,225.0,0.0,0.0,0.0,0.0,0.0,0.0,903.0,Locally available sand,4.75,160.0,polycarboxylate-based HRWRA,44.5,Normal Curing,
+833.0,Portland cement (US) Type I,208.25,0.0,0.0,0.0,208.25,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1132.88,Locally available sand,0.6,149.94,HRWR based on polycarboxylate ether,7.496999999999999,Standard Curing,20.0
+775.0,High sulfate-resistant cement (Type HS cement),223.0,0.0,0.0,233.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,930.0,Quartz Sand,0.6,215.0,polycarboxylate (PCE)-based HRWRA,13.0,Heat curing,90.0
+1044.0,portland cement (TypeI),261.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1212.0,Natural River sand,2.36,261.0,HRWRA was carboxylate-based admixture,151.7,steam curing,90.0
+807.0,High sulfate-resistant cement (Type HS cement),224.0,0.0,0.0,121.0,121.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,967.0,Quartz sand,0.6,195.0,polycarboxylate (PCE)-based high-range water-reducing admixture (HRWRA),13.0,Standard Curing,20.0
+810.0,High sulfate-resistant cement (Type HS cement),225.0,0.0,0.0,243.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,972.0,Quartz sand,0.6,196.0,"polycarboxylate (PCE)-based high-range
+water-reducing admixture (HRWRA)",13.0,Standard Curing,20.0
+580.0,OPC Type-1,73.95,406.0,0.0,24.65,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,464.0,Natural River sand,1.2,152.83,VC-2044,21.69,STANDARD Curing,23.0
+756.0,Type I 52.5 R ©,199.8,0.0,0.0,308.00000000000006,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,850.0000000000001,Silica Sand,0.6,200.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+972.0,"P.I 52.5 Portland 
+cement",271.5,0.0,0.0,87.48,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.76,Quartz sand,2.0,223.83,CX-8 superplasticizer (SP) with water-reducing,24.3,Steam curing,90.0
+926.4705882352944,"Portland cement (PC, P⋅II 52.5)",617.6470588235295,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,555.8823529411766,Natural River sand,0.5,293.3823529411765,polycarboxylate superplasticizer from Sika,77.2058823529412,Standard Curing,20.0
+877.4193548387095,OPC 52.5,154.83870967741936,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1135.483870967742,Locally available sand,0.63,185.8064516129032,polycarboxylate based superpasticizer (SP),46.4516129032258,Standard Curing,20.0
+300.0,PII 52.5 Portland cement,100.0,0.0,500.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1060.0,Natural River sand,1.25,165.0,Polycarboxylic ether based SP,38.0,Standard Curing,20.0
+692.0,"ordinary 
+Portland cement type 1(52.5 R)",0.0,0.0,0.0,200.1,0.0,0.0,0.0,206.7,0.0,0.0,0.0,0.0,0.0,0.0,899.6,Silica Sand,0.6,190.5,polycarboxylate ether based superplasticizers,36.0,Steam Curing,90.0
+562.0,High sulfate-resistant cement (Type HS cement),208.0,0.0,0.0,0.0,412.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,899.0,quartz sand,0.6,227.0,PCE-based SP,20.4,Hot  Curing,90.0
+598.0,CEM I 52.5 N,0.0,0.0,276.0,0.0,0.0,0.0,46.0,0.0,0.0,0.0,0.0,0.0,0.0,1055.0,220.0,Quartz Sand,1.0,202.4,unknown_type,27.6,Standard Curing,20.0
+920.0,OPC,276.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1012.0,Quartz sand,1.25,239.2,polycarboxylate-based superplasticizer (SP),19.14,Standard Curing,20.0
+805.0,ordinary Portland cement (PO. 52.5),0.0,345.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1150.0,quartz sand,2.36,207.0,polycarboxylate superplasticizer (Sp),17.25,Standard Curing,20.0
+700.0,Portland cement 52.5R (OPC),230.0,0.0,0.0,0.0,0.0,0.0,0.0,750.0,0.0,0.0,0.0,0.0,0.0,0.0,500.0,Silica sand,0.3,230.0,polycarboxylate-based high-range water-reducing admixture (HRWRA) from Sika Co. Ltd,45.0,STANDARD Curing,23.0
+756.0,Type I 52.5 R ©,133.2,0.0,0.0,440.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,850.0000000000001,Silica Sand,0.6,200.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica Sand,0.5,160.3,polycarboxylate superplasticizer,15.7696,Standard Curing,
+580.0,OPC Type-1,73.95,406.0,0.0,24.65,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,464.0,Natural River sand,1.2,152.83,VC-2044,21.69,STANDARD Curing,23.0
+863.2,Portland cement,215.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1079.0,Natural River sand,2.36,177.0,polycarboxylate-based superplasticizer (SP),21.6,Standard curing,20.0
+1008.0,Type I 52.5 R ©,177.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,825.0,Silica Sand,0.6,200.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Standard curing,20.0
+430.0,CEM I-52.5 Portland cement,128.0,574.0,0.0,0.0,0.0,182.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,429.0,Silica sand,0.15,290.0,polycarboxylate superplasticizer,30.0,Air Cured,25.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,425.0,0.0,0.0,0.0,0.0,0.0,425.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Steam Curing,70.0
+829.0,P.I 42.5 Portland cement,216.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,34.5,0.0,0.0,0.0,0.0,923.0,Natural River sand,2.36,177.0,polycarboxylate-based superplasticizer (SP),16.19,Standard curing,20.0
+640.0,CEM I-type 42.5 R,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1170.0,Quartz Sand,,135.0,HE 200 hyperplasticizer,35.0,Steam-Cured samples,65.0
+700.0,Ordinary type I Portland cement (OPC),100.0,0.0,0.0,0.0,0.0,0.0,0.0,200.0,0.0,0.0,0.0,0.0,0.0,0.0,1000.0,Washed sand,,230.0,polycarboxylic acid-based superplasticizer,25.0,Autoclave Curing,200.0
+857.1428571428571,"Portland cement, 42.5N",257.14285714285717,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,21.42857142857143,0.0,1285.7142857142858,Crushed limestone,,222.8571428571429,"polycarboxylic ether based, high
+range water reducing",66.85714285714285,Normal Curing,
+900.0,Ordinary Portland cement Type I,230.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,974.7,quartz sand,,198.0,"Plasticizer
+Glenium® 51",16.2,Standard Curing,
+880.0,Standard Portland pozzolan cement,220.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,833.0,Calcareous sand,0.5,172.0,unknown_type,67.0,Heat curing,90.0
+830.0,"Portland cement (CEM I 42,5)",291.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,977.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),55.0,Autoclave Curing,210.0
+756.5,"Portland
+cement (Type I)",133.5,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,890.0,Natural River sand,4.75,178.0,"HRWR admixture
+was carboxylate-based",30.2,Standard Curing,21.0
+850.5,Type I 52.5 R ©,155.4,0.0,0.0,440.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,775.0,Silica Sand,0.6,190.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Standard curing,20.0
+897.2,"P.I 
+52.5 Portland cement",269.16,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.724,Quartz Sand,1.7,161.496,superplasticizer (SP) CX-8,22.430000000000003,steam cured,90.0
+800.0,Ordinary Portland cement (OPC) 52.5R,150.0,0.0,0.0,0.0,0.0,0.0,0.0,450.0,0.0,0.0,0.0,0.0,0.0,0.0,800.0,Silica Sand,0.18,230.0,High range water reducing Admixtures,25.0,Standard Curing,
+800.0,Ordinary Portland cement (OPC)-type I,200.0,0.0,0.0,0.0,0.0,200.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,880.0,Silica Sand,,200.0,Polycarboxylate ether type superplastisizer,14.4,Standard Curing,20.0
+852.0,P.I 42.5 Portland cement,216.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,10.8,0.0,923.0,Natural River sand,2.36,177.0,polycarboxylate-based superplasticizer (SP),16.19,Standard curing,20.0
+890.0,Type I/II ordinary portland cement,223.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,592.0,Locally available sand,0.6,334.0,polycarboxylate based HRWRA,50.0,Heat curing,90.0
+874.9,"Ordinary Portland Cement (OPC)
+CEM I 52.5 R",43.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1098.4,Locally available sand,2.0,202.1,"polycarboxylic
+ether based superplasticiser (BASF)",45.9,Standard Curing,21.0
+788.5,Type 1 Portland cement,197.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,236.6,867.4,Silica sand,0.3,160.3,polycarboxylate superplasticizer,52.6,steam curing,90.0
+498.0,Ordinary Portland cement (CEM-I 42.5-R),141.0,249.0,0.0,0.0,0.0,0.0,0.0,83.0,0.0,0.0,0.0,0.0,0.0,0.0,1058.0,Quartz Sand,3.0,151.0,"polycarboxylate-based
+superplasticizer (SP)",33.0,Autoclave curing,210.0
+900.0,"Ordinary Portland cement
+ASTM C150 type I",220.0,0.0,47.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,931.0,Fine dune sand,0.6,162.0,polycarboxylic-based ether hyperplasticiser,40.0,Standard Curing,22.0
+840.0,High sulfate-resistant cement (Type HS cement),233.0,0.0,0.0,252.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1008.0,Quartz Sand,0.6,161.0,polycarboxylate (PCE)-based HRWRA,9.0,Heat curing,90.0
+623.0,High sulfate-resistant cement (Type HS cement),216.0,0.0,0.0,0.0,390.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,935.0,Quartz sand,0.6,188.0,polycarboxylate (PCE)-based high-range water-reducing admixture (HRWRA),13.0,hot curing (HC),90.0
+794.0,High sulfate-resistant cement (Type HS cement),221.0,0.0,0.0,238.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,953.0,0.0,not_applicable,0.35,192.0,polycarboxylate (PCE)-based high range water-reducing admixture (HRWRA),13.0,steam hot curing,90.0
+900.0,portland cement,180.0,0.0,0.0,270.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1080.0,Quartz sand,,207.0,polycarboxylate based super-plasticizer,31.5,Standard Curing,20.0
+960.0,Ordinary Portland cement with strength grade of 42.5,288.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,quartz sand,0.6,224.64,polycarboxylate-based superplasticizer (SP,24.96,Standard Curing,22.0
+692.0,"ordinary 
+Portland cement type 1(52.5 R)",0.0,196.0,0.0,200.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,899.6,Silica Sand,0.6,190.5,polycarboxylate ether based superplasticizers,36.0,Standard Curing,20.0
+695.9,Ordinary Portland Cement (OPC) CEM I 42.5,214.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,160.6,1177.5,quartz sand,0.8,184.0,polycsarboxylic-acid-based superplasticizer (SP),23.3,Steam Curing,80.0
+765.0,Type I/II ordinary portland cement (OPC),69.0,103.0,135.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,920.0,Locally available sand,4.75,160.0,polycarboxylate-based HRWRA,44.5,Warm bath curing,90.0
+580.0,OPC Type-1,73.95,406.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,464.0,Natural River sand,1.2,152.83,VC-2044,21.69,STANDARD Curing,23.0
+540.0,Portland cement (P·II 52.5R),108.0,432.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1296.0,Natural River sand,2.36,172.8,polycarboxylic superplasticiser,37.8,Standard Curing,20.0
+568.48,High sulfate-resistant cement (Type HS cement),104.0,0.0,0.0,0.0,507.52,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,897.0,quartz sand,0.6,239.0,PCE-based SP,12.5,Standard Normal Curing,23.0
+640.0,CEM I-type 42.5 R,214.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1170.0,Quartz Sand,,135.0,HE 200 hyperplasticizer,37.5,Hot Water Curing,80.0
+583.0,ordinary Portland cement (OPC),0.0,700.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,467.0,Locally available sand,0.045,187.0,Polycarboxylate based Superplasticizer,9.5,STANDARD Curing,20.0
+900.0,Ordinary Portland cement Type I,219.6,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1005.3,quartz sand,,162.0,"Plasticizer
+Glenium® 51",39.599999999999994,Standard Curing,
+960.0,Ordinary Portland cement with strength grade of 42.5,288.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,quartz sand,0.6,299.52,polycarboxylate-based superplasticizer (SP,9.984000000000002,Standard Curing,22.0
+792.0,Portland cement (CEM I 42.5 R),0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,8.0,0.0,1450.8,Quartz sand,2.5,160.0,superplasticizer (SP) of polycarboxilate type,28.8,Standard Curing,22.0
+890.0,Type I/II ordinary portland cement,178.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,982.0,Locally available sand,0.6,214.0,polycarboxylate based HRWRA,50.0,Heat curing,90.0
+510.0,"Portland cement (PC 42,5)",260.0,0.0,0.0,0.0,0.0,0.0,0.0,340.0,0.0,0.0,0.0,0.0,0.0,0.0,1038.0,Quartz + Basalt,4.0,170.0,superplasticizer of sulfonated naphthalene formaldehyde based,45.0,Autoclave curing,210.0
+634.0,Portland cement (P.I. 42.5),264.0,159.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1056.0,Natural River sand,2.36,173.0,polycarboxylate-based superplasticizer (SP),21.1,Standard Curing,20.0
+923.0769230769228,"ordinary type I Portland cement (OPC, P.O 52.5)",184.61538461538456,92.30769230769228,0.0,0.0,0.0,0.0,0.0,0.0,0.0,36.92307692307691,0.0,0.0,0.0,184.61538461538456,1015.3846153846152,Silica sand,2.0,188.30769230769224,"polycarboxylate-based
+high-range water-reducing admixture (HRWRA)",16.61538461538461,Standard Curing,20.0
+708.24,Type II Portland cement,233.04,0.0,0.0,210.96,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1010.88,Locally available sand,1.18,183.12,polycarboxylate-based ethers,30.72,standard curing,
+787.5,Type I 52.5 R (C),177.6,0.0,0.0,396.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,750.0,Silica Sand,0.6,210.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Heat Curing,90.0
+960.0,Ordinary Portland cement with strength grade of 42.5,288.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,960.0,quartz sand,0.6,274.56,polycarboxylate-based superplasticizer (SP,14.976,Standard Curing,22.0
+400.0,"Portland cement (PC)  with 28 days of compressive strength of
+68.9 Mpa",100.0,250.0,0.0,0.0,0.0,0.0,0.0,250.0,0.0,0.0,0.0,0.0,0.0,0.0,1200.0,quartz sand,3.0,150.0,superplasticizer with the water reducing,17.0,Steam curing,90.0
+787.5,Type I 52.5 R (C),177.6,0.0,0.0,396.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,750.0,Silica Sand,0.6,210.0,polycarboxylate ether-based superplasticizers (SPs),30.0,Standard curing,20.0
+830.0,"Portland cement (CEM I 42,5)",249.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1025.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),53.0,Autoclave Curing,210.0
+874.9,"Ordinary Portland Cement (OPC)
+CEM I 52.5 R",43.7,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1098.4,Locally available sand,2.0,202.1,"polycarboxylic
+ether based superplasticiser (BASF)",45.9,Standard Curing,21.0
+830.0,"Portland cement (CEM I 42,5)",83.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1219.0,Quartz Sand,3.0,151.0,polycarboxylate based superplasticizer (SP),38.0,Autoclave Curing,210.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,85.0,0.0,0.0,0.0,0.0,0.0,765.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Heat Curing,160.0
+972.0,"P.I 52.5 Portland 
+cement",271.5,0.0,0.0,87.48,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1049.76,Quartz sand,2.0,223.83,CX-8 superplasticizer (SP) with water-reducing,24.3,Steam curing,90.0
+700.0,Chinese standard Graded 52.5 P.II type Portland cement,140.0,0.0,0.0,0.0,0.0,0.0,0.0,110.0,0.0,0.0,0.0,0.0,0.0,0.0,1200.0,Natural River sand,2.5,152.0,PCA-I polycarboxylic type HRWR,22.8,Standard Curing,21.7
+1035.0,ordinary Portland cement (P.O 52.5),115.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1150.0,Quartz sand,2.36,207.0,"polycarboxylate-based high range water-reducing 
+agent (HRWR)",17.25,Standard Water Curing,25.0
+900.0,"Ordinary Portland cement
+ASTM C150 type I",198.0,0.0,22.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,990.0,Fine dune sand,0.6,162.0,polycarboxylic-based ether hyperplasticiser,40.0,Standard Curing,22.0
+705.0,P.I 42.5 cement,217.0,0.0,0.0,0.0,0.0,0.0,0.0,163.0,0.0,0.0,0.0,0.0,0.0,0.0,1084.7,Natural River sand,2.36,174.0,polycarboxylate-based superplasticizer (SP),5.4,steam curing,80.0
+850.0,Portland Cement of 53 grade,260.0,0.0,0.0,212.0,0.0,0.0,0.0,0.0,765.0,0.0,0.0,0.0,0.0,0.0,85.0,quartz sand,0.6,170.0,"High range water reducing
+admixture",45.0,Steam Curing,70.0
+692.0,"ordinary 
+Portland cement type 1(52.5 R)",99.7,78.4,0.0,200.1,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,899.6,Silica Sand,0.6,190.5,polycarboxylate ether based superplasticizers,36.0,Standard Curing,20.0
+780.8,"ordinary Portland
+cement (CEM I 52.5 R",162.9,0.0,0.0,207.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1029.6,Quartz sand,,216.5,"Superplasticizer (SP) is polycarboxylate ether
+polymer",9.438,Hot Water Curing,90.0
+841.0,Portland cement,215.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,21.6,0.0,1079.0,Natural River sand,2.36,177.0,polycarboxylate-based superplasticizer (SP),21.6,Standard curing,20.0
+795.4,CEM I 52.5 R HS-NA,168.6,0.0,0.0,198.4,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,971.0,Quartz sand,0.5,187.98,Superplasticizer Sika Viscorete 2810,24.1,Heat treated,90.0
+820.0,High sulfate-resistant cement (Type HS cement),228.0,0.0,0.0,246.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,984.0,Quartz Sand,0.6,168.0,polycarboxylate (PCE)-based HRWRA,26.0,Heat curing,90.0
+750.0,CEM II,144.0,200.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,220.0,792.0,Natural River sand,1.25,210.0,polycarboxylic-ether based,45.0,Standard Curing,20.0
+594.2,Ordinary Portland Cement (OPC) CEM I 52.5 R,0.0,0.0,265.3,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,24.8,0.0,1282.3,Locally available sand,2.0,176.9,polycarboxylic ether based superplasticizer,44.2,Standard Curing,21.0
+863.0,ordinary portland cement,216.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,923.0,Natural River sand,2.36,194.22,polycarboxylate-based superplasticizer,92.794,Standard Curing,20.0
+828.0,High sulfate-resistant cement (Type HS cement),230.0,0.0,0.0,248.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,994.0,Quartz Sand,0.6,159.0,polycarboxylate (PCE)-based HRWRA,27.0,Standard Curing,23.0
+900.0,Type I Ordinary Portland Cement,220.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1005.0,quartz sand,,163.0,polycarboxylic-based ether hyperplasticiser (Glenium 51®),40.0,Standard Curing,23.0
+900.0,Type I Ordinary Portland Cement,220.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,1005.0,quartz sand,,163.0,polycarboxylic-based ether hyperplasticiser (Glenium 51®),40.0,Standard Curing,23.0
+1139.2,portland cement (TypeI),284.8,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,0.0,925.0,Natural River Sand,2.36,227.84,HRWRA was carboxylate-based admixture,124.0,steam curing,90.0

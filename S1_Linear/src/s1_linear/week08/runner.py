@@ -16,6 +16,7 @@ import pandas as pd
 from s1_linear.config import load_config
 from s1_linear.week08.publication_data import (
     build_aligned_week08_data,
+    make_lineage_from_publication_column,
     make_linkage_audit_table,
     make_publication_audit,
 )
@@ -58,17 +59,27 @@ def main(config_path: str) -> None:
     modeling_config = config["modeling"]
     output_config = config["outputs"]
 
-    paths = {
-        "corrected_semantic": resolve_project_path(
-            data_config["corrected_semantic_path"]
-        ),
-        "corrected_lineage": resolve_project_path(
-            data_config["corrected_lineage_path"]
-        ),
-        "week07_linear_ready": resolve_project_path(
-            data_config["week07_linear_ready_path"]
-        ),
-    }
+    if "shared_publication_ready_path" in data_config:
+        paths = {
+            "shared_publication_ready": resolve_project_path(
+                data_config["shared_publication_ready_path"]
+            ),
+            "week07_linear_ready": resolve_project_path(
+                data_config["week07_linear_ready_path"]
+            ),
+        }
+    else:
+        paths = {
+            "corrected_semantic": resolve_project_path(
+                data_config["corrected_semantic_path"]
+            ),
+            "corrected_lineage": resolve_project_path(
+                data_config["corrected_lineage_path"]
+            ),
+            "week07_linear_ready": resolve_project_path(
+                data_config["week07_linear_ready_path"]
+            ),
+        }
     for name, path in paths.items():
         if not path.exists():
             raise FileNotFoundError(f"Required {name} file not found: {path}")
@@ -91,8 +102,15 @@ def main(config_path: str) -> None:
     ):
         directory.mkdir(parents=True, exist_ok=True)
 
-    semantic_df = pd.read_csv(paths["corrected_semantic"])
-    lineage_df = pd.read_csv(paths["corrected_lineage"])
+    if "shared_publication_ready" in paths:
+        semantic_df = pd.read_csv(paths["shared_publication_ready"])
+        lineage_df = make_lineage_from_publication_column(
+            semantic_df,
+            data_config.get("publication_column", "paper_reference"),
+        )
+    else:
+        semantic_df = pd.read_csv(paths["corrected_semantic"])
+        lineage_df = pd.read_csv(paths["corrected_lineage"])
     week07_linear_ready_df = pd.read_csv(paths["week07_linear_ready"])
     modeling_df, modeling_lineage, linkage_audit = build_aligned_week08_data(
         semantic_df=semantic_df,
@@ -100,6 +118,7 @@ def main(config_path: str) -> None:
         target_col=data_config["target"],
         drop_predictor_columns=data_config["drop_predictor_columns"],
         week07_linear_ready_df=week07_linear_ready_df,
+        drop_exact_duplicate_rows=data_config.get("drop_exact_duplicate_rows", True),
     )
 
     modeling_df.to_csv(data_dir / output_config["modeling_data_name"], index=False)

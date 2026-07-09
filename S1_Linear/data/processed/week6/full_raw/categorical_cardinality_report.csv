@@ -1,0 +1,10 @@
+policy,column,missing_count_train,missing_fraction_train,unique_categories_train,cardinality_bucket,encoder_policy,low_cardinality_max,medium_cardinality_max
+full_raw,Mix Constitutents | Binder | Cement type,0,0.0,133,high,domain_grouping_then_rare_category_onehot,10,20
+full_raw,Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Fly Ash Type,0,0.0,8,low,onehot_ignore_unknown,10,20
+full_raw,Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Type of Slag,0,0.0,6,low,onehot_ignore_unknown,10,20
+full_raw,Mix Constitutents | Sustainable Filler | Type of Filler,0,0.0,20,medium,rare_category_onehot,10,20
+full_raw,Mix Constitutents | Sand | Sand Type,0,0.0,28,high,domain_grouping_then_rare_category_onehot,10,20
+full_raw,Mix Constitutents | Fiber | Type of Fiber,0,0.0,45,high,domain_grouping_then_rare_category_onehot,10,20
+full_raw,Mix Constitutents | Synergetic Fiber | Type of Fiber,0,0.0,14,medium,rare_category_onehot,10,20
+full_raw,Mix Constitutents | Superplasticizer | Type of Superplasticizer,0,0.0,120,high,domain_grouping_then_rare_category_onehot,10,20
+full_raw,Curing Regime | Curing,0,0.0,42,high,domain_grouping_then_rare_category_onehot,10,20

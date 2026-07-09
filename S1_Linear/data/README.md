@@ -1,11 +1,19 @@
-# Local data folder
+# S1 Data Folder
 
-Do not push datasets to GitHub.
+For final submission, the S1 raw and processed datasets are included so the
+notebooks and runners can execute after cloning the repository.
 
-Place the local Week 3 dataset here:
+The Week 3 UCI Concrete input is:
 
 ```text
 S1_Linear/data/processed/uci_concrete_clean_engineered.csv
 ```
 
-The file may contain engineered Week 2 columns, but the Week 3 configuration uses only the original eight concrete features.
+The Week 7 onward shared UHPC semantic dataset is:
+
+```text
+S1_Linear/data/processed/shared_strategies/uhpc_semantic_50/
+```
+
+Generated model artifacts under `results/models/` remain ignored and can be
+recreated by running the scripts.

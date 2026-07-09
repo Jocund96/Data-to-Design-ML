@@ -1,0 +1,43 @@
+column,missing_before,missing_after,missing_reduced_by,missing_percentage_before,missing_percentage_after
+Curing Regime | Pressure (MPa),2073,2073,0,100.0,100.0
+"Mix Constitutents | Synergetic Fiber | Nominal Young’s modulus, Gpa",2015,2015,0,97.20212252773757,97.20212252773757
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Type of Slag,1981,0,1981,95.56198745779064,0.0
+Mix Constitutents | Synergetic Fiber | Tensile Strength (MPa),1981,1981,0,95.56198745779064,95.56198745779064
+Mix Constitutents | Synergetic Fiber | Amount / Quantity of Fiber,1955,0,1955,94.30776652194886,0.0
+Mix Constitutents | Synergetic Fiber | Diameter (mm),1955,1955,0,94.30776652194886,94.30776652194886
+Mix Constitutents | Synergetic Fiber | Length (mm),1955,1955,0,94.30776652194886,94.30776652194886
+Mix Constitutents | Synergetic Fiber | Type of Fiber,1955,0,1955,94.30776652194886,0.0
+"Mix Constitutents | Fiber | Nominal Young’s modulus, Gpa",1741,1741,0,83.98456343463579,83.98456343463579
+Mix Constitutents | Sustainable Filler | Type of Filler,1713,0,1713,82.63386396526772,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Fly Ash Type,1648,0,1648,79.49831162566329,0.0
+Curing Regime | Humidity (%),1235,1235,0,59.57549445248432,59.57549445248432
+Mix Constitutents | Fiber | Tensile Strength (MPa),1182,1182,0,57.01881331403763,57.01881331403763
+Mix Constitutents | Binder | Cement Grade (Mpa),799,799,0,38.54317414375302,38.54317414375302
+Mix Constitutents | Fiber | Length (mm),676,676,0,32.609744331886155,32.609744331886155
+Mix Constitutents | Fiber | Diameter (mm),675,675,0,32.56150506512301,32.56150506512301
+Mix Constitutents | Fiber | Amount / Quantity of Fiber,669,0,669,32.27206946454414,0.0
+Mix Constitutents | Fiber | Type of Fiber,669,0,669,32.27206946454414,0.0
+Mix Constitutents | Sand | Max Size (mm),277,277,0,13.36227689339122,13.36227689339122
+Curing Regime | Temperature (o C),158,158,0,7.621804148576941,7.621804148576941
+Mix Constitutents | Superplasticizer | Type of Superplasticizer,120,0,120,5.788712011577424,0.0
+Mix Constitutents | Sand | Sand Type,82,0,82,3.9556198745779065,0.0
+Mix Constitutents | Binder | Cement type,19,0,19,0.9165460684997588,0.0
+Mix Constitutents | Superplasticizer | Amount (kg/m³),8,8,0,0.3859141341051616,0.3859141341051616
+Curing Regime | Curing,0,0,0,0.0,0.0
+Mix Constitutents | Binder | Cement Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano Silica (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano-Al2O3 (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano-CaCO3 (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Nano Particles | Nano-TiO2 (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Sand | Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Flayash Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | GGBFS (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Glass powder (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Limestone Powder (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Metakaolin (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Quartzpowder (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Rice husk ash (kg/m3),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Silica Fume (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Slag Amount (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Sustainable Filler | Filler (kg/m³),0,0,0,0.0,0.0
+Mix Constitutents | Water | Amount (kg/m³),0,0,0,0.0,0.0

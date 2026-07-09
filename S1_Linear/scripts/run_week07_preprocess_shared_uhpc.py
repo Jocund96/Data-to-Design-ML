@@ -1,5 +1,5 @@
 """
-Week 7 - Split, scale, and encode the teammate semantic-recoded 50% UHPC data.
+Week 7 - Split, scale, and encode the shared semantic-recoded 50% UHPC data.
 
 The preprocessor is fitted on X_train only. Validation and test data only call
 transform, preventing imputation, scaling, and category-learning leakage.
@@ -21,6 +21,7 @@ import pandas as pd
 from sklearn.model_selection import GroupShuffleSplit
 
 from s1_linear.config import load_config
+from s1_linear.shared_strategies import normalize_shared_uhpc_semantic_50
 from s1_linear.week07_preprocessing import (
     build_week07_preprocessor,
     make_feature_hash_groups,
@@ -159,11 +160,15 @@ def main(config_path: str) -> None:
 
     if not input_path.exists():
         raise FileNotFoundError(
-            f"Imported teammate dataset not found: {input_path}\n"
-            "Run scripts/run_week07_import_teammate_uhpc.py first."
+            f"Shared semantic dataset not found: {input_path}\n"
+            "Prepare the shared semantic 50% dataset before running preprocessing."
         )
 
-    df = pd.read_csv(input_path)
+    df = normalize_shared_uhpc_semantic_50(
+        pd.read_csv(input_path),
+        target_col=target_col,
+        keep_publication=False,
+    )
     if target_col not in df.columns:
         raise ValueError(f"Target column not found: {target_col}")
 
@@ -183,23 +188,28 @@ def main(config_path: str) -> None:
     preprocessing_config = config["preprocessing"]
     build = build_week07_preprocessor(
         X_train=X_train,
-        numeric_add_indicator=preprocessing_config["numeric_add_indicator"],
-        categorical_missing_value=preprocessing_config[
-            "categorical_missing_value"
-        ],
-        categorical_min_frequency=preprocessing_config[
-            "categorical_min_frequency"
-        ],
-        categorical_max_categories=preprocessing_config[
-            "categorical_max_categories"
-        ],
+        numeric_add_indicator=preprocessing_config.get("numeric_add_indicator", False),
+        categorical_missing_value=preprocessing_config.get(
+            "categorical_missing_value",
+            "unused_shared_strategy",
+        ),
+        categorical_min_frequency=preprocessing_config.get(
+            "categorical_min_frequency",
+            0,
+        ),
+        categorical_max_categories=preprocessing_config.get(
+            "categorical_max_categories",
+            0,
+        ),
     )
 
     preprocessor = build.preprocessor
-    Xt_train = preprocessor.fit_transform(X_train)
+    Xt_train = preprocessor.fit_transform(X_train, y_train)
     Xt_val = preprocessor.transform(X_val)
     Xt_test = preprocessor.transform(X_test)
     feature_names = preprocessor.get_feature_names_out().tolist()
+    column_contract_report = build.column_contract_report.copy()
+    column_contract_report["final_transformed_columns_total"] = len(feature_names)
 
     split_dir.mkdir(parents=True, exist_ok=True)
     transformed_dir.mkdir(parents=True, exist_ok=True)
@@ -258,18 +268,12 @@ def main(config_path: str) -> None:
                 "categorical_predictors": len(build.categorical_features),
                 "transformed_predictors": len(feature_names),
                 "numeric_imputer": preprocessing_config["numeric_imputer"],
-                "numeric_missing_indicators": preprocessing_config[
-                    "numeric_add_indicator"
-                ],
+                "numeric_missing_indicators": False,
                 "numeric_scaler": "StandardScaler",
-                "categorical_missing_value": preprocessing_config[
-                    "categorical_missing_value"
-                ],
-                "categorical_encoder": (
-                    "OneHotEncoder(handle_unknown='infrequent_if_exist', "
-                    f"min_frequency={preprocessing_config['categorical_min_frequency']}, "
-                    f"max_categories={preprocessing_config['categorical_max_categories']})"
-                ),
+                "one_hot_predictors": len(build.one_hot_features),
+                "target_encoded_predictors": len(build.target_encoded_features),
+                "categorical_missing_value": "preserved_for_shared_strategy",
+                "categorical_encoder": "OneHotEncoder(handle_unknown='ignore') + TargetEncoder(cv=5)",
                 "preprocessor_fit_rows": len(X_train),
                 "remaining_nan_train": int(np.isnan(Xt_train).sum()),
                 "remaining_nan_validation": int(np.isnan(Xt_val).sum()),
@@ -298,8 +302,13 @@ def main(config_path: str) -> None:
         tables_dir / config["outputs"]["missingness_report_name"],
         index=False,
     )
+    if "column_contract_name" in config["outputs"]:
+        column_contract_report.to_csv(
+            tables_dir / config["outputs"]["column_contract_name"],
+            index=False,
+        )
 
-    print("Week 7 teammate 50% preprocessing complete.")
+    print("Week 7 shared 50% preprocessing complete.")
     print("\nSplit summary:")
     print(split_summary.to_string(index=False))
     print("\nPreprocessing summary:")
@@ -309,11 +318,11 @@ def main(config_path: str) -> None:
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(
-        description="Prepare the teammate semantic-recoded 50% UHPC dataset."
+        description="Prepare the shared semantic-recoded 50% UHPC dataset."
     )
     parser.add_argument(
         "--config",
-        default="configs/week07_teammate_uhpc_preprocessing.yaml",
+        default="configs/week07_shared_preprocessing.yaml",
         help="Config path relative to S1_Linear by default.",
     )
     args = parser.parse_args()

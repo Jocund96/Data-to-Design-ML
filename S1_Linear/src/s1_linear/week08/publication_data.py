@@ -41,12 +41,37 @@ def normalize_text_values(df: pd.DataFrame) -> pd.DataFrame:
     return normalized
 
 
+def make_lineage_from_publication_column(
+    semantic_df: pd.DataFrame,
+    publication_column: str,
+) -> pd.DataFrame:
+    """Create Week 8 lineage from a publication column in the shared dataset."""
+    if publication_column not in semantic_df:
+        raise ValueError(f"Publication column is missing: {publication_column}")
+
+    publication = semantic_df[publication_column].astype("object")
+    lineage = pd.DataFrame(
+        {
+            "semantic_row_id": np.arange(len(semantic_df)),
+            "publication_reference_id": publication,
+            "publication_source": "shared_semantic_dataset",
+            "publication_country": np.nan,
+            "publication_year": np.nan,
+            "publication_group": publication,
+        }
+    )
+    if lineage["publication_group"].isna().any():
+        raise ValueError("Publication groups contain missing values in shared data.")
+    return lineage
+
+
 def build_aligned_week08_data(
     semantic_df: pd.DataFrame,
     lineage_df: pd.DataFrame,
     target_col: str,
     drop_predictor_columns: list[str],
     week07_linear_ready_df: pd.DataFrame | None = None,
+    drop_exact_duplicate_rows: bool = True,
 ) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, object]]:
     """
     Build predictor and metadata tables with identical row alignment.
@@ -77,7 +102,10 @@ def build_aligned_week08_data(
     modeling[target_col] = pd.to_numeric(modeling[target_col], errors="coerce")
 
     valid_target_mask = modeling[target_col].notna()
-    exact_duplicate_mask = modeling.duplicated(keep="first")
+    if drop_exact_duplicate_rows:
+        exact_duplicate_mask = modeling.duplicated(keep="first")
+    else:
+        exact_duplicate_mask = pd.Series(False, index=modeling.index)
     keep_mask = valid_target_mask & ~exact_duplicate_mask
 
     modeling = modeling.loc[keep_mask].reset_index(drop=True)
@@ -106,6 +134,11 @@ def build_aligned_week08_data(
         "lineage_source_rows": len(lineage_df),
         "rows_with_missing_target_removed": int((~valid_target_mask).sum()),
         "exact_duplicate_rows_removed": int(exact_duplicate_mask.sum()),
+        "exact_duplicate_rows_kept_by_policy": int(
+            modeling.duplicated(keep=False).sum()
+        )
+        if not drop_exact_duplicate_rows
+        else 0,
         "week08_modeling_rows": len(modeling),
         "week08_modeling_columns_including_target": modeling.shape[1],
         "week08_lineage_rows": len(lineage),

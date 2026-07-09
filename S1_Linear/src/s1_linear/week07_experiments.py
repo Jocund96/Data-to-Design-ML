@@ -52,8 +52,8 @@ def detect_fiber_group(X: pd.DataFrame) -> pd.Series:
     """
     Detect whether fiber was used in each mix.
 
-    Supports both the long Week 6 column names and the simplified teammate
-    columns used in Week 7.
+    Supports both the long Week 6 column names and the simplified shared
+    columns used from Week 7 onward.
     """
     amount_columns = _matching_columns(
         X,
