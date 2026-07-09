@@ -1,0 +1,94 @@
+data:
+  week09_config_path: "configs/week09_uncertainty_calibration.yaml"
+  target: "cs_28d"
+  policy: "shared_semantic_recoding_50_percent"
+
+model:
+  model_name: "Elastic Net"
+  source: "week09_train_only_shared_publication_pipeline"
+  evaluation_scheme: "shared_publication_held_out"
+  evaluation_fold: "shared_publication_test"
+
+shap:
+  prefer_shap_package: true
+  background: "training_publications"
+  fallback_method: "independent_linear_formula"
+  additive_tolerance: 0.000001
+
+permutation:
+  n_repeats: 30
+  random_state: 42
+  scoring: "rmse_delta"
+
+agreement:
+  top_k_features: 10
+  top_k_groups: 3
+
+feature_groups:
+  binders_and_scms:
+    - "cement"
+    - "cement_type"
+    - "silica_fume"
+    - "fly_ash"
+    - "fly_ash_type"
+    - "limestone_powder"
+    - "quartz_powder"
+    - "glass_powder"
+    - "rice_husk_ash"
+    - "metakaolin"
+    - "ggbfs"
+    - "slag"
+    - "slag_type"
+    - "nano_caco3"
+    - "nano_al2o3"
+    - "nano_tio2"
+    - "nano_sio2"
+  fillers_and_aggregates:
+    - "filler"
+    - "filler_type"
+    - "sand"
+    - "sand_type"
+    - "sand_max_size"
+  fibers:
+    - "fiber1_type"
+    - "fiber1_amount"
+    - "fiber1_length"
+    - "fiber1_diameter"
+    - "fiber2_type"
+    - "fiber2_amount"
+  water:
+    - "water"
+  chemical_admixtures:
+    - "sp_type"
+    - "sp_amount"
+  curing:
+    - "curing_method"
+    - "curing_temp"
+
+outputs:
+  tables_dir: "reports/tables/week10"
+  figures_dir: "reports/figures/week10"
+  predictions_dir: "results/predictions/week10"
+  metrics_dir: "results/metrics/week10"
+
+  readiness_audit_name: "week10_readiness_audit.csv"
+  transformed_mapping_name: "week10_transformed_to_original_mapping.csv"
+  feature_group_mapping_name: "week10_feature_group_mapping.csv"
+  shap_prediction_audit_name: "week10_shap_prediction_additivity_audit.csv"
+  shap_transformed_importance_name: "week10_shap_transformed_importance.csv"
+  shap_original_importance_name: "week10_shap_original_feature_importance.csv"
+  shap_group_importance_name: "week10_shap_group_importance.csv"
+  shap_original_values_name: "week10_shap_original_feature_values.csv"
+  shap_group_values_name: "week10_shap_group_values.csv"
+
+  feature_permutation_name: "week10_feature_permutation_importance.csv"
+  feature_permutation_repeats_name: "week10_feature_permutation_repeats.csv"
+  group_permutation_name: "week10_group_permutation_importance.csv"
+  group_permutation_repeats_name: "week10_group_permutation_repeats.csv"
+  shap_permutation_agreement_name: "week10_shap_permutation_agreement.csv"
+
+  shap_original_figure: "week10_top_original_shap.png"
+  shap_group_figure: "week10_group_shap.png"
+  feature_permutation_figure: "week10_feature_permutation_importance.png"
+  group_permutation_figure: "week10_group_permutation_importance.png"
+  rank_agreement_figure: "week10_shap_vs_permutation_rank.png"

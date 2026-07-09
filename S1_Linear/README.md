@@ -222,3 +222,32 @@ The executed explanatory notebook is:
 ```text
 notebooks/week07_linear_family_results.ipynb
 ```
+
+## Run the Week 10 feature-attribution workflow
+
+Week 10 reuses the Week 9 train-only pipeline and explains the held-out
+publication-test predictions for the selected Linear Family model.
+
+From `S1_Linear/`:
+
+```bash
+PYTHONPATH=src .venv/bin/python -m s1_linear.week10.runner
+```
+
+The runner saves readiness checks, transformed-to-original feature mapping,
+original-feature SHAP attribution, group-level SHAP attribution, held-out
+feature permutation importance, group permutation importance, and
+SHAP/permutation ranking agreement.
+
+Outputs are written under:
+
+- `reports/tables/week10/`
+- `reports/figures/week10/`
+- `results/predictions/week10/`
+- `results/metrics/week10/`
+
+The `shap` package is included in `requirements.txt` for this workflow. The
+runner uses `shap.LinearExplainer` for the fitted linear pipeline and records
+the method in `reports/tables/week10/week10_readiness_audit.csv`. If SHAP is
+unavailable in a local environment, the runner falls back to the exact
+independent linear attribution formula so the workflow can still be audited.
