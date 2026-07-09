@@ -58,6 +58,38 @@ def calibration_table(intervals):
     ).reset_index()
 
 
+def plot_interval_band(intervals, title="Prediction Intervals", ax=None):
+    """Sort test points by predicted value; shade the conformal band; colour dots by coverage."""
+    import matplotlib.pyplot as plt
+
+    df = intervals.sort_values("prediction").reset_index(drop=True)
+    covered = (df["true"] >= df["lower"]) & (df["true"] <= df["upper"])
+    coverage = covered.mean()
+    x = df["prediction"].values
+
+    own_fig = ax is None
+    if own_fig:
+        _, ax = plt.subplots(figsize=(10, 5))
+
+    ax.fill_between(x, df["lower"].values, df["upper"].values,
+                    alpha=0.20, color="steelblue", label="Interval [ŷ ± q]")
+    ax.plot(x, x, color="steelblue", linewidth=1.2, linestyle="--", label="Predicted")
+    ax.scatter(x[covered.values], df.loc[covered, "true"].values,
+               color="seagreen", s=20, zorder=3, label="True (in)")
+    ax.scatter(x[~covered.values], df.loc[~covered, "true"].values,
+               color="tomato", s=20, zorder=3, marker="x", linewidths=1.2, label="True (out)")
+
+    ax.set_xlabel("Predicted compressive strength (MPa)", fontsize=10)
+    ax.set_ylabel("Compressive strength (MPa)", fontsize=10)
+    ax.set_title(f"{title}  —  coverage {coverage:.1%}", fontsize=11)
+    ax.legend(fontsize=8)
+    ax.grid(True, linestyle="--", alpha=0.35)
+
+    if own_fig:
+        plt.tight_layout()
+        plt.show()
+
+
 def run_conformal(model_cls, model_key, results, param_key, preprocessor,
                   X_train, y_train, X_val, y_val, X_test, y_test, pub_test,
                   kernel_kwargs=None, alpha=0.90, n_neighbors=5):

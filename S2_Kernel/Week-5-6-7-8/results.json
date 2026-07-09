@@ -18,20 +18,20 @@
     },
     "recoded_50": {
       "knn": {
-        "model__metric": "minkowski",
+        "model__metric": "manhattan",
         "model__n_neighbors": 3,
-        "model__p": 1,
+        "model__p": 3,
         "model__weights": "distance"
       },
       "svr": {
-        "model__C": 1024,
+        "model__C": 512,
         "model__epsilon": 3,
         "model__gamma": "scale"
       },
       "nusvr": {
-        "model__C": 1024,
+        "model__C": 512,
         "model__gamma": "scale",
-        "model__nu": 0.4
+        "model__nu": 0.5
       }
     }
   }
