@@ -1,3 +1,0 @@
-Targeted experiment
-50% =  Global R2: 0.5631173186612612
-20% =  Global R2: 0.5360038912910644
