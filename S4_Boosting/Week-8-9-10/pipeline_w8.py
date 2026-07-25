@@ -63,7 +63,6 @@ class CuringRegimeImputer(BaseEstimator, TransformerMixin):
 
         return X_copy
 
-
 # Pipeline
 def preprocessing_pipeline(one_hot_encode_cols, target_encode_cols, numeric_features, estimator=XGBRegressor(random_state=42)):
     
@@ -94,9 +93,10 @@ def preprocessing_pipeline(one_hot_encode_cols, target_encode_cols, numeric_feat
 
     # Master Pipeline
     pipeline = Pipeline(steps=[
-        ('curing_logic', CuringRegimeImputer()), # Safely handles temp, humid, and pressure if present
+        ('curing_logic', CuringRegimeImputer()), # Safely handles temp, humid, and pressure
         ('preprocessor', preprocessor),
         ('model', estimator)
+
     ])
     
     return pipeline

@@ -1,0 +1,4 @@
+Evaluation Method,XGBoost Coverage (%),XGBoost Avg Width (MPa),HistGB Coverage (%),HistGB Avg Width (MPa)
+Random Split,91.32,71.62,87.78,51.93
+Publication Group Split,98.94,118.38,99.29,112.02
+LOPO (P > 50 rows),84.07,112.98,90.71,109.68
