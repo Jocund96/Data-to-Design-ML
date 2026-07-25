@@ -1,3 +1,5 @@
+"""Dataset loading, scaling, evaluation, and results-saving helpers."""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -7,6 +9,7 @@ from sklearn.svm import SVR, NuSVR
 import seaborn as sns
 
 def load_data():
+    """Load the processed train/val/test feature and target CSVs."""
     X_train = pd.read_csv('../Datasets/processed/X_train.csv')
     X_val   = pd.read_csv('../Datasets/processed/X_val.csv')
     X_test  = pd.read_csv('../Datasets/processed/X_test.csv')
@@ -18,6 +21,7 @@ def load_data():
     
     
 def scale_data(X_train, X_val, X_test, data_scaler = 'RobustScaler'):
+    """Fit a scaler on X_train and apply it to train/val/test sets."""
     if data_scaler == 'RobustScaler':
         scaler = RobustScaler()
     else:
@@ -31,6 +35,7 @@ def scale_data(X_train, X_val, X_test, data_scaler = 'RobustScaler'):
     return X_train, X_val, X_test, scaler
 
 def evaluate_model(model_name,y_train,y_train_predicted,y_test,y_test_predicted):
+    """Compute and print MAE, RMSE, R, and R² for test predictions, returning them as a dict."""
     mae  = mean_absolute_error(y_test, y_test_predicted)
     rmse = np.sqrt(mean_squared_error(y_test, y_test_predicted))
     r2   = r2_score(y_test, y_test_predicted)
@@ -49,42 +54,12 @@ def evaluate_model(model_name,y_train,y_train_predicted,y_test,y_test_predicted)
     return {'model': model_name, 'Total Samples':total_samples, 'Test Samples': n_samples, 'MAE': mae, 'RMSE': rmse, 'R': r, 'R2': r2}
 
 def save_results(results_dict, filename):
+    """Save a results dict as a single-row CSV under ./results/."""
     pd.DataFrame([results_dict]).to_csv(f'./results/{filename}', index=False)
     print(f"Results saved to results/{filename}")
 
 
-def plot_residuals(model_name, y_test, y_pred):
-    residuals = y_test - y_pred
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 4))
-
-    axes[0].scatter(y_pred, residuals, alpha=0.5)
-    axes[0].axhline(y=0, color='red', linestyle='--')
-    axes[0].set_xlabel('Predicted')
-    axes[0].set_ylabel('Residuals')
-    axes[0].set_title('Residuals vs Predicted')
-    axes[0].grid(True)
-
-    axes[1].scatter(y_test, y_pred, alpha=0.5)
-    axes[1].plot([y_test.min(), y_test.max()],
-                 [y_test.min(), y_test.max()],
-                 color='red', linestyle='--', label='Perfect fit')
-    axes[1].set_xlabel('Actual')
-    axes[1].set_ylabel('Predicted')
-    axes[1].set_title('Actual vs Predicted')
-    axes[1].legend()
-    axes[1].grid(True)
-
-    axes[2].hist(residuals, bins=30, edgecolor='black')
-    axes[2].axvline(x=0, color='red', linestyle='--')
-    axes[2].set_xlabel('Residual')
-    axes[2].set_ylabel('Frequency')
-    axes[2].set_title('Residual Distribution')
-    axes[2].grid(True)
-
-    plt.suptitle(f'{model_name} Residual Analysis')
-    plt.tight_layout()
-    plt.show()
 
 
 

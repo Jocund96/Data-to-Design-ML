@@ -54,7 +54,7 @@ def clean_basic_types(df):
     """Normalize dtypes/formatting for curing_pressure, fly_ash/slag/filler/sand types and fiber2."""
     df = df.copy()
 
-    # Extract numeric value from curing_pressure (handles cases like "1.2?MPa", "2 MPa")
+    # Extract numeric value from curing_pressure (handles cases like 1.2?MPa, 2 MPa)
     df['curing_pressure'] = df['curing_pressure'].str.extract(r'(\d+\.?\d*)')[0].astype(float)
 
     # Clean fly_ash_type: extract last character (F or C), strip whitespace, standardize
@@ -155,7 +155,7 @@ def _resolve_cement_type(row):
     ct = str(row['cement_type']).strip() if pd.notna(row['cement_type']) else ''
     cg = str(row['cement_grade']).strip() if pd.notna(row['cement_grade']) else ''
 
-    # special types first — grade doesn't override these
+    # special types first,  grade doesn't override these
     if ct in ('HS_cement', 'OPC_III', 'CEM_II', 'white_cement',
               'pozzolan_cement', 'OPC_I_GGBS', 'BFS_cement'):
         return ct
@@ -170,7 +170,7 @@ def _resolve_cement_type(row):
     if ct == 'OPC_42.5':  return 'OPC_42.5'
     if ct == 'OPC_53':    return 'OPC_53'
 
-    # ungraded OPC_unknown with no grade info → OPC_I
+    # ungraded OPC_unknown with no grade info isss OPC_I
     if ct == 'OPC_unknown':  return 'OPC_I'
 
     return 'Unknown'
