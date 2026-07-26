@@ -18,9 +18,9 @@ We work with a concrete dataset collection to predict concrete compressive stren
 
 ## Classical Machine Learning Models
 
-*   Linear models - assigned to Brijesh Dholakiya
-*   Support Vector Machines (SVM) - assigned to Shoaib Ahmad Joo
-*   Ensemble models (Random Forest) - assigned to Anmol Bradhwaj
+*   Linear models (OLS, Elastic Net, Bayesian Ridge, Polynomial Ridge) - assigned to Brijesh Dholakiya
+*   Support Vector Machines (KNN, SVR, NuSVR) - assigned to Shoaib Ahmad Joo
+*   Ensemble models (Decision tree, Random Forest, Extra Trees) - assigned to Anmol Bradhwaj
 *   Boosting models (XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
 
 ## Repository Structure
