@@ -16,16 +16,12 @@ We work with a concrete dataset collection to predict concrete compressive stren
 *   **Feature Engineering**: Encoding mix proportions and material descriptors.
 *   **Interpretability**: Checking if models match physical reality.
 
-## Models
+## Classical Machine Learning Models
 
-### Classical Machine Learning
 *   Linear models - assigned to Brijesh Dholakiya
 *   Support Vector Machines (SVM) - assigned to Shoaib Ahmad Joo
 *   Ensemble models (Random Forest) - assigned to Anmol Bradhwaj
 *   Boosting models (e.g., XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
-
-### Deep Learning
-*   Multi-Layer Perceptron (MLP)
 
 ## Repository Structure
 
