@@ -2,13 +2,13 @@
 
 Repository for the Da2DeSM project-based course at Bauhaus-Universität Weimar. This project applies machine learning to predict the mechanical properties of structural materials.
 
-## 🎯 Main Goals
+## Main Goals
 
 *   Predict material behavior with limited data.
 *   Analyze model uncertainty and out-of-distribution performance.
 *   Turn machine learning outputs into engineering insights.
 
-## 📊 Dataset & Tasks
+## Dataset & Tasks
 
 We work with a concrete dataset collection to predict concrete compressive strength.
 
@@ -16,7 +16,7 @@ We work with a concrete dataset collection to predict concrete compressive stren
 *   **Feature Engineering**: Encoding mix proportions and material descriptors.
 *   **Interpretability**: Checking if models match physical reality.
 
-## 🤖 Models
+## Models
 
 ### Classical Machine Learning
 *   Linear models - assigned to Brijesh Dholakiya
@@ -27,13 +27,13 @@ We work with a concrete dataset collection to predict concrete compressive stren
 ### Deep Learning
 *   Multi-Layer Perceptron (MLP)
 
-## 📂 Repository Structure
+## Repository Structure
 
 *   `notebooks/` — Jupyter notebooks for data analysis and model training.
 *   `data/` — Concrete mixture and strength datasets.
 *   `requirements.txt` — Python package dependencies.
 
-## ⚙️ Setup
+## Setup
 
 1. Clone the repository:
    ```bash
@@ -45,7 +45,7 @@ We work with a concrete dataset collection to predict concrete compressive stren
    ```
 3. Open Jupyter to run the notebooks.
 
-## 👥 Contributors
+## Contributors
 
 *   **Shoaib Ahmad Joo** ([@shoaib-joo](https://github.com/shoaib-joo))
 *   **Jasurbek Odilov** ([@Jocund96](https://github.com/Jocund96))
