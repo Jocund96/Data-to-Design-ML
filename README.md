@@ -52,6 +52,6 @@ We work with a concrete dataset collection to predict concrete compressive stren
 *   **Brijesh** ([@BrijeshDholakiya](https://github.com/BrijeshDholakiya))
 *   **ANMOL BHARDWAJ** ([@Anmol040](https://github.com/Anmol040))
 
-## 🎓 Course Info
+## Course Info
 *   **Chair**: Data Science in Civil Engineering, Bauhaus-Universität Weimar.
 *   **Instructors**: Marchellino Ghorayeb, Stefan Kollmannsberger.
