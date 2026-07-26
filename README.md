@@ -21,7 +21,7 @@ We work with a concrete dataset collection to predict concrete compressive stren
 *   Linear models - assigned to Brijesh Dholakiya
 *   Support Vector Machines (SVM) - assigned to Shoaib Ahmad Joo
 *   Ensemble models (Random Forest) - assigned to Anmol Bradhwaj
-*   Boosting models (e.g., XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
+*   Boosting models (XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
 
 ## Repository Structure
 
