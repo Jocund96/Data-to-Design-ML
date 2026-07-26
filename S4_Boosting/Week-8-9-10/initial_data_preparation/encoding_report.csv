@@ -42,4 +42,4 @@ curing_temp,float64,19,No Encoding
 curing_humidity,float64,11,No Encoding
 curing_pressure,float64,3,No Encoding
 cs_28d,float64,646,No Encoding
-reference,str,165,Ordinal/Target Encoding
+publication,str,165,Ordinal/Target Encoding

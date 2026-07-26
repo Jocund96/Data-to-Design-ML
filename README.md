@@ -19,10 +19,10 @@ We work with a concrete dataset collection to predict concrete compressive stren
 ## 🤖 Models
 
 ### Classical Machine Learning
-*   Linear models
-*   Support Vector Machines (SVM)
-*   Ensemble models (Random Forest)
-*   Boosting models (e.g., XGBoost, HistGradBoost, Adaboost)
+*   Linear models - assigned to Brijesh Dholakiya
+*   Support Vector Machines (SVM) - assigned to Shoaib Ahmad Joo
+*   Ensemble models (Random Forest) - assigned to Anmol Bradhwaj
+*   Boosting models (e.g., XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
 
 ### Deep Learning
 *   Multi-Layer Perceptron (MLP)

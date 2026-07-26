@@ -1,3 +1,5 @@
+"""Model training helpers for KNN and SVR/NuSVR regressors."""
+
 import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -12,6 +14,7 @@ from sklearn.model_selection import cross_val_score,GridSearchCV,KFold
 
 
 def train_knn(X_train_kf, y_train_kf, metric, k_range=range(1, 31), scaler_type="RobustScaler", p_degree = 2 ):
+    """Grid-search k for a scaled KNN regressor via 3-fold CV and return the best pipeline."""
     scalers = {
         "RobustScaler": RobustScaler(),
         "StandardScaler": StandardScaler(),
@@ -43,6 +46,7 @@ def train_knn(X_train_kf, y_train_kf, metric, k_range=range(1, 31), scaler_type=
 
 
 def train_svr(X_train, y_train, svr_type="SVR", param_grid=None, cv=3, scaler_type="RobustScaler",json_path = "config.json" ):
+    """Grid-search hyperparameters for a scaled SVR/NuSVR pipeline and return the best estimator."""
     scalers = {
         "RobustScaler": RobustScaler(),
         "StandardScaler": StandardScaler(),
