@@ -1,10 +1,13 @@
+"""Plotting helpers for model evaluation (RMSE curves, residuals, etc.)."""
+
 import matplotlib.pyplot as plt
 import numpy as np
 import seaborn as sns
 
 
 def plot_rmse_vs_k(k_range : list, kfold_rmse_list: list , best_k_kfold:int):
-    
+    """Plot 3-fold CV RMSE against k, marking the best k."""
+
     plt.plot(k_range, kfold_rmse_list,  label='3-Fold CV',        marker='o')
 
     plt.axvline(x=best_k_kfold, color='red',  linestyle='--', label=f'Best k (KFold)={best_k_kfold}')
@@ -18,6 +21,7 @@ def plot_rmse_vs_k(k_range : list, kfold_rmse_list: list , best_k_kfold:int):
     
 
 def plot_residuals(model_name, y_test, y_pred):
+    """Plot residuals vs predicted, actual vs predicted, and residual distribution for a model."""
     residuals = y_test - y_pred
 
     fig, axes = plt.subplots(1, 3, figsize=(15, 4))
@@ -53,6 +57,7 @@ def plot_residuals(model_name, y_test, y_pred):
 
 
 def plot_feature_vs_strength(df, feature_col, strength_col):
+    """Scatter-plot a feature against a target column with a linear trend line and Pearson r."""
     feature = df[feature_col]
     strength = df[strength_col]
     correlation = feature.corr(strength)
@@ -76,6 +81,7 @@ def plot_feature_vs_strength(df, feature_col, strength_col):
     
     
 def plot_correlation_matrix(df, figsize=(10, 8), cmap="coolwarm", title="Feature Correlation Matrix"):
+    """Plot a heatmap of the pairwise correlation matrix for a dataframe's columns."""
     corr_matrix = df.corr()
     plt.figure(figsize=figsize)
     sns.heatmap(corr_matrix, annot=True, fmt=".2f", cmap=cmap)

@@ -4,7 +4,7 @@
       "knn": {
         "model__metric": "manhattan",
         "model__n_neighbors": 12,
-        "model__p": 2,
+        "model__p": 1,
         "model__weights": "distance"
       },
       "svr": {
@@ -13,7 +13,7 @@
       },
       "nusvr": {
         "model__C": 128,
-        "model__nu": 0.4
+        "model__nu": 0.3
       }
     },
     "recoded_50": {

@@ -1,3 +1,5 @@
+"""Data cleaning, scaling, and train/test split helpers."""
+
 import os
 import pandas as pd
 from sklearn.model_selection import train_test_split
@@ -5,21 +7,24 @@ from sklearn.preprocessing import StandardScaler,RobustScaler
 from sklearn.model_selection import train_test_split
 
 def clean_data(df: pd.DataFrame) -> pd.DataFrame:
+    """Drop missing values and duplicate rows, then reset the index."""
     df = df.dropna()
     df = df.drop_duplicates()
-    
+
     return df.reset_index(drop=True)
 
 def scale_data(X_train, scaler_type="RobustScaler"):
+    """Fit a scaler on X_train and return the scaled dataframe along with the scaler."""
     scaler = RobustScaler() if scaler_type == "RobustScaler" else StandardScaler()
     X_train_scaled = pd.DataFrame(
         scaler.fit_transform(X_train), columns=X_train.columns
     )
     return X_train_scaled, scaler
-    
+
 def load_and_prepare_kfold_data(
     filepath, target, columns=None, test_size=0.2, random_state=42
 ):
+    """Load a CSV, clean it, and return a train/test split for the given target column."""
     df = pd.read_csv(filepath)
     df = clean_data(df)
 
