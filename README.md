@@ -2,13 +2,13 @@
 
 Repository for the Da2DeSM project-based course at Bauhaus-Universität Weimar. This project applies machine learning to predict the mechanical properties of structural materials.
 
-## 🎯 Main Goals
+## Main Goals
 
 *   Predict material behavior with limited data.
 *   Analyze model uncertainty and out-of-distribution performance.
 *   Turn machine learning outputs into engineering insights.
 
-## 📊 Dataset & Tasks
+## Dataset & Tasks
 
 We work with a concrete dataset collection to predict concrete compressive strength.
 
@@ -16,24 +16,20 @@ We work with a concrete dataset collection to predict concrete compressive stren
 *   **Feature Engineering**: Encoding mix proportions and material descriptors.
 *   **Interpretability**: Checking if models match physical reality.
 
-## 🤖 Models
+## Classical Machine Learning Models
 
-### Classical Machine Learning
-*   Linear models - assigned to Brijesh Dholakiya
-*   Support Vector Machines (SVM) - assigned to Shoaib Ahmad Joo
-*   Ensemble models (Random Forest) - assigned to Anmol Bradhwaj
-*   Boosting models (e.g., XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
+*   Linear models (OLS, Elastic Net, Bayesian Ridge, Polynomial Ridge) - assigned to Brijesh Dholakiya
+*   Support Vector Machines (KNN, SVR, NuSVR) - assigned to Shoaib Ahmad Joo
+*   Ensemble models (Decision tree, Random Forest, Extra Trees) - assigned to Anmol Bradhwaj
+*   Boosting models (XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
 
-### Deep Learning
-*   Multi-Layer Perceptron (MLP)
-
-## 📂 Repository Structure
+## Repository Structure
 
 *   `notebooks/` — Jupyter notebooks for data analysis and model training.
 *   `data/` — Concrete mixture and strength datasets.
 *   `requirements.txt` — Python package dependencies.
 
-## ⚙️ Setup
+## Setup
 
 1. Clone the repository:
    ```bash
@@ -45,13 +41,13 @@ We work with a concrete dataset collection to predict concrete compressive stren
    ```
 3. Open Jupyter to run the notebooks.
 
-## 👥 Contributors
+## Contributors
 
-*   **Shoaib Ahmad Joo** ([@shoaib-joo](https://github.com/shoaib-joo))
-*   **Jasurbek Odilov** ([@Jocund96](https://github.com/Jocund96))
 *   **Brijesh** ([@BrijeshDholakiya](https://github.com/BrijeshDholakiya))
+*   **Shoaib Ahmad Joo** ([@shoaib-joo](https://github.com/shoaib-joo))
 *   **ANMOL BHARDWAJ** ([@Anmol040](https://github.com/Anmol040))
+*   **Jasurbek Odilov** ([@Jocund96](https://github.com/Jocund96))
 
-## 🎓 Course Info
+## Course Info
 *   **Chair**: Data Science in Civil Engineering, Bauhaus-Universität Weimar.
 *   **Instructors**: Marchellino Ghorayeb, Stefan Kollmannsberger.
