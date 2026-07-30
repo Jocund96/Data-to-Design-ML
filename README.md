@@ -16,7 +16,7 @@ We work with a concrete dataset collection to predict concrete compressive stren
 *   **Feature Engineering**: Encoding mix proportions and material descriptors.
 *   **Interpretability**: Checking if models match physical reality.
 
-<<<<<<< HEAD
+
 ## Models
 
 ### Classical Machine Learning
@@ -37,7 +37,7 @@ Each track is an independent student workstream (not a progressive pipeline), or
 *   Boosting models (XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
 
 ## Repository Structure
->>>>>>> 28291a868cd5a64d4645f9181cd61916a2bb49f5
+
 
 *   `S1_Linear/` — Linear models.
 *   `S2_Kernel/` — Kernel and SVM-based models.
@@ -45,11 +45,10 @@ Each track is an independent student workstream (not a progressive pipeline), or
 *   `S4_Boosting/` — Boosting models.
 *   `requirements.txt` — Consolidated Python package dependencies for all tracks.
 
-<<<<<<< HEAD
+
 Each track folder holds its own datasets, notebooks (grouped by week), and helper/utility modules.
 
-=======
->>>>>>> 28291a868cd5a64d4645f9181cd61916a2bb49f5
+
 ## Setup
 
 1. Clone the repository:
