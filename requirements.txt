@@ -1,0 +1,17 @@
+# Consolidated dependencies for all four tracks (S1_Linear, S2_Kernel, S3_Tree, S4_Boosting)
+
+numpy
+pandas
+scipy
+scikit-learn
+matplotlib
+seaborn
+xgboost
+quantile-forest
+shap
+tqdm
+joblib
+pyyaml
+openpyxl
+jupyter
+notebook
