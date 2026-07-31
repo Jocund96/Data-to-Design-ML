@@ -1,4 +1,4 @@
-Label              | Our data | Paper (Fig. 6) in UHPC Paper you provided
+Label              | Our data | Paper (Fig. 6) in UHPC Paper  provided
  -------------------|----------|---------------
  PCE_SP             |  55.9%   |  45%
  PCE_HRWRA          |  19.2%   |  27%
