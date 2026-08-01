@@ -1,253 +1,169 @@
 # S1 Linear Family
 
-This folder contains the Linear Family implementation and notebooks for the
-S1 workstream.
+This directory contains the Linear Family experiments for concrete
+compressive-strength prediction. The work covers the UCI Concrete dataset and
+the literature-derived UHPC dataset.
 
-## Important data rule
+## Requirements
 
-For final submission, I have kept the S1 input datasets and processed split CSV files
-under `data/` so the workflows can run without manual dataset setup.
-Bulky generated model artifacts remain local/ignored and are recreated by the
-runners.
+- Python 3.11 or newer
+- About 2 GB of free disk space for the environment and generated outputs
+- A Jupyter-compatible browser for interactive notebook use
 
-For the Week 3 UCI Concrete baseline, the input file lives here:
-
-```text
-data/processed/uci_concrete_clean_engineered.csv
-```
-
-For Week 3, only the original Yeh/UCI input features are used:
-
-- Cement
-- Slag
-- FlyAsh
-- Water
-- Superplasticizer
-- CoarseAggregate
-- FineAggregate
-- Age
-
-The engineered Week 2 columns may exist in the CSV, but they are ignored in this Week 3 baseline.
+The submitted environment uses Python 3.14.0. Package versions are fixed in
+`pyproject.toml`.
 
 ## Setup
 
-From this folder:
+Run these commands from `S1_Linear/`.
+
+macOS or Linux:
 
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-On Windows PowerShell:
+Windows PowerShell:
 
 ```powershell
 python -m venv .venv
 .venv\Scripts\Activate.ps1
-pip install -r requirements.txt
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-## Run Week 3
-
-From `S1_Linear/`:
+Please confirm the installation:
 
 ```bash
-PYTHONPATH=src python scripts/run_week03_linear.py
+python -c "import s1_linear, sklearn, shap; print('Environment ready')"
 ```
 
-On Windows PowerShell:
+## Data
 
-```powershell
-$env:PYTHONPATH="src"
+The required input data is included in `data/`.
+
+| Workflow                         | Input                                                |
+| -------------------------------- | ---------------------------------------------------- |
+| UCI baseline and representations | `data/processed/uci_concrete_clean_engineered.csv`   |
+| UHPC import                      | `data/raw/UHPC Dataset  (Version-2).xlsx`            |
+| UHPC semantic missingness        | `data/processed/uhpc_rows_with_28day_target.csv`     |
+| Shared UHPC experiments          | `data/processed/shared_strategies/uhpc_semantic_50/` |
+
+The UCI baseline uses the original eight Yeh predictors: cement, slag, fly
+ash, water, superplasticizer, coarse aggregate, fine aggregate, and age.
+
+## Complete Run
+
+The complete workflow runs the experiment code first and then executes each
+notebook with the generated outputs:
+
+```bash
+python scripts/run_all.py
+```
+
+The workflows are ordered because the publication, uncertainty, and
+attribution stages reuse outputs from earlier stages. Use
+`python scripts/run_all.py --help` to run a smaller week range or skip notebook
+execution.
+
+## Individual Runs
+
+All commands below assume the virtual environment is active and the current
+directory is `S1_Linear/`.
+
+### Week 3: UCI linear baselines
+
+```bash
 python scripts/run_week03_linear.py
+python -m nbconvert --to notebook --execute --inplace notebooks/week03_linear_family.ipynb
 ```
 
-## Generated outputs
+The experiment uses an 80/20 train-test split and 4-fold cross-validation.
 
-These files are recreated locally when the script runs and are ignored by Git by default:
-
-- Metrics table: `reports/tables/week03_linear_metrics.csv`
-- Best parameters: `reports/tables/week03_linear_best_params.csv`
-- Metrics copy: `results/metrics/week03_linear_metrics.csv`
-- Predictions: `results/predictions/week03_linear_predictions.csv`
-- Figures: `reports/figures/`
-- Models: `results/models/`
-
-## Run Week 6
-
-Week 6 prepares the UHPC modeling dataset with semantic missingness rules.
-It starts from:
-
-```text
-data/processed/uhpc_rows_with_28day_target.csv
-```
-
-From `S1_Linear/`:
+### Week 4: UCI feature representations
 
 ```bash
-PYTHONPATH=src python scripts/run_week06_semantic_missingness.py
+python scripts/run_week04_representation.py
+python -m nbconvert --to notebook --execute --inplace notebooks/week04_representation_experiments.ipynb
 ```
 
-The script creates:
+This stage compares the original, domain-engineered, log-transformed, and
+interaction feature sets. The selected setup is also evaluated with seeds
+`0`, `42`, and `123`.
 
-- `data/processed/week6_semantic_cleaned.csv`
-- `data/processed/week6/full_raw/X_train.csv`, `X_val.csv`, `X_test.csv`
-- `data/processed/week6/raw_le_50/X_train.csv`, `X_val.csv`, `X_test.csv`
-- `data/processed/week6/raw_le_20/X_train.csv`, `X_val.csv`, `X_test.csv`
-- Policy-level `numeric_fully_missing_audit.csv`, `categorical_cardinality_report.csv`,
-  `preprocessing_summary.csv`, and `modeling_features.csv`
-- Week 6 audit tables in `reports/tables/`
-- Leakage-safe train-fitted preprocessors in `results/models/week6_preprocessors/`
-
-## Prepare the Shared UHPC Semantic Dataset
-
-From Week 7 onward, the Linear Family work uses the shared
-semantic-recoded **50 percent policy** UHPC representation. Local copies live
-under:
-
-```text
-data/processed/shared_strategies/uhpc_semantic_50/
-```
-
-The active modeling files are:
-
-- `uhpc_semantic_50_modeling.csv` for Week 7 row-mixed modeling;
-- `uhpc_semantic_50_publication_ready.csv` for Week 8/9 publication-aware
-  splitting and diagnostics.
-
-Prepare the shared dataset for model training:
+### Week 5: UHPC import and target audit
 
 ```bash
-PYTHONPATH=src python scripts/run_week07_preprocess_shared_uhpc.py
+python -m nbconvert --to notebook --execute --inplace notebooks/week05_uhpc_import_and_target_check.ipynb
 ```
 
-The preprocessing script:
+This notebook reads the UHPC workbook, selects the 28-day compressive-strength
+target, and writes the target-filtered CSV used in the next stage.
 
-- creates feature-hash grouped 70/15/15 train, validation, and test splits;
-- fits median imputation and `StandardScaler` on numeric training features
-  only;
-- fits `OneHotEncoder(handle_unknown='ignore')` on the fixed low-cardinality
-  shared categorical group;
-- fits `TargetEncoder(cv=5)` on the fixed high-cardinality shared categorical
-  group and scales those encoded columns;
-- produces 60 transformed model-input columns for the shared 50 percent
-  semantic setup;
-- saves the fitted preprocessor to
-  `results/models/week7_semantic_50_preprocessor.joblib`;
-- saves raw splits, transformed inspection copies, and preprocessing audits.
-
-For model selection and cross-validation, use the raw files in
-`data/processed/week7/semantic_50_splits/` and place a fresh Week 7
-preprocessor inside each model pipeline. The transformed CSV files are saved
-for inspection and fixed-split checks; they should not be used for
-cross-validation because their preprocessor was fitted on the complete Week 7
-training split.
-
-## Run Week 7 Linear Family experiments
-
-From `S1_Linear/`:
+### Week 6: UHPC semantic missingness
 
 ```bash
-PYTHONPATH=src python scripts/run_week07_linear_experiments.py
+python scripts/run_week06_semantic_missingness.py
+python -m nbconvert --to notebook --execute --inplace notebooks/week06_semantic_missingness_strategies.ipynb
 ```
 
-The runner tunes model parameters from
-`configs/week07_linear_experiments.yaml` using group-aware `GridSearchCV` on
-training rows only. It trains OLS, Elastic Net, Bayesian Ridge, and Polynomial
-Ridge. The tuned settings are frozen before running:
+This stage compares three missingness policies and fits preprocessing only on
+training rows.
 
-- curing-regime and fiber-group error analysis for the best validation model;
-- fiber-feature ablation;
-- training-target outlier sensitivity;
-- exploratory engineering-ratio features;
-- numeric-feature VIF as a separate OLS coefficient-stability diagnostic.
-
-## Build the Week 8 publication-held-out foundation
-
-Week 8 evaluates whether the Linear Family models generalize to publications
-that were completely unseen during training. All Week 8 modules live under
-`src/s1_linear/week08/`.
-
-From `S1_Linear/`:
+### Week 7: Shared UHPC row-mixed experiments
 
 ```bash
-PYTHONPATH=src python -m s1_linear.week08.runner
+python scripts/run_week07_preprocess_shared_uhpc.py
+python scripts/run_week07_linear_experiments.py
+python -m nbconvert --to notebook --execute --inplace notebooks/week07_linear_family_results.ipynb
 ```
 
-Inside the Week 8 runner:
+The grouped split contains 1,449 training, 311 validation, and 313 test rows.
+The raw 33 predictors produce 60 transformed model columns.
 
-- derives publication lineage from the shared publication-ready dataset and
-  aligns it with the exact 2,073-row Week 7 modeling input;
-- verifies that publication metadata is absent from model predictors;
-- creates publication-level composition, target, fiber, curing, and
-  missingness audits;
-- creates one shared size-balanced publication-held-out split;
-- saves predictor, target, and lineage files separately for every split;
-- verifies zero publication overlap between train, validation, and test;
-- tunes the four Linear Family models using publication-group cross-validation;
-- selects on held-out validation publications and evaluates the selected model
-  once on unseen test publications;
-- compares the same frozen model against the row-mixed Week 7 split;
-- runs leave-one-publication-out analysis for eligible publications;
-- saves worst-publication, worst-row, and presentation-figure outputs.
-
-## Run the Week 9 uncertainty-calibration workflow
-
-Week 9 reuses the frozen Week 8 publication split and model configuration. It
-fits models on training publications only, calibrates intervals on validation
-publications, and evaluates the unchanged test publications.
-
-From `S1_Linear/`:
+### Week 8: Publication-held-out generalization
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m s1_linear.week09.runner
+python -m s1_linear.week08.runner
+python -m nbconvert --to notebook --execute --inplace notebooks/week08_publication_generalization.ipynb
 ```
 
-The runner evaluates 90% Elastic Net split-conformal intervals, native and
-conformalized Bayesian Ridge intervals, and raw and conformalized residual
-bootstrap intervals. It reports coverage, interval width, Winkler score,
-publication confidence diagnostics, and calibrated LOPO results for the six
-publications meeting the Week 8 50-row threshold.
+This stage keeps publications separate across train, validation, and test,
+then runs the publication-held-out and LOPO evaluations.
 
-Feature-policy sensitivity is intentionally skipped because Week 7 uses only
-the agreed semantic-recoded 50 percent policy.
-
-The runner also saves Week 7 interpretation figures in
-`reports/figures/week07/`, including model metric comparisons, selected
-baseline prediction plots, group-error plots, VIF, experiment comparisons, and
-the selected baseline coefficient diagnostic.
-
-The executed explanatory notebook is:
-
-```text
-notebooks/week07_linear_family_results.ipynb
-```
-
-## Run the Week 10 feature-attribution workflow
-
-Week 10 reuses the Week 9 train-only pipeline and explains the held-out
-publication-test predictions for the selected Linear Family model.
-
-From `S1_Linear/`:
+### Week 9: Uncertainty calibration
 
 ```bash
-PYTHONPATH=src .venv/bin/python -m s1_linear.week10.runner
+python -m s1_linear.week09.runner
+python -m nbconvert --to notebook --execute --inplace notebooks/week09_uncertainty_calibration.ipynb
 ```
 
-The runner saves readiness checks, transformed-to-original feature mapping,
-original-feature SHAP attribution, group-level SHAP attribution, held-out
-feature permutation importance, group permutation importance, and
-SHAP/permutation ranking agreement.
+This stage evaluates Bayesian, bootstrap, and conformal prediction intervals
+on the fixed publication split.
 
-Outputs are written under:
+### Week 10: Feature attribution
 
-- `reports/tables/week10/`
-- `reports/figures/week10/`
-- `results/predictions/week10/`
-- `results/metrics/week10/`
+```bash
+python -m s1_linear.week10.runner
+python -m nbconvert --to notebook --execute --inplace notebooks/week10_feature_attribution.ipynb
+```
 
-The `shap` package is included in `requirements.txt` for this workflow. The
-runner uses `shap.LinearExplainer` for the fitted linear pipeline and records
-the method in `reports/tables/week10/week10_readiness_audit.csv`. If SHAP is
-unavailable in a local environment, the runner falls back to the exact
-independent linear attribution formula so the workflow can still be audited.
+This stage computes original-feature and engineering-group attribution using
+SHAP and held-out permutation importance.
+
+## Outputs
+
+Generated files are written to:
+
+- `data/processed/` for intermediate datasets and split manifests
+- `reports/tables/` for audit and result tables
+- `reports/figures/` for plots
+- `results/metrics/` for evaluation metrics
+- `results/predictions/` for row-level predictions
+- `results/models/` for fitted model artifacts
+
+Most generated outputs are ignored by Git because they can be reproduced from
+the included data, configuration files, and runners.

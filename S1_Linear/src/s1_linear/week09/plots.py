@@ -50,7 +50,7 @@ def plot_method_coverage_width(metrics_df: pd.DataFrame, output_path) -> None:
     axes[1].grid(axis="y", alpha=0.25)
     for axis in axes:
         axis.set_xticks(x, _labels(frame["method"]), rotation=18, ha="right")
-    fig.suptitle("Week 9 Shared Publication-Held-Out Calibration")
+    fig.suptitle("Publication-Held-Out Calibration")
     fig.tight_layout()
     fig.savefig(_prepare_path(output_path), dpi=200, bbox_inches="tight")
     plt.close(fig)
@@ -272,4 +272,3 @@ def plot_lopo_shift_vs_uncertainty(comparison_df: pd.DataFrame, output_path) -> 
     fig.tight_layout()
     fig.savefig(_prepare_path(output_path), dpi=200, bbox_inches="tight")
     plt.close(fig)
-

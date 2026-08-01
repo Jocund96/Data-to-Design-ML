@@ -108,6 +108,81 @@ def _prediction_frame_with_lineage(
     )
 
 
+def _evaluate_all_publication_test_models(
+    model_names: list[str],
+    frozen_config: dict,
+    X_train: pd.DataFrame,
+    y_train: pd.Series,
+    train_lineage: pd.DataFrame,
+    X_validation: pd.DataFrame,
+    y_validation: pd.Series,
+    validation_lineage: pd.DataFrame,
+    X_test: pd.DataFrame,
+    y_test: pd.Series,
+    test_lineage: pd.DataFrame,
+    policy: str,
+    selected_model_name: str,
+) -> tuple[pd.DataFrame, pd.DataFrame, dict[str, object]]:
+    """Refit every frozen candidate and report the same unseen-publication test."""
+    X_train_validation = pd.concat(
+        [X_train, X_validation],
+        ignore_index=True,
+    )
+    y_train_validation = pd.concat(
+        [y_train, y_validation],
+        ignore_index=True,
+    )
+    training_publications = int(
+        train_lineage["publication_group"].nunique()
+        + validation_lineage["publication_group"].nunique()
+    )
+    metric_rows = []
+    prediction_frames = []
+    fitted_models = {}
+
+    for model_name in model_names:
+        model, _ = _fit_selected_model(
+            model_name=model_name,
+            frozen_config=frozen_config,
+            X_train=X_train_validation,
+            y_train=y_train_validation,
+        )
+        predictions = model.predict(X_test)
+        residual = y_test.to_numpy(dtype=float) - np.asarray(predictions, dtype=float)
+        metric_rows.append(
+            make_metrics_row(
+                model_name=model_name,
+                y_true=y_test,
+                y_pred=predictions,
+                split="test",
+                policy=policy,
+                experiment="all_models_unseen_publication_test",
+                selected_for_downstream=model_name == selected_model_name,
+                training_rows=len(X_train_validation),
+                training_publications=training_publications,
+                MaximumAE=float(np.max(np.abs(residual))),
+            )
+        )
+        prediction_frames.append(
+            _prediction_frame_with_lineage(
+                model_name=model_name,
+                y_true=y_test,
+                y_pred=predictions,
+                split="test",
+                policy=policy,
+                experiment="all_models_unseen_publication_test",
+                lineage=test_lineage,
+            )
+        )
+        fitted_models[model_name] = model
+
+    return (
+        pd.DataFrame(metric_rows),
+        pd.concat(prediction_frames, ignore_index=True),
+        fitted_models,
+    )
+
+
 def run_publication_model_selection(
     X_train: pd.DataFrame,
     y_train: pd.Series,
@@ -189,6 +264,23 @@ def run_publication_model_selection(
         experiment="final_unseen_publication_test",
         lineage=test_lineage,
     )
+    all_test_metrics, all_test_predictions, all_test_models = (
+        _evaluate_all_publication_test_models(
+            model_names=validation_rows["model"].tolist(),
+            frozen_config=frozen_config,
+            X_train=X_train,
+            y_train=y_train,
+            train_lineage=train_lineage,
+            X_validation=X_validation,
+            y_validation=y_validation,
+            validation_lineage=validation_lineage,
+            X_test=X_test,
+            y_test=y_test,
+            test_lineage=test_lineage,
+            policy=policy,
+            selected_model_name=selected_model_name,
+        )
+    )
     selected_validation = validation_rows.iloc[0]
     selected_summary = pd.DataFrame(
         [
@@ -208,6 +300,9 @@ def run_publication_model_selection(
     models_dir.mkdir(parents=True, exist_ok=True)
     safe_name = selected_model_name.casefold().replace(" ", "_")
     joblib.dump(selected_model, models_dir / f"week08_selected_{safe_name}.joblib")
+    for model_name, model in all_test_models.items():
+        safe_name = model_name.casefold().replace(" ", "_")
+        joblib.dump(model, models_dir / f"week08_publication_{safe_name}.joblib")
     with (models_dir / "week08_frozen_publication_config.yaml").open(
         "w",
         encoding="utf-8",
@@ -224,6 +319,8 @@ def run_publication_model_selection(
         "selected_config": selected_config,
         "final_test_metrics": final_test_metrics,
         "final_test_predictions": final_test_predictions,
+        "all_test_metrics": all_test_metrics,
+        "all_test_predictions": all_test_predictions,
     }
 
 
@@ -409,3 +506,72 @@ def run_leave_one_publication_out(
         ]
     )
     return metrics_df, predictions_df, summary
+
+
+def select_directional_error_examples(predictions_df: pd.DataFrame) -> pd.DataFrame:
+    """Select reproducible absolute, underprediction, and overprediction cases."""
+    required_columns = {"Residual", "AbsoluteError"}
+    missing_columns = required_columns.difference(predictions_df.columns)
+    if missing_columns:
+        missing = ", ".join(sorted(missing_columns))
+        raise ValueError(f"Missing prediction columns: {missing}")
+    if predictions_df.empty:
+        raise ValueError("Cannot select error examples from an empty prediction table.")
+
+    selections = [
+        ("largest_absolute_error", predictions_df["AbsoluteError"].idxmax()),
+    ]
+    underpredictions = predictions_df.loc[predictions_df["Residual"] > 0]
+    if not underpredictions.empty:
+        selections.append(
+            ("largest_underprediction", underpredictions["Residual"].idxmax())
+        )
+    overpredictions = predictions_df.loc[predictions_df["Residual"] < 0]
+    if not overpredictions.empty:
+        selections.append(
+            ("largest_overprediction", overpredictions["Residual"].idxmin())
+        )
+
+    selected_rows = []
+    for diagnostic_case, row_index in selections:
+        row = predictions_df.loc[[row_index]].copy()
+        row.insert(0, "diagnostic_case", diagnostic_case)
+        selected_rows.append(row)
+    return pd.concat(selected_rows, ignore_index=True)
+
+
+def run_all_models_leave_one_publication_out(
+    modeling_df: pd.DataFrame,
+    lineage_df: pd.DataFrame,
+    target_col: str,
+    model_names: list[str],
+    frozen_config: dict,
+    policy: str,
+    minimum_rows: int,
+) -> tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
+    """Run the common LOPO evaluation for every frozen Linear candidate."""
+    metric_frames = []
+    prediction_frames = []
+    summary_frames = []
+
+    for model_name in model_names:
+        metrics, predictions, summary = run_leave_one_publication_out(
+            modeling_df=modeling_df,
+            lineage_df=lineage_df,
+            target_col=target_col,
+            selected_model_name=model_name,
+            selected_config=frozen_config,
+            policy=policy,
+            minimum_rows=minimum_rows,
+        )
+        metrics.insert(0, "model", model_name)
+        summary.insert(0, "model", model_name)
+        metric_frames.append(metrics)
+        prediction_frames.append(predictions)
+        summary_frames.append(summary)
+
+    return (
+        pd.concat(metric_frames, ignore_index=True),
+        pd.concat(prediction_frames, ignore_index=True),
+        pd.concat(summary_frames, ignore_index=True),
+    )

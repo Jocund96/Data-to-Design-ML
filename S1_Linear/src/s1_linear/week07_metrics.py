@@ -15,12 +15,17 @@ def regression_metrics(y_true, y_pred) -> dict:
         correlation = np.nan
     else:
         correlation = float(np.corrcoef(y_true_array, y_pred_array)[0, 1])
+    r2 = (
+        float(r2_score(y_true_array, y_pred_array))
+        if len(y_true_array) >= 2
+        else np.nan
+    )
 
     return {
         "n_rows": int(len(y_true_array)),
         "MAE": float(mean_absolute_error(y_true_array, y_pred_array)),
         "RMSE": float(np.sqrt(mean_squared_error(y_true_array, y_pred_array))),
-        "R2": float(r2_score(y_true_array, y_pred_array)),
+        "R2": r2,
         "R": correlation,
         "Bias": float(np.mean(residual)),
         "MedianAE": float(np.median(np.abs(residual))),

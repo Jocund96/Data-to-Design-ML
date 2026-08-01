@@ -1,10 +1,1 @@
-numpy
-pandas
-scikit-learn
-matplotlib
-pyyaml
-joblib
-jupyter
-notebook
-openpyxl
-shap
+-e .

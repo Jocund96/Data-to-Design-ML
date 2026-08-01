@@ -11,6 +11,7 @@ import numpy as np
 import pandas as pd
 from sklearn.compose import ColumnTransformer
 from sklearn.impute import SimpleImputer
+from sklearn.model_selection import KFold
 from sklearn.pipeline import Pipeline
 from sklearn.preprocessing import OneHotEncoder, StandardScaler, TargetEncoder
 
@@ -240,14 +241,9 @@ def make_shared_column_contract_report(
 
 
 def _target_encoder(random_state: int | None) -> TargetEncoder:
-    """Create TargetEncoder while staying compatible across sklearn versions."""
-    kwargs = {"cv": 5}
-    if random_state is not None:
-        kwargs["random_state"] = random_state
-    try:
-        return TargetEncoder(target_type="continuous", **kwargs)
-    except TypeError:
-        return TargetEncoder(**kwargs)
+    """Create the seeded five-fold target encoder used by the shared strategy."""
+    cv = KFold(n_splits=5, shuffle=True, random_state=random_state)
+    return TargetEncoder(target_type="continuous", cv=cv)
 
 
 def build_shared_uhpc_preprocessor(

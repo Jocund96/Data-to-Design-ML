@@ -47,7 +47,7 @@ def plot_top_original_shap(
         labels=data["original_feature"],
         values=data["mean_abs_shap"],
         output_path=output_path,
-        title="Week 10: Top Original Features by SHAP Magnitude",
+        title="Top Original Features by SHAP Magnitude",
         xlabel="Mean absolute SHAP contribution",
     )
 
@@ -59,7 +59,7 @@ def plot_group_shap(shap_group_importance: pd.DataFrame, output_path: Path) -> N
         labels=data["feature_group"],
         values=data["mean_abs_shap"],
         output_path=output_path,
-        title="Week 10: Feature Groups by SHAP Magnitude",
+        title="Feature Groups by SHAP Magnitude",
         xlabel="Mean absolute group SHAP contribution",
         color="#4f9d69",
     )
@@ -79,7 +79,7 @@ def plot_feature_permutation(
         labels=data["original_feature"],
         values=data["mean_rmse_delta"],
         output_path=output_path,
-        title="Week 10: Held-Out Feature Permutation Importance",
+        title="Held-Out Feature Permutation Importance",
         xlabel="Mean RMSE increase after permutation",
         color="#b95f3b",
     )
@@ -95,7 +95,7 @@ def plot_group_permutation(
         labels=data["feature_group"],
         values=data["mean_rmse_delta"],
         output_path=output_path,
-        title="Week 10: Held-Out Group Permutation Importance",
+        title="Held-Out Group Permutation Importance",
         xlabel="Mean RMSE increase after group permutation",
         color="#a65fb9",
     )
@@ -132,9 +132,8 @@ def plot_rank_agreement(
         )
     ax.set_xlabel("SHAP rank (1 = most important)")
     ax.set_ylabel("Permutation rank (1 = most important)")
-    ax.set_title("Week 10: SHAP vs Held-Out Permutation Rank")
+    ax.set_title("SHAP vs Held-Out Permutation Rank")
     ax.grid(alpha=0.25)
     fig.tight_layout()
     fig.savefig(output_path, dpi=200)
     plt.close(fig)
-

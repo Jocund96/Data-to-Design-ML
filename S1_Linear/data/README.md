@@ -1,19 +1,15 @@
-# S1 Data Folder
+# Data
 
-For final submission, the S1 raw and processed datasets are included so the
-notebooks and runners can execute after cloning the repository.
+The datasets required by the S1 Linear Family workflows are included in this
+directory.
 
-The Week 3 UCI Concrete input is:
+| Dataset | Path | Purpose |
+|---|---|---|
+| UCI Concrete | `processed/uci_concrete_clean_engineered.csv` | Baseline and representation experiments |
+| UHPC workbook | `raw/UHPC Dataset  (Version-2).xlsx` | Original UHPC import |
+| Target-filtered UHPC | `processed/uhpc_rows_with_28day_target.csv` | Semantic missingness experiments |
+| Shared semantic UHPC | `processed/shared_strategies/uhpc_semantic_50/` | Row-mixed, publication, uncertainty, and attribution experiments |
 
-```text
-S1_Linear/data/processed/uci_concrete_clean_engineered.csv
-```
-
-The Week 7 onward shared UHPC semantic dataset is:
-
-```text
-S1_Linear/data/processed/shared_strategies/uhpc_semantic_50/
-```
-
-Generated model artifacts under `results/models/` remain ignored and can be
-recreated by running the scripts.
+Generated split files are retained so individual stages can be inspected.
+Running the complete workflow recreates them from the included source files.
+Fitted model files under `results/models/` are generated locally.

@@ -1,5 +1,10 @@
 # Notebooks
 
+The notebooks display the datasets, audit tables, metrics, and figures created
+by the experiment runners.
+
+Please run them in this order:
+
 ```text
 week03_linear_family.ipynb
 week04_representation_experiments.ipynb
@@ -11,4 +16,5 @@ week09_uncertainty_calibration.ipynb
 week10_feature_attribution.ipynb
 ```
 
-Keeping the notebook mainly for explanation, result display, and discussion. Putting all reusable functions in `src/s1_linear/`.
+Reusable processing and modeling code is stored in `src/s1_linear/`. The
+complete command sequence is documented in the root `README.md`.

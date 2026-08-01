@@ -15,7 +15,7 @@ def build_elastic_net_pipeline(random_state: int = 42) -> Pipeline:
     """Elastic Net with L1/L2 regularization."""
     return Pipeline([
         ("scaler", StandardScaler()),
-        ("model", ElasticNet(max_iter=10000, random_state=random_state))
+        ("model", ElasticNet(max_iter=50000, random_state=random_state))
     ])
 
 

@@ -22,9 +22,11 @@ from s1_linear.week08.publication_data import (
 )
 from s1_linear.week08.experiments import (
     load_split,
+    run_all_models_leave_one_publication_out,
     run_leave_one_publication_out,
     run_publication_model_selection,
     run_row_mixed_comparison,
+    select_directional_error_examples,
 )
 from s1_linear.week08.splits import (
     make_size_balanced_publication_manifest,
@@ -241,6 +243,14 @@ def main(config_path: str) -> None:
         predictions_dir / output_config["final_test_predictions_name"],
         index=False,
     )
+    model_results["all_test_metrics"].to_csv(
+        metrics_dir / output_config["all_model_test_metrics_name"],
+        index=False,
+    )
+    model_results["all_test_predictions"].to_csv(
+        predictions_dir / output_config["all_model_test_predictions_name"],
+        index=False,
+    )
 
     split_comparison = run_row_mixed_comparison(
         selected_model_name=model_results["selected_model_name"],
@@ -289,6 +299,33 @@ def main(config_path: str) -> None:
             tables_dir / output_config["worst_rows_name"],
             index=False,
         )
+        select_directional_error_examples(lopo_predictions).to_csv(
+            tables_dir / output_config["directional_error_rows_name"],
+            index=False,
+        )
+        all_lopo_metrics, all_lopo_predictions, all_lopo_summary = (
+            run_all_models_leave_one_publication_out(
+                modeling_df=modeling_df,
+                lineage_df=modeling_lineage,
+                target_col=data_config["target"],
+                model_names=model_results["tuning_summary"]["model"].tolist(),
+                frozen_config=model_results["selected_config"],
+                policy=data_config["policy"],
+                minimum_rows=audit_config["minimum_rows_for_reliable_metrics"],
+            )
+        )
+        all_lopo_metrics.to_csv(
+            metrics_dir / output_config["all_model_lopo_metrics_name"],
+            index=False,
+        )
+        all_lopo_predictions.to_csv(
+            predictions_dir / output_config["all_model_lopo_predictions_name"],
+            index=False,
+        )
+        all_lopo_summary.to_csv(
+            tables_dir / output_config["all_model_lopo_summary_name"],
+            index=False,
+        )
 
     plot_publication_group_sizes(
         publication_audit,
@@ -325,6 +362,14 @@ def main(config_path: str) -> None:
     print(leakage_audit.to_string(index=False))
     print("\nPublication-held-out model selection:")
     print(model_results["selected_summary"].round(3).to_string(index=False))
+    print("\nAll Linear models on the unseen-publication test:")
+    print(
+        model_results["all_test_metrics"][
+            ["model", "MAE", "RMSE", "R2", "MaximumAE"]
+        ]
+        .round(3)
+        .to_string(index=False)
+    )
     print("\nRow-mixed versus publication-held-out:")
     print(
         split_comparison[
@@ -343,6 +388,14 @@ def main(config_path: str) -> None:
     if not lopo_summary.empty:
         print("\nLeave-one-publication-out summary:")
         print(lopo_summary.round(3).to_string(index=False))
+        print("\nAll Linear models under leave-one-publication-out:")
+        print(
+            all_lopo_summary.query(
+                "aggregation == 'macro_equal_publication_weight'"
+            )[["model", "MAE", "RMSE", "R2", "MaximumAE"]]
+            .round(3)
+            .to_string(index=False)
+        )
 
 
 if __name__ == "__main__":
