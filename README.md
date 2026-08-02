@@ -60,10 +60,10 @@ Each track folder holds its own datasets, notebooks (grouped by week), and helpe
 
 ## Contributors
 
-- **Brijeshkumar Dholakiya (Linear Family)** ([@BrijeshDholakiya](https://github.com/BrijeshDholakiya))
-- **Shoaib Ahmad Joo (Kernel Family)** ([@shoaib-joo](https://github.com/shoaib-joo))
-- **Anmol Bhardwaj (Tree Family)** ([@Anmol040](https://github.com/Anmol040))
-- **Jasurbek Odilov (Boosting Family)** ([@Jocund96](https://github.com/Jocund96))
+- **Brijeshkumar Dholakiya** ([@BrijeshDholakiya](https://github.com/BrijeshDholakiya))
+- **Shoaib Ahmad Joo** ([@shoaib-joo](https://github.com/shoaib-joo))
+- **Anmol Bhardwaj** ([@Anmol040](https://github.com/Anmol040))
+- **Jasurbek Odilov** ([@Jocund96](https://github.com/Jocund96))
 
 ## Course Info
 
