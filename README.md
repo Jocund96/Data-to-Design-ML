@@ -20,21 +20,10 @@ We work with a concrete dataset collection to predict concrete compressive stren
 
 ### Classical Machine Learning
 
-- Linear models (OLS, Elastic Net, Bayesian Ridge, Polynomial Ridge) - assigned to Brijesh Dholakiya
-- Kernel and SVMs (KNN, SVR, NuSVR) - assigned to Shoaib Ahmad Joo
-- Ensemble models (Decision Tree, Random Forest, Extra Trees) - assigned to Anmol Bhardwaj
-- Boosting models (XGBoost, HistGradientBoosting, AdaBoost) - assigned to Jasurbek Odilov
-
-## Repository Structure
-
-# Each track is an independent student workstream (not a progressive pipeline), organized by week within its own folder:
-
-## Classical Machine Learning Models
-
-- Linear models (OLS, Elastic Net, Bayesian Ridge, Polynomial Ridge) - assigned to Brijesh Dholakiya
-- Support Vector Machines (KNN, SVR, NuSVR) - assigned to Shoaib Ahmad Joo
-- Ensemble models (Decision tree, Random Forest, Extra Trees) - assigned to Anmol Bradhwaj
-- Boosting models (XGBoost, HistGradBoost, Adaboost) - assigned to Jasurbek Odilov
+- Linear models (OLS, Elastic Net, Bayesian Ridge, Polynomial Ridge)
+- Kernel and SVMs (KNN, SVR, NuSVR)
+- Ensemble models (Decision Tree, Random Forest, Extra Trees)
+- Boosting models (XGBoost, HistGradientBoosting, AdaBoost)
 
 ## Repository Structure
 
@@ -60,10 +49,10 @@ Each track folder holds its own datasets, notebooks (grouped by week), and helpe
 
 ## Contributors
 
-- **Brijeshkumar Dholakiya** ([@BrijeshDholakiya](https://github.com/BrijeshDholakiya))
-- **Shoaib Ahmad Joo** ([@shoaib-joo](https://github.com/shoaib-joo))
-- **Anmol Bhardwaj** ([@Anmol040](https://github.com/Anmol040))
-- **Jasurbek Odilov** ([@Jocund96](https://github.com/Jocund96))
+- **Brijeshkumar Dholakiya (Linear Family)** ([@BrijeshDholakiya](https://github.com/BrijeshDholakiya))
+- **Shoaib Ahmad Joo (Kernel Family)** ([@shoaib-joo](https://github.com/shoaib-joo))
+- **Anmol Bhardwaj (Tree Family)** ([@Anmol040](https://github.com/Anmol040))
+- **Jasurbek Odilov (Boosting Family)** ([@Jocund96](https://github.com/Jocund96))
 
 ## Course Info
 
