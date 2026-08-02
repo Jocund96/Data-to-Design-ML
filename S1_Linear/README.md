@@ -1,8 +1,9 @@
 # S1 Linear Family
 
 This directory contains the Linear Family experiments for concrete
-compressive-strength prediction. The work covers the UCI Concrete dataset and
-the literature-derived UHPC dataset.
+compressive-strength prediction. It begins with an introductory California
+Housing example, followed by the UCI Concrete and literature-derived UHPC
+datasets.
 
 ## View Saved Results
 
@@ -11,16 +12,18 @@ directly on GitHub or in the VS Code Notebook Editor without rerunning the
 experiments. In VS Code, install the Jupyter extension and trust the cloned
 workspace so that rich tables and figures are displayed.
 
-| Stage | Notebook |
-| ----- | -------- |
-| UCI linear baselines | [Week 3](notebooks/week03_linear_family.ipynb) |
-| UCI feature representations | [Week 4](notebooks/week04_representation_experiments.ipynb) |
-| UHPC import and target audit | [Week 5](notebooks/week05_uhpc_import_and_target_check.ipynb) |
-| UHPC semantic missingness | [Week 6](notebooks/week06_semantic_missingness_strategies.ipynb) |
-| UHPC row-mixed experiments | [Week 7](notebooks/week07_linear_family_results.ipynb) |
-| Publication-held-out and LOPO evaluation | [Week 8](notebooks/week08_publication_generalization.ipynb) |
-| Uncertainty calibration | [Week 9](notebooks/week09_uncertainty_calibration.ipynb) |
-| SHAP and permutation attribution | [Week 10](notebooks/week10_feature_attribution.ipynb) |
+| Stage                                    | Notebook                                                         |
+| ---------------------------------------- | ---------------------------------------------------------------- |
+| Linear regression basics                 | [Week 1](notebooks/week01_linear_regression_basics.ipynb)         |
+| UCI exploratory analysis                 | [Week 2](notebooks/week02_uci_exploratory_analysis.ipynb)         |
+| UCI linear baselines                     | [Week 3](notebooks/week03_linear_family.ipynb)                   |
+| UCI feature representations              | [Week 4](notebooks/week04_representation_experiments.ipynb)      |
+| UHPC import and target audit             | [Week 5](notebooks/week05_uhpc_import_and_target_check.ipynb)    |
+| UHPC semantic missingness                | [Week 6](notebooks/week06_semantic_missingness_strategies.ipynb) |
+| UHPC row-mixed experiments               | [Week 7](notebooks/week07_linear_family_results.ipynb)           |
+| Publication-held-out and LOPO evaluation | [Week 8](notebooks/week08_publication_generalization.ipynb)      |
+| Uncertainty calibration                  | [Week 9](notebooks/week09_uncertainty_calibration.ipynb)         |
+| SHAP and permutation attribution         | [Week 10](notebooks/week10_feature_attribution.ipynb)            |
 
 Individual artifacts can also be inspected without execution:
 
@@ -34,7 +37,6 @@ Individual artifacts can also be inspected without execution:
 The following environment is required only to rerun the experiments.
 
 - Python 3.11 or newer
-- About 2 GB of free disk space for the environment and generated outputs
 - A Jupyter-compatible browser for interactive notebook use
 
 The submitted environment uses Python 3.14.0. Package versions are fixed in
@@ -74,6 +76,7 @@ The required input data is included in `data/`.
 
 | Workflow                         | Input                                                |
 | -------------------------------- | ---------------------------------------------------- |
+| UCI exploratory analysis         | `data/raw/uci_concrete_data.xlsx`                    |
 | UCI baseline and representations | `data/processed/uci_concrete_clean_engineered.csv`   |
 | UHPC import                      | `data/raw/UHPC Dataset  (Version-2).xlsx`            |
 | UHPC semantic missingness        | `data/processed/uhpc_rows_with_28day_target.csv`     |
@@ -100,6 +103,27 @@ execution.
 
 All commands below assume the virtual environment is active and the current
 directory is `S1_Linear/`.
+
+### Week 1: Linear regression basics
+
+```bash
+python -m nbconvert --to notebook --execute --inplace notebooks/week01_linear_regression_basics.ipynb
+```
+
+This notebook introduces data inspection, an 80/20 split, ordinary linear
+regression, standard metrics, and an actual-versus-predicted plot using the
+California Housing dataset retrieved through scikit-learn. On a machine where
+the dataset is not already cached, its first execution requires internet access.
+
+### Week 2: UCI exploratory analysis
+
+```bash
+python -m nbconvert --to notebook --execute --inplace notebooks/week02_uci_exploratory_analysis.ipynb
+```
+
+This notebook cleans the raw UCI workbook, examines missing values,
+duplicates, distributions, correlations, and outliers, and creates the
+processed raw and engineered feature tables used by the later experiments.
 
 ### Week 3: UCI linear baselines
 

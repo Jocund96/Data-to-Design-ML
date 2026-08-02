@@ -5,6 +5,7 @@ directory.
 
 | Dataset | Path | Purpose |
 |---|---|---|
+| Raw UCI Concrete | `raw/uci_concrete_data.xlsx` | Exploratory analysis and cleaning |
 | UCI Concrete | `processed/uci_concrete_clean_engineered.csv` | Baseline and representation experiments |
 | UHPC workbook | `raw/UHPC Dataset  (Version-2).xlsx` | Original UHPC import |
 | Target-filtered UHPC | `processed/uhpc_rows_with_28day_target.csv` | Semantic missingness experiments |

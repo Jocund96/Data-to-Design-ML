@@ -12,6 +12,8 @@ import sys
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 
 WORKFLOWS = {
+    1: [],
+    2: [],
     3: [["scripts/run_week03_linear.py"]],
     4: [["scripts/run_week04_representation.py"]],
     5: [],
@@ -26,6 +28,8 @@ WORKFLOWS = {
 }
 
 NOTEBOOKS = {
+    1: "week01_linear_regression_basics.ipynb",
+    2: "week02_uci_exploratory_analysis.ipynb",
     3: "week03_linear_family.ipynb",
     4: "week04_representation_experiments.ipynb",
     5: "week05_uhpc_import_and_target_check.ipynb",
@@ -65,7 +69,7 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(
         description="Run S1 Linear workflows and notebooks in dependency order."
     )
-    parser.add_argument("--from-week", type=int, choices=WORKFLOWS, default=3)
+    parser.add_argument("--from-week", type=int, choices=WORKFLOWS, default=1)
     parser.add_argument("--to-week", type=int, choices=WORKFLOWS, default=10)
     parser.add_argument(
         "--skip-notebooks",
