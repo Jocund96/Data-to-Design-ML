@@ -1,0 +1,2 @@
+selection_rule,selected_model,validation_RMSE,validation_MAE,validation_R2,final_test_RMSE,final_test_MAE,final_test_R2
+lowest_publication_validation_RMSE,Elastic Net,29.402517723451925,23.861121398196165,0.2899276360309909,30.320013056474735,25.76024938716135,0.4260151697133263

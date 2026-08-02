@@ -1,0 +1,8 @@
+Feature group,Examples,Variable type,Recommended handling
+Mix ID and paper details,"Mix-ID, reference details, country, year, paper reference",Identifier / metadata,"Use for checking and traceability, but normally drop before modelling"
+Material amounts,"cement amount, silica fume, fly ash, sand, water, superplasticizer",Continuous numeric,Keep as numeric; check units; impute missing values carefully
+Cement grade,"42.5, 52.5, 53 MPa",Ordinal / numeric,Extract the number and use it as a numeric feature
+Material type columns,"cement type, fly ash type, sand type, fiber type",Nominal categorical,Clean spelling and group rare categories; then use one-hot encoding
+Curing regime,"curing method, temperature, humidity, pressure",Mixed: categorical + numeric,"One-hot encode curing method; keep temperature, humidity, and pressure as numeric"
+Testing standard and specimen information,"ASTM, EN, specimen size",High-cardinality categorical / text,"Clean or group; for first model, keep only useful extracted information"
+Other mechanical/durability outputs,"7-day strength, 56-day strength, shrinkage, porosity",Output-like variables,Do not use as input for a pure mix-design to 28-day strength model

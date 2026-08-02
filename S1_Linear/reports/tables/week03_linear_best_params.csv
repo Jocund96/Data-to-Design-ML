@@ -1,0 +1,5 @@
+Model,Best parameters
+OLS,None
+Elastic Net,"{'model__alpha': 0.01, 'model__l1_ratio': 0.7}"
+Bayesian Ridge,Default sklearn parameters
+Polynomial Ridge,"{'model__alpha': 0.1, 'poly__degree': 3}"

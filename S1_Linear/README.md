@@ -4,7 +4,34 @@ This directory contains the Linear Family experiments for concrete
 compressive-strength prediction. The work covers the UCI Concrete dataset and
 the literature-derived UHPC dataset.
 
+## View Saved Results
+
+The notebooks are committed with their final saved outputs. They can be opened
+directly on GitHub or in the VS Code Notebook Editor without rerunning the
+experiments. In VS Code, install the Jupyter extension and trust the cloned
+workspace so that rich tables and figures are displayed.
+
+| Stage | Notebook |
+| ----- | -------- |
+| UCI linear baselines | [Week 3](notebooks/week03_linear_family.ipynb) |
+| UCI feature representations | [Week 4](notebooks/week04_representation_experiments.ipynb) |
+| UHPC import and target audit | [Week 5](notebooks/week05_uhpc_import_and_target_check.ipynb) |
+| UHPC semantic missingness | [Week 6](notebooks/week06_semantic_missingness_strategies.ipynb) |
+| UHPC row-mixed experiments | [Week 7](notebooks/week07_linear_family_results.ipynb) |
+| Publication-held-out and LOPO evaluation | [Week 8](notebooks/week08_publication_generalization.ipynb) |
+| Uncertainty calibration | [Week 9](notebooks/week09_uncertainty_calibration.ipynb) |
+| SHAP and permutation attribution | [Week 10](notebooks/week10_feature_attribution.ipynb) |
+
+Individual artifacts can also be inspected without execution:
+
+- [Tables](reports/tables/) for preprocessing audits and experiment summaries
+- [Figures](reports/figures/) for saved plots
+- [Metrics](results/metrics/) for model-evaluation results
+- [Predictions](results/predictions/) for row-level model outputs
+
 ## Requirements
+
+The following environment is required only to rerun the experiments.
 
 - Python 3.11 or newer
 - About 2 GB of free disk space for the environment and generated outputs
@@ -55,7 +82,7 @@ The required input data is included in `data/`.
 The UCI baseline uses the original eight Yeh predictors: cement, slag, fly
 ash, water, superplasticizer, coarse aggregate, fine aggregate, and age.
 
-## Complete Run
+## Optional Complete Run
 
 The complete workflow runs the experiment code first and then executes each
 notebook with the generated outputs:
@@ -69,7 +96,7 @@ attribution stages reuse outputs from earlier stages. Use
 `python scripts/run_all.py --help` to run a smaller week range or skip notebook
 execution.
 
-## Individual Runs
+## Optional Individual Runs
 
 All commands below assume the virtual environment is active and the current
 directory is `S1_Linear/`.
@@ -165,5 +192,7 @@ Generated files are written to:
 - `results/predictions/` for row-level predictions
 - `results/models/` for fitted model artifacts
 
-Most generated outputs are ignored by Git because they can be reproduced from
-the included data, configuration files, and runners.
+Readable tables, figures, metrics, predictions, and frozen YAML configurations
+are included in the repository for direct inspection. Fitted model binaries are
+ignored because they can be regenerated from the included data, configurations,
+and runners.

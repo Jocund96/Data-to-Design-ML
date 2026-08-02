@@ -1,0 +1,61 @@
+transformed_feature,original_feature,transform_family,transformed_detail,mapping_status,feature_group
+target__cement_type,cement_type,target,,mapped,binders_and_scms
+target__filler_type,filler_type,target,,mapped,fillers_and_aggregates
+target__sand_type,sand_type,target,,mapped,fillers_and_aggregates
+target__fiber1_type,fiber1_type,target,,mapped,fibers
+num__cement,cement,num,,mapped,binders_and_scms
+num__silica_fume,silica_fume,num,,mapped,binders_and_scms
+num__fly_ash,fly_ash,num,,mapped,binders_and_scms
+num__limestone_powder,limestone_powder,num,,mapped,binders_and_scms
+num__quartz_powder,quartz_powder,num,,mapped,binders_and_scms
+num__glass_powder,glass_powder,num,,mapped,binders_and_scms
+num__rice_husk_ash,rice_husk_ash,num,,mapped,binders_and_scms
+num__metakaolin,metakaolin,num,,mapped,binders_and_scms
+num__ggbfs,ggbfs,num,,mapped,binders_and_scms
+num__slag,slag,num,,mapped,binders_and_scms
+num__nano_caco3,nano_caco3,num,,mapped,binders_and_scms
+num__nano_al2o3,nano_al2o3,num,,mapped,binders_and_scms
+num__nano_tio2,nano_tio2,num,,mapped,binders_and_scms
+num__nano_sio2,nano_sio2,num,,mapped,binders_and_scms
+num__filler,filler,num,,mapped,fillers_and_aggregates
+num__sand,sand,num,,mapped,fillers_and_aggregates
+num__sand_max_size,sand_max_size,num,,mapped,fillers_and_aggregates
+num__fiber1_amount,fiber1_amount,num,,mapped,fibers
+num__fiber1_length,fiber1_length,num,,mapped,fibers
+num__fiber1_diameter,fiber1_diameter,num,,mapped,fibers
+num__fiber2_amount,fiber2_amount,num,,mapped,fibers
+num__water,water,num,,mapped,water
+num__sp_amount,sp_amount,num,,mapped,chemical_admixtures
+num__curing_temp,curing_temp,num,,mapped,curing
+ohe__fly_ash_type_class C,fly_ash_type,ohe,class C,mapped,binders_and_scms
+ohe__fly_ash_type_class F,fly_ash_type,ohe,class F,mapped,binders_and_scms
+ohe__fly_ash_type_not_applicable,fly_ash_type,ohe,not_applicable,mapped,binders_and_scms
+ohe__fly_ash_type_unknown_type,fly_ash_type,ohe,unknown_type,mapped,binders_and_scms
+ohe__slag_type_Phosphorous Slag,slag_type,ohe,Phosphorous Slag,mapped,binders_and_scms
+ohe__slag_type_Steel Slag,slag_type,ohe,Steel Slag,mapped,binders_and_scms
+"ohe__slag_type_Steel Slag 
+Powder",slag_type,ohe,"Steel Slag 
+Powder",mapped,binders_and_scms
+ohe__slag_type_not_applicable,slag_type,ohe,not_applicable,mapped,binders_and_scms
+ohe__fiber2_type_Cellulose Fiber,fiber2_type,ohe,Cellulose Fiber,mapped,fibers
+ohe__fiber2_type_Hooked Steel Fiber,fiber2_type,ohe,Hooked Steel Fiber,mapped,fibers
+ohe__fiber2_type_PE Fiber,fiber2_type,ohe,PE Fiber,mapped,fibers
+ohe__fiber2_type_PP Fiber,fiber2_type,ohe,PP Fiber,mapped,fibers
+ohe__fiber2_type_PVA Fiber,fiber2_type,ohe,PVA Fiber,mapped,fibers
+ohe__fiber2_type_Straight Steel Fiber,fiber2_type,ohe,Straight Steel Fiber,mapped,fibers
+ohe__fiber2_type_not_applicable,fiber2_type,ohe,not_applicable,mapped,fibers
+ohe__sp_type_HRWRA,sp_type,ohe,HRWRA,mapped,chemical_admixtures
+ohe__sp_type_Other_Polymer_SP,sp_type,ohe,Other_Polymer_SP,mapped,chemical_admixtures
+ohe__sp_type_PCE_HRWRA,sp_type,ohe,PCE_HRWRA,mapped,chemical_admixtures
+ohe__sp_type_PCE_SP,sp_type,ohe,PCE_SP,mapped,chemical_admixtures
+ohe__sp_type_SNF_SP,sp_type,ohe,SNF_SP,mapped,chemical_admixtures
+ohe__sp_type_Unspecified,sp_type,ohe,Unspecified,mapped,chemical_admixtures
+ohe__sp_type_VMA,sp_type,ohe,VMA,mapped,chemical_admixtures
+ohe__sp_type_unknown_type,sp_type,ohe,unknown_type,mapped,chemical_admixtures
+ohe__curing_method_Air Curing,curing_method,ohe,Air Curing,mapped,curing
+ohe__curing_method_Autoclave Curing,curing_method,ohe,Autoclave Curing,mapped,curing
+ohe__curing_method_Heat Curing,curing_method,ohe,Heat Curing,mapped,curing
+ohe__curing_method_Hot Water Curing,curing_method,ohe,Hot Water Curing,mapped,curing
+ohe__curing_method_Standard Curing,curing_method,ohe,Standard Curing,mapped,curing
+ohe__curing_method_Steam Curing,curing_method,ohe,Steam Curing,mapped,curing
+ohe__curing_method_Water Curing,curing_method,ohe,Water Curing,mapped,curing

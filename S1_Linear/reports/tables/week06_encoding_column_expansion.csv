@@ -1,0 +1,4 @@
+policy,preprocessing_policy,fit_scope,input_predictor_columns,numeric_source_columns,categorical_source_columns,encoded_categorical_columns,extra_columns_from_categorical_encoding,extra_numeric_missing_indicator_columns,total_transformed_columns,net_extra_columns_after_preprocessing
+full_raw,grouped_ohe,X_train_only,41,32,9,79,70,13,124,83
+raw_le_50,grouped_ohe,X_train_only,29,24,5,53,48,6,83,54
+raw_le_20,grouped_ohe,X_train_only,24,20,4,48,44,3,71,47

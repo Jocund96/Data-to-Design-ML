@@ -38,18 +38,24 @@ __pycache__/
 !/data/interim/**
 !/data/external/**
 
-# Generated experiment outputs. Recreate them by running scripts/run_week03_linear.py.
-/reports/figures/**
-/reports/tables/**
+# Keep result artifacts ignored by default, then include readable metrics,
+# predictions, and frozen YAML configurations below.
 /results/**
 !/reports/
 !/reports/**/
+!/reports/figures/**
+!/reports/tables/**
 !/reports/**/.gitkeep
 !/reports/**/README.md
+/reports/tables/week07_baseline_predictions.csv
+/reports/tables/week07_targeted_experiment_predictions.csv
 !/results/
 !/results/**/
 !/results/**/.gitkeep
 !/results/**/README.md
+!/results/metrics/**
+!/results/predictions/**
+!/results/models/**/*.yaml
 
 # Saved model artifacts
 *.joblib

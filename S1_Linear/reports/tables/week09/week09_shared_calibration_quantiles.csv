@@ -1,0 +1,21 @@
+method,model,evaluation_scheme,evaluation_fold,calibration_score_type,alpha,nominal_coverage,n_calibration_rows,finite_sample_rank,quantile_level,q_hat,bootstrap_repetitions
+elastic_net_split_conformal,Elastic Net,shared_publication_held_out,shared_publication_test,absolute_validation_residual,0.5,0.5,311,156.0,0.5016077170418006,21.442353033411564,
+elastic_net_split_conformal,Elastic Net,shared_publication_held_out,shared_publication_test,absolute_validation_residual,0.19999999999999996,0.8,311,250.0,0.8038585209003215,34.50836570954081,
+elastic_net_split_conformal,Elastic Net,shared_publication_held_out,shared_publication_test,absolute_validation_residual,0.09999999999999998,0.9,311,281.0,0.9035369774919614,46.72090464931597,
+elastic_net_split_conformal,Elastic Net,shared_publication_held_out,shared_publication_test,absolute_validation_residual,0.050000000000000044,0.95,311,297.0,0.954983922829582,55.544647471269684,
+bayesian_ridge_native,Bayesian Ridge,shared_publication_held_out,shared_publication_test,gaussian_predictive_z,0.5,0.5,311,,,0.6744897501960817,
+bayesian_ridge_native,Bayesian Ridge,shared_publication_held_out,shared_publication_test,gaussian_predictive_z,0.19999999999999996,0.8,311,,,1.2815515655446006,
+bayesian_ridge_native,Bayesian Ridge,shared_publication_held_out,shared_publication_test,gaussian_predictive_z,0.09999999999999998,0.9,311,,,1.6448536269514715,
+bayesian_ridge_native,Bayesian Ridge,shared_publication_held_out,shared_publication_test,gaussian_predictive_z,0.050000000000000044,0.95,311,,,1.9599639845400534,
+bayesian_ridge_conformalized,Bayesian Ridge,shared_publication_held_out,shared_publication_test,absolute_residual_over_predictive_std,0.5,0.5,311,156.0,0.5016077170418006,1.113088337072879,
+bayesian_ridge_conformalized,Bayesian Ridge,shared_publication_held_out,shared_publication_test,absolute_residual_over_predictive_std,0.19999999999999996,0.8,311,250.0,0.8038585209003215,1.8829541663343645,
+bayesian_ridge_conformalized,Bayesian Ridge,shared_publication_held_out,shared_publication_test,absolute_residual_over_predictive_std,0.09999999999999998,0.9,311,281.0,0.9035369774919614,2.2339911816509073,
+bayesian_ridge_conformalized,Bayesian Ridge,shared_publication_held_out,shared_publication_test,absolute_residual_over_predictive_std,0.050000000000000044,0.95,311,297.0,0.954983922829582,2.8244412445424865,
+elastic_net_residual_bootstrap,Elastic Net,shared_publication_held_out,shared_publication_test,bootstrap_percentile_bounds,0.5,0.5,311,,,,300.0
+elastic_net_bootstrap_conformalized,Elastic Net,shared_publication_held_out,shared_publication_test,outside_bootstrap_interval_distance,0.5,0.5,311,156.0,0.5016077170418006,4.846389151618197,
+elastic_net_residual_bootstrap,Elastic Net,shared_publication_held_out,shared_publication_test,bootstrap_percentile_bounds,0.19999999999999996,0.8,311,,,,300.0
+elastic_net_bootstrap_conformalized,Elastic Net,shared_publication_held_out,shared_publication_test,outside_bootstrap_interval_distance,0.19999999999999996,0.8,311,250.0,0.8038585209003215,7.889848807011987,
+elastic_net_residual_bootstrap,Elastic Net,shared_publication_held_out,shared_publication_test,bootstrap_percentile_bounds,0.09999999999999998,0.9,311,,,,300.0
+elastic_net_bootstrap_conformalized,Elastic Net,shared_publication_held_out,shared_publication_test,outside_bootstrap_interval_distance,0.09999999999999998,0.9,311,281.0,0.9035369774919614,12.71614745875226,
+elastic_net_residual_bootstrap,Elastic Net,shared_publication_held_out,shared_publication_test,bootstrap_percentile_bounds,0.050000000000000044,0.95,311,,,,300.0
+elastic_net_bootstrap_conformalized,Elastic Net,shared_publication_held_out,shared_publication_test,outside_bootstrap_interval_distance,0.050000000000000044,0.95,311,297.0,0.954983922829582,13.88206944071132,

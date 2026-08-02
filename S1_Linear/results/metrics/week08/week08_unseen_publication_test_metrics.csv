@@ -1,0 +1,2 @@
+policy,experiment,exploratory,model,split,n_rows,MAE,RMSE,R2,R,Bias,MedianAE,training_rows,training_publications
+shared_semantic_recoding_50_percent,final_unseen_publication_test,False,Elastic Net,test,311,25.76024938716135,30.320013056474735,0.4260151697133263,0.7112856547854112,11.15157022266686,23.021413812174615,1762,140

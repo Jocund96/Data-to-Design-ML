@@ -313,7 +313,6 @@ def main(config_path: str) -> None:
     print(split_summary.to_string(index=False))
     print("\nPreprocessing summary:")
     print(preprocessing_summary.to_string(index=False))
-    print(f"\nSaved fitted preprocessor to: {preprocessor_path}")
 
 
 if __name__ == "__main__":

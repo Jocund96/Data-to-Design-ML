@@ -174,7 +174,6 @@ def main(config_path: str):
     print(results_df.round(3).to_string(index=False))
     print("\nBest parameters")
     print(params_df.to_string(index=False))
-    print("\nSaved outputs to reports/ and results/.")
 
 
 if __name__ == "__main__":

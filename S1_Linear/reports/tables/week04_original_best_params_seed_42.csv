@@ -1,0 +1,5 @@
+Model,BestParams,FeatureSet,RandomState
+OLS,No hyperparameters tuned,original,42
+Elastic Net,"{'model__alpha': 0.01, 'model__l1_ratio': 0.7}",original,42
+Bayesian Ridge,Default sklearn parameters,original,42
+Polynomial Ridge,"{'model__alpha': 0.1, 'poly__degree': 3}",original,42

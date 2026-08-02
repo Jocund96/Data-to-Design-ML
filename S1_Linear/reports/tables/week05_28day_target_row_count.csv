@@ -1,0 +1,5 @@
+Item,Value
+Total rows in UHPC dataset,2188.0
+Rows with valid 28-day compressive strength,2073.0
+Rows missing 28-day compressive strength,115.0
+Usable rows for 28-day target modelling (%),94.74

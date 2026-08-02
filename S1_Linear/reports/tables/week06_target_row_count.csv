@@ -1,0 +1,5 @@
+item,value
+total_rows_in_source,2073.0
+rows_with_valid_28_day_target,2073.0
+rows_missing_28_day_target,0.0
+usable_rows_for_28_day_target_percent,100.0

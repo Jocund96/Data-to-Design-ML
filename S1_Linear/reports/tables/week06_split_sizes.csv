@@ -1,0 +1,4 @@
+policy,rows_total,train_rows,validation_rows,test_rows
+full_raw,2073,1451,311,311
+raw_le_50,2073,1451,311,311
+raw_le_20,2073,1451,311,311

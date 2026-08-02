@@ -1,0 +1,50 @@
+column,reason
+Mix-ID,identifier
+Workability | Testing Standard,workability_excluded_by_week6_scope
+Workability | Slump (mm),workability_excluded_by_week6_scope
+Workability | Slump Flow (mm),workability_excluded_by_week6_scope
+Mechanical Properties | Compressive Strength (Mpa) | Specimen,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | Testing Standard,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | 1-day,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | 3-Day,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | 7-Day,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | 14-Day,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | 21 days,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | 56-Day,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Compressive Strength (Mpa) | 90-Day,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Elastic Modulus | Testing Standard,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Elastic Modulus | Elastic Modulus (Gpa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Tensile Strength Parameters | Testing Standards,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Tensile Strength Parameters | Split Tensile Strength (Mpa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Tensile Strength Parameters | first-cracking strength (MPa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Tensile Strength Parameters | Direct Tensile Strength (Mpa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Tensile Strength Parameters | Peak tensile strain (%),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Tensile Strength Parameters | Tensile Elastic Modulus (GPa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Tensile Strength Parameters | Strain capacity (%),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | Specimens,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | Testing Standard,mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | LOP (Mpa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | MOR (MPa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | Peak Strength (MPa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | Residual Strength (f600) (MPa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | Residual Strength (f150) (MPa),mechanical_outcome_or_testing_metadata_leakage
+Mechanical Properties | Flexural Strength Parameters | Toughness (J),mechanical_outcome_or_testing_metadata_leakage
+Durability Properities | Air Content/Air Void/ Porosity | Testing Standards,durability_outcome_leakage
+Durability Properities | Air Content/Air Void/ Porosity | Air Content %,durability_outcome_leakage
+Durability Properities | Air Content/Air Void/ Porosity | Air Void %,durability_outcome_leakage
+Durability Properities | Air Content/Air Void/ Porosity | Porosity,durability_outcome_leakage
+Durability Properities | Water absorption | Testing Standards,durability_outcome_leakage
+Durability Properities | Water absorption | Water absorption (%),durability_outcome_leakage
+Durability Properities | Shrinkage (µϵ) | Testing Standards,durability_outcome_leakage
+Durability Properities | Shrinkage (µϵ) | 28-day Shrinkage (µstrain),durability_outcome_leakage
+Durability Properities | Shrinkage (µϵ) | 56-day Shrinkage (µstrain),durability_outcome_leakage
+Durability Properities | Freezing and Thawing | Testing Standards,durability_outcome_leakage
+Durability Properities | Freezing and Thawing | Cycles,durability_outcome_leakage
+Durability Properities | Rapid Chloride Permeability Test | Testing Standards,durability_outcome_leakage
+Durability Properities | Rapid Chloride Permeability Test | Total Charge Passed (Coulombs),durability_outcome_leakage
+Durability Properities | Surface Resistivity | Testing Standards,durability_outcome_leakage
+Durability Properities | Surface Resistivity | Surface Resistivity (kΩ-mm),durability_outcome_leakage
+Research Paper Details | Country of Origin,paper_metadata
+Research Paper Details | Reference details/Data sources,paper_metadata
+Research Paper Details | Year of Publish,paper_metadata
+Research Paper Details | Research paper reference in dataset,paper_metadata

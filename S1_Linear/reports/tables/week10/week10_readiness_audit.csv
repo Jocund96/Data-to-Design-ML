@@ -1,0 +1,11 @@
+check,value,status,detail
+week09_readiness_audit_passed,0,pass,Week 10 reuses the frozen Week 9 input audit.
+model_name,Elastic Net,pass,Week 10 is configured to explain the Week 9 Elastic Net.
+test_row_alignment,311/311/311,pass,"X_test, y_test, and test lineage rows must align."
+target_not_in_predictors,cs_28d,pass,Target values are only used for evaluation.
+lineage_columns_not_in_predictors,0,pass,
+transformed_feature_count_matches_coefficients,58/58,pass,Each transformed feature needs exactly one linear coefficient.
+shap_package_available,True,pass,SHAP is installed and shap.LinearExplainer was used.
+shap_method_used,shap.LinearExplainer,pass,Method used for transformed-space SHAP values.
+shap_additivity,2.842170943040401e-14,pass,Tolerance: 1e-06
+permutation_refits_model,False,pass,Week 10 permutation importance reuses the fitted model.

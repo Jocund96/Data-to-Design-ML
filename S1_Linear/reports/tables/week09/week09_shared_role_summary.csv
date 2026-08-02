@@ -1,0 +1,4 @@
+evaluation_fold,role,n_rows,n_publications
+shared_publication_test,train,1451,115
+shared_publication_test,calibration,311,25
+shared_publication_test,heldout,311,25

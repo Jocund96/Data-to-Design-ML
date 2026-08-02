@@ -1,0 +1,2 @@
+selection_rule,best_model,validation_RMSE,validation_MAE,validation_R2,test_RMSE,test_MAE,test_R2
+lowest_validation_RMSE,Bayesian Ridge,21.742525107241676,16.990839823943833,0.6690124900344376,20.93484018166194,16.562743701630453,0.6892335532885363

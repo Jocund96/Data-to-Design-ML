@@ -1,0 +1,2 @@
+policy,split_strategy,total_rows,train_rows,validation_rows,test_rows,train_percentage,validation_percentage,test_percentage,train_target_mean,validation_target_mean,test_target_mean,train_target_std,validation_target_std,test_target_std,feature_hash_groups_crossing_splits,random_state
+shared_semantic_recoding_50_percent,feature_hash_grouped,2073,1449,311,313,69.8986975397974,15.002411963338158,15.098890496864447,150.34768467827553,148.75583704097903,150.90324455946472,35.779145314795265,37.85328067668164,37.613821609498366,0,42

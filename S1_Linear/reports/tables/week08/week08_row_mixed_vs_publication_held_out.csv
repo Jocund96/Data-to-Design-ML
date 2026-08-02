@@ -1,0 +1,3 @@
+split_strategy,policy,experiment,exploratory,model,split,n_rows,MAE,RMSE,R2,R,Bias,MedianAE,training_rows,training_publications,RMSE_gap_vs_row_mixed,MAE_gap_vs_row_mixed,R2_gap_vs_row_mixed
+row_mixed_feature_hash,shared_semantic_recoding_50_percent,row_mixed_test_same_frozen_model,False,Elastic Net,test,313,16.91425524547559,21.68217637148494,0.6666499165626326,0.8233322291053452,2.532218480343115,13.542635319678823,,,0.0,0.0,0.0
+publication_held_out,shared_semantic_recoding_50_percent,final_unseen_publication_test,False,Elastic Net,test,311,25.76024938716135,30.320013056474735,0.4260151697133263,0.7112856547854112,11.15157022266686,23.021413812174615,1762.0,140.0,8.637836684989797,8.845994141685757,-0.2406347468493063

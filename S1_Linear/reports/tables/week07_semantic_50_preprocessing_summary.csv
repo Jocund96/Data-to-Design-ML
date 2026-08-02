@@ -1,0 +1,2 @@
+policy,raw_predictors,numeric_predictors,categorical_predictors,transformed_predictors,numeric_imputer,numeric_missing_indicators,numeric_scaler,one_hot_predictors,target_encoded_predictors,categorical_missing_value,categorical_encoder,preprocessor_fit_rows,remaining_nan_train,remaining_nan_validation,remaining_nan_test
+shared_semantic_recoding_50_percent,33,24,9,60,median,False,StandardScaler,5,4,preserved_for_shared_strategy,OneHotEncoder(handle_unknown='ignore') + TargetEncoder(cv=5),1449,0,0,0

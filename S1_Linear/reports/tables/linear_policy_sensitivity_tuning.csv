@@ -1,0 +1,9 @@
+policy,model,cv_folds,grouping,best_cv_RMSE,best_parameters
+raw_le_20,OLS,3,feature_hash_group,,{}
+raw_le_20,Elastic Net,3,feature_hash_group,23.070944546571038,"{""model__alpha"": 0.1, ""model__l1_ratio"": 0.1}"
+raw_le_20,Bayesian Ridge,3,feature_hash_group,23.228906113942987,"{""model__alpha_1"": 1e-07, ""model__lambda_1"": 1e-05}"
+raw_le_20,Polynomial Ridge,3,feature_hash_group,27.97903090103995,"{""model__alpha"": 1000.0, ""poly__degree"": 2}"
+raw_le_50,OLS,3,feature_hash_group,,{}
+raw_le_50,Elastic Net,3,feature_hash_group,20.7246406919177,"{""model__alpha"": 0.1, ""model__l1_ratio"": 0.7}"
+raw_le_50,Bayesian Ridge,3,feature_hash_group,20.81213293247371,"{""model__alpha_1"": 1e-07, ""model__lambda_1"": 1e-05}"
+raw_le_50,Polynomial Ridge,3,feature_hash_group,39.951779668901715,"{""model__alpha"": 100.0, ""poly__degree"": 2}"

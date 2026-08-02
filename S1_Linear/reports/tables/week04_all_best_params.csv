@@ -1,0 +1,17 @@
+Model,BestParams,FeatureSet,RandomState
+OLS,No hyperparameters tuned,original,42
+Elastic Net,"{'model__alpha': 0.01, 'model__l1_ratio': 0.7}",original,42
+Bayesian Ridge,Default sklearn parameters,original,42
+Polynomial Ridge,"{'model__alpha': 0.1, 'poly__degree': 3}",original,42
+OLS,No hyperparameters tuned,yeh_engineered,42
+Elastic Net,"{'model__alpha': 0.1, 'model__l1_ratio': 0.7}",yeh_engineered,42
+Bayesian Ridge,Default sklearn parameters,yeh_engineered,42
+Polynomial Ridge,"{'model__alpha': 1, 'poly__degree': 3}",yeh_engineered,42
+OLS,No hyperparameters tuned,log_transformed,42
+Elastic Net,"{'model__alpha': 0.001, 'model__l1_ratio': 0.1}",log_transformed,42
+Bayesian Ridge,Default sklearn parameters,log_transformed,42
+Polynomial Ridge,"{'model__alpha': 0.1, 'poly__degree': 2}",log_transformed,42
+OLS,No hyperparameters tuned,aggressive_interactions,42
+Elastic Net,"{'model__alpha': 0.001, 'model__l1_ratio': 0.3}",aggressive_interactions,42
+Bayesian Ridge,Default sklearn parameters,aggressive_interactions,42
+Polynomial Ridge,"{'model__alpha': 0.1, 'poly__degree': 2}",aggressive_interactions,42

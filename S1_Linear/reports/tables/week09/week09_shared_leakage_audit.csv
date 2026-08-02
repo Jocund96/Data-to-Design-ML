@@ -1,0 +1,6 @@
+evaluation_fold,check,value,status
+shared_publication_test,train_calibration_publication_overlap,0,pass
+shared_publication_test,train_heldout_publication_overlap,0,pass
+shared_publication_test,calibration_heldout_publication_overlap,0,pass
+shared_publication_test,all_rows_assigned,2073,pass
+shared_publication_test,assignment_uses_target_values,False,pass

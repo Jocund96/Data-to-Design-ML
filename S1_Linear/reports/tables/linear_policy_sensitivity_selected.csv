@@ -1,0 +1,3 @@
+policy,selection_rule,selected_model,validation_MAE,validation_RMSE,validation_R2,test_MAE,test_RMSE,test_R2
+raw_le_20,lowest_validation_RMSE_stable_regularized,Elastic Net,16.481050560452083,21.44818707654375,0.6767779975927896,17.238192364610928,22.838586258159804,0.5540331812867831
+raw_le_50,lowest_validation_RMSE_stable_regularized,Elastic Net,15.80837077521931,20.074833242158363,0.7168453936257,16.21126965586226,21.184601600502365,0.6162885884610563

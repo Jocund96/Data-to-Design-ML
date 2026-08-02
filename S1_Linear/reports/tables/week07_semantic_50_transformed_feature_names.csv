@@ -1,0 +1,62 @@
+transformed_feature
+target__cement_type
+target__filler_type
+target__sand_type
+target__fiber1_type
+num__cement
+num__silica_fume
+num__fly_ash
+num__limestone_powder
+num__quartz_powder
+num__glass_powder
+num__rice_husk_ash
+num__metakaolin
+num__ggbfs
+num__slag
+num__nano_caco3
+num__nano_al2o3
+num__nano_tio2
+num__nano_sio2
+num__filler
+num__sand
+num__sand_max_size
+num__fiber1_amount
+num__fiber1_length
+num__fiber1_diameter
+num__fiber2_amount
+num__water
+num__sp_amount
+num__curing_temp
+ohe__fly_ash_type_class C
+ohe__fly_ash_type_class F
+ohe__fly_ash_type_not_applicable
+ohe__fly_ash_type_unknown_type
+ohe__slag_type_Copper Slag
+ohe__slag_type_Phosphorous Slag
+ohe__slag_type_Steel Slag
+"ohe__slag_type_Steel Slag 
+Powder"
+ohe__slag_type_not_applicable
+ohe__slag_type_unknown_type
+ohe__fiber2_type_Carbon Fiber
+ohe__fiber2_type_Cellulose Fiber
+ohe__fiber2_type_Hooked Steel Fiber
+ohe__fiber2_type_PE Fiber
+ohe__fiber2_type_PVA Fiber
+ohe__fiber2_type_Straight Steel Fiber
+ohe__fiber2_type_not_applicable
+ohe__sp_type_HRWRA
+ohe__sp_type_Other_Polymer_SP
+ohe__sp_type_PCE_HRWRA
+ohe__sp_type_PCE_SP
+ohe__sp_type_SNF_SP
+ohe__sp_type_Unspecified
+ohe__sp_type_VMA
+ohe__sp_type_unknown_type
+ohe__curing_method_Air Curing
+ohe__curing_method_Autoclave Curing
+ohe__curing_method_Heat Curing
+ohe__curing_method_Hot Water Curing
+ohe__curing_method_Standard Curing
+ohe__curing_method_Steam Curing
+ohe__curing_method_Water Curing

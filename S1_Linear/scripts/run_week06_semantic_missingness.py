@@ -635,8 +635,6 @@ def main(config_path: str) -> None:
             )
     else:
         print("\nEncoded-column expansion not calculated: preprocessor fitting is disabled.")
-    print(f"\nSaved semantic cleaned file to: {semantic_cleaned_path}")
-    print(f"Saved policy split folders to: {processed_dir}")
 
 
 if __name__ == "__main__":

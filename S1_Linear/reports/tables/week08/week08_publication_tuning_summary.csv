@@ -1,0 +1,5 @@
+model,tuned,cv_strategy,grouping,scoring,candidate_count,best_cv_RMSE,best_parameters,note
+OLS,False,GroupKFold(n_splits=3),publication_group,neg_root_mean_squared_error,1,,{},No meaningful hyperparameters; fitted as reference baseline.
+Elastic Net,True,GroupKFold(n_splits=3),publication_group,neg_root_mean_squared_error,25,26.623892291581118,"{""model__alpha"": 0.1, ""model__l1_ratio"": 0.1}",Best estimator refitted on all supplied training rows.
+Bayesian Ridge,True,GroupKFold(n_splits=3),publication_group,neg_root_mean_squared_error,9,27.58685581808893,"{""model__alpha_1"": 1e-07, ""model__lambda_1"": 1e-05}",Best estimator refitted on all supplied training rows.
+Polynomial Ridge,True,GroupKFold(n_splits=3),publication_group,neg_root_mean_squared_error,5,28.923360938296952,"{""model__alpha"": 1000.0, ""poly__degree"": 2}",Best estimator refitted on all supplied training rows.

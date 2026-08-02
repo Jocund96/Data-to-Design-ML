@@ -1,0 +1,93 @@
+,missing_count,missing_percentage
+Durability Properities | Surface Resistivity | Surface Resistivity (kΩ-mm),2175,99.40585009140767
+Mechanical Properties | Compressive Strength (Mpa) | 21 days,2175,99.40585009140767
+Durability Properities | Surface Resistivity | Testing Standards,2175,99.40585009140767
+Durability Properities | Freezing and Thawing | Testing Standards,2166,98.99451553930531
+Durability Properities | Freezing and Thawing | Cycles,2166,98.99451553930531
+Durability Properities | Water absorption | Water absorption (%),2165,98.94881170018282
+Durability Properities | Water absorption | Testing Standards,2165,98.94881170018282
+Workability | Slump (mm),2159,98.6745886654479
+Mechanical Properties | Tensile Strength Parameters | Tensile Elastic Modulus (GPa),2153,98.40036563071298
+Durability Properities | Air Content/Air Void/ Porosity | Air Void %,2150,98.26325411334552
+Mechanical Properties | Tensile Strength Parameters | Peak tensile strain (%),2146,98.08043875685559
+Durability Properities | Air Content/Air Void/ Porosity | Air Content %,2141,97.85191956124314
+"Mix Constitutents | Synergetic Fiber | Nominal Young’s modulus, Gpa",2130,97.3491773308958
+Mechanical Properties | Flexural Strength Parameters | LOP (Mpa),2122,96.9835466179159
+Durability Properities | Shrinkage (µϵ) | 56-day Shrinkage (µstrain),2122,96.9835466179159
+Mechanical Properties | Flexural Strength Parameters | Residual Strength (f600) (MPa),2120,96.89213893967093
+Curing Regime | Pressure (MPa),2117,96.75502742230347
+Mechanical Properties | Flexural Strength Parameters | Residual Strength (f150) (MPa),2115,96.66361974405851
+Durability Properities | Shrinkage (µϵ) | Testing Standards,2107,96.29798903107861
+Mix Constitutents | Synergetic Fiber | Tensile Strength (MPa),2096,95.79524680073126
+Mechanical Properties | Tensile Strength Parameters | first-cracking strength (MPa),2085,95.29250457038391
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Type of Slag,2080,95.06398537477148
+Durability Properities | Rapid Chloride Permeability Test | Testing Standards,2080,95.06398537477148
+Durability Properities | Rapid Chloride Permeability Test | Total Charge Passed (Coulombs),2080,95.06398537477148
+Durability Properities | Shrinkage (µϵ) | 28-day Shrinkage (µstrain),2076,94.88117001828154
+Mix Constitutents | Synergetic Fiber | Type of Fiber,2070,94.6069469835466
+Mix Constitutents | Synergetic Fiber | Diameter (mm),2070,94.6069469835466
+Mix Constitutents | Synergetic Fiber | Length (mm),2069,94.56124314442414
+Mix Constitutents | Synergetic Fiber | Amount / Quantity of Fiber,2067,94.46983546617916
+Mechanical Properties | Compressive Strength (Mpa) | 1-day,2062,94.24131627056673
+Mechanical Properties | Tensile Strength Parameters | Strain capacity (%),2058,94.05850091407679
+Mechanical Properties | Compressive Strength (Mpa) | 14-Day,2055,93.92138939670932
+Mechanical Properties | Flexural Strength Parameters | MOR (MPa),2048,93.60146252285192
+Durability Properities | Air Content/Air Void/ Porosity | Testing Standards,2024,92.50457038391224
+Research Paper Details | Year of Publish,2023,92.45886654478977
+Research Paper Details | Research paper reference in dataset,2020,92.3217550274223
+Research Paper Details | Reference details/Data sources,2020,92.3217550274223
+Research Paper Details | Country of Origin,2020,92.3217550274223
+Mechanical Properties | Flexural Strength Parameters | Toughness (J),1986,90.76782449725776
+Mechanical Properties | Elastic Modulus | Testing Standard,1983,90.63071297989032
+Mechanical Properties | Compressive Strength (Mpa) | 56-Day,1971,90.08226691042047
+Mechanical Properties | Tensile Strength Parameters | Split Tensile Strength (Mpa),1951,89.16819012797075
+Durability Properities | Air Content/Air Void/ Porosity | Porosity,1949,89.07678244972578
+Mechanical Properties | Elastic Modulus | Elastic Modulus (Gpa),1927,88.07129798903108
+Mechanical Properties | Compressive Strength (Mpa) | 3-Day,1915,87.52285191956123
+Mechanical Properties | Tensile Strength Parameters | Direct Tensile Strength (Mpa),1908,87.20292504570384
+Mechanical Properties | Tensile Strength Parameters | Testing Standards,1857,84.87202925045703
+Mechanical Properties | Compressive Strength (Mpa) | 90-Day,1847,84.41499085923218
+"Mix Constitutents | Fiber | Nominal Young’s modulus, Gpa",1820,83.18098720292505
+Mix Constitutents | Sustainable Filler | Type of Filler,1818,83.08957952468006
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Fly Ash Type,1733,79.20475319926874
+Mechanical Properties | Compressive Strength (Mpa) | 7-Day,1434,65.53930530164533
+Curing Regime | Humidity (%),1323,60.46617915904936
+Mechanical Properties | Flexural Strength Parameters | Testing Standard,1288,58.866544789762344
+Mix Constitutents | Fiber | Tensile Strength (MPa),1240,56.672760511883006
+Workability | Testing Standard,1178,53.83912248628885
+Mechanical Properties | Flexural Strength Parameters | Peak Strength (MPa),1164,53.199268738574034
+Mechanical Properties | Flexural Strength Parameters | Specimens,1094,50.0
+Workability | Slump Flow (mm),1013,46.297989031078615
+Mix Constitutents | Binder | Cement Grade (Mpa),860,39.30530164533821
+Mix Constitutents | Fiber | Length (mm),720,32.90676416819013
+Mix Constitutents | Fiber | Diameter (mm),719,32.86106032906764
+Mix Constitutents | Fiber | Type of Fiber,713,32.586837294332724
+Mix Constitutents | Fiber | Amount / Quantity of Fiber,713,32.586837294332724
+Mechanical Properties | Compressive Strength (Mpa) | Testing Standard,450,20.56672760511883
+Mix Constitutents | Sand | Max Size (mm),284,12.979890310786105
+Mix-ID,214,9.780621572212066
+Curing Regime | Temperature (o C),166,7.586837294332724
+Mix Constitutents | Superplasticizer | Type of Superplasticizer,147,6.718464351005485
+Mechanical Properties | Compressive Strength (Mpa) | 28-Day,115,5.255941499085924
+Mechanical Properties | Compressive Strength (Mpa) | Specimen,86,3.930530164533821
+Mix Constitutents | Sand | Sand Type,83,3.793418647166362
+Mix Constitutents | Binder | Cement type,62,2.83363802559415
+Mix Constitutents | Superplasticizer | Amount (kg/m³),8,0.3656307129798903
+Curing Regime | Curing,8,0.3656307129798903
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Metakaolin (kg/m³),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Silica Fume (kg/m³),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Flayash Amount (kg/m³),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Limestone Powder (kg/m3),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Quartzpowder (kg/m3),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Glass powder (kg/m3),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Rice husk ash (kg/m3),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | Slag Amount (kg/m³),0,0.0
+Mix Constitutents | Supplementary Cementitious Materials (SCMs) | GGBFS (kg/m³),0,0.0
+Mix Constitutents | Nano Particles | Nano-CaCO3 (kg/m3),0,0.0
+Mix Constitutents | Binder | Cement Amount (kg/m³),0,0.0
+Mix Constitutents | Nano Particles | Nano-TiO2 (kg/m3),0,0.0
+Mix Constitutents | Nano Particles | Nano Silica (kg/m3),0,0.0
+Mix Constitutents | Sustainable Filler | Filler (kg/m³),0,0.0
+Mix Constitutents | Sand | Amount (kg/m³),0,0.0
+Mix Constitutents | Water | Amount (kg/m³),0,0.0
+Mix Constitutents | Nano Particles | Nano-Al2O3 (kg/m3),0,0.0

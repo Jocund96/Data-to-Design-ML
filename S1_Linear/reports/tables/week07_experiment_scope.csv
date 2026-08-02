@@ -1,0 +1,7 @@
+experiment,enabled,targeted_experiment,exploratory,reason
+feature_policy_sensitivity,False,False,False,Week 7 uses only the agreed semantic-recoded 50 percent policy.
+curing_regime_error_analysis,True,True,False,
+fiber_ablation,True,True,False,
+outliers,True,True,False,
+engineering_features,True,False,True,
+numeric_vif,True,False,False,"Supporting OLS multicollinearity diagnostic, not performance metric."

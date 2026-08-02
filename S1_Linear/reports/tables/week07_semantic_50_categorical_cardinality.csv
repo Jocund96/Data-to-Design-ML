@@ -1,0 +1,10 @@
+column,encoding_group,missing_count_train,unique_categories_train,encoder
+fly_ash_type,one_hot,0,4,OneHotEncoder(handle_unknown='ignore')
+slag_type,one_hot,0,6,OneHotEncoder(handle_unknown='ignore')
+fiber2_type,one_hot,0,7,OneHotEncoder(handle_unknown='ignore')
+sp_type,one_hot,0,8,OneHotEncoder(handle_unknown='ignore')
+curing_method,one_hot,0,7,OneHotEncoder(handle_unknown='ignore')
+cement_type,target,0,11,TargetEncoder(cv=5)
+filler_type,target,0,18,TargetEncoder(cv=5)
+sand_type,target,0,23,TargetEncoder(cv=5)
+fiber1_type,target,0,12,TargetEncoder(cv=5)
